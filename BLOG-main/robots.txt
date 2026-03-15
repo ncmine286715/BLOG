@@ -1,0 +1,26 @@
+# robots.txt para MINEADDONSNEWS
+User-agent: *
+Allow: /
+Disallow: /cgi-bin/
+Disallow: /tmp/
+
+# Sitemap
+Sitemap: https://www.mineaddonsnews.online/sitemap.xml
+
+# Atraso de crawl (opcional - para não sobrecarregar o servidor)
+Crawl-delay: 5
+
+# Google Adsense
+User-agent: Mediapartners-Google
+Allow: /
+
+# Google Images
+User-agent: Googlebot-Image
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.svg$
+
+# Bing
+User-agent: bingbot
+Allow: /

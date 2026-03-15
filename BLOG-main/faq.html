@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mineaddonsnews.online/$(basename "$file")">
+    <meta property="og:title" content="MINEADDONSNEWS - Artigo Técnico">
+    <meta property="og:description" content="Análise técnica aprofundada sobre hardware e engenharia para Minecraft Bedrock.">
+    <meta property="og:image" content="https://mineaddonsnews.online/og-image.jpg">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-(44) 99970-723664134" crossorigin="anonymous"></script>
+    
+    <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
+    <script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+    <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+    <script>
+        window.ezstandalone = window.ezstandalone || {};
+        ezstandalone.cmd = ezstandalone.cmd || [];
+    </script>
+    <script src="//ezoicanalytics.com/analytics.js"></script>
+    
+    <meta name="google-adsense-account" content="ca-pub-(44) 99970-723664134">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perguntas Frequentes (FAQ) - MINEADDONSNEWS</title>
+    <meta name="description" content="Encontre respostas para as perguntas mais frequentes sobre Minecraft Bedrock, otimização de servidores, hardware, Scripting API e nossos artigos técnicos.">
+    <link rel="canonical" href="https://www.mineaddonsnews.online/faq.html">
+    <style>
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-elevated: #21262d;
+            --border-color: #30363d;
+            --text-primary: #f0f6fc;
+            --text-secondary: #8b949e;
+            --accent-green: #3fb950;
+            --accent-green-muted: #2ea043;
+            --header-bg: #010409;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .site-header {
+            background: var(--header-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 24px 0;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .creeper-logo {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-green);
+            position: relative;
+            border: 3px solid #000;
+            flex-shrink: 0;
+        }
+
+        .creeper-eye {
+            width: 12px;
+            height: 12px;
+            background: #000;
+            position: absolute;
+            top: 12px;
+        }
+
+        .eye-left { left: 8px; }
+        .eye-right { right: 8px; }
+
+        .creeper-mouth {
+            width: 24px;
+            height: 24px;
+            background: #000;
+            position: absolute;
+            bottom: 6px;
+            left: 18px;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 75% 50%, 75% 100%, 25% 100%, 25% 50%, 0% 50%);
+        }
+
+        .site-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .site-tagline {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 4px;
+        }
+
+        /* Navegação */
+        .site-nav {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-green);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            margin: 24px 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--accent-green);
+        }
+
+        .breadcrumb span {
+            color: var(--text-primary);
+        }
+
+        /* Page Header */
+        .page-header {
+            margin: 32px 0 24px 0;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 16px;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-green);
+            margin-bottom: 8px;
+        }
+
+        .page-header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 800px;
+        }
+
+        /* Busca FAQ */
+        .faq-search {
+            margin: 32px 0;
+        }
+
+        .faq-search input {
+            width: 100%;
+            padding: 16px 20px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+
+        .faq-search input:focus {
+            outline: none;
+            border-color: var(--accent-green);
+            box-shadow: 0 0 0 3px rgba(63, 185, 80, 0.1);
+        }
+
+        /* Categorias FAQ */
+        .faq-categories {
+            display: flex;
+            gap: 16px;
+            margin: 32px 0;
+            flex-wrap: wrap;
+        }
+
+        .category-tag {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 10px 24px;
+            border-radius: 30px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .category-tag:hover,
+        .category-tag.active {
+            background: var(--accent-green);
+            color: #000;
+            border-color: var(--accent-green);
+        }
+
+        /* Grid FAQ */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin: 40px 0;
+        }
+
+        .faq-item {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 28px;
+            transition: 0.2s;
+        }
+
+        .faq-item:hover {
+            border-color: var(--accent-green);
+            transform: translateY(-2px);
+        }
+
+        .faq-question {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+            align-items: flex-start;
+        }
+
+        .faq-icon {
+            color: var(--accent-green);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .faq-question h3 {
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            margin-left: 36px;
+        }
+
+        .faq-answer p {
+            margin-bottom: 12px;
+        }
+
+        .faq-answer a {
+            color: var(--accent-green);
+            text-decoration: none;
+        }
+
+        .faq-answer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Ainda tem dúvidas? */
+        .contact-section {
+            background: linear-gradient(135deg, #1f4037 0%, #0f2027 100%);
+            border-radius: 16px;
+            padding: 48px;
+            margin: 48px 0;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .contact-section h2 {
+            color: var(--accent-green);
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .contact-section p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            background: var(--accent-green);
+            color: #000;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.2s;
+            border: 2px solid var(--accent-green);
+        }
+
+        .contact-btn:hover {
+            background: transparent;
+            color: var(--accent-green);
+        }
+
+        .contact-btn-outline {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--border-color);
+        }
+
+        .contact-btn-outline:hover {
+            border-color: var(--accent-green);
+            color: var(--accent-green);
+            background: transparent;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: var(--header-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 48px 0 32px 0;
+            margin-top: 48px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-about p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin: 16px 0;
+        }
+
+        .footer-contact {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-green);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-color);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-legal a {
+            color: var(--text-secondary);
+            margin-left: 20px;
+            text-decoration: none;
+        }
+
+        /* Cookie Banner */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: var(--bg-secondary);
+            border-top: 2px solid var(--accent-green);
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .cookie-btn {
+            background: var(--accent-green);
+            color: #000;
+            border: none;
+            padding: 8px 24px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 1024px) {
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            .contact-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrapper header-content">
+            <div class="creeper-logo">
+                <div class="creeper-eye eye-left"></div>
+                <div class="creeper-eye eye-right"></div>
+                <div class="creeper-mouth"></div>
+            </div>
+            <div>
+                <h1 class="site-title">MINEADDONSNEWS</h1>
+                <p class="site-tagline">Engenharia de Sistemas · Hardware · Tutoriais Técnicos</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="site-nav">
+        <div class="wrapper nav-links">
+            <a href="index.html">Início</a>
+            <a href="index.html#engenharia">Engenharia</a>
+            <a href="index.html#hardware">Hardware</a>
+            <a href="index.html#infra">Infraestrutura</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="contato.html">Contato</a>
+            <a href="privacidade.html">Privacidade</a>
+        </div>
+    </nav>
+
+    <main class="wrapper">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="index.html">Início</a> › <span>Perguntas Frequentes (FAQ)</span>
+        </div>
+
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1>❓ Perguntas Frequentes</h1>
+            <p>Encontre respostas para as dúvidas mais comuns sobre Minecraft Bedrock, otimização de servidores, hardware e nossos artigos técnicos.</p>
+        </div>
+
+        <!-- Busca -->
+        <div class="faq-search">
+            <input type="text" id="faqSearch" placeholder="🔍 Buscar perguntas... (ex: servidor, fps, RAM, Scripting API)">
+        </div>
+
+        <!-- Categorias -->
+        <div class="faq-categories" id="faqCategories">
+            <span class="category-tag active" data-category="all">Todas</span>
+            <span class="category-tag" data-category="servidores">Servidores</span>
+            <span class="category-tag" data-category="hardware">Hardware</span>
+            <span class="category-tag" data-category="software">Scripting API</span>
+            <span class="category-tag" data-category="desempenho">Desempenho</span>
+            <span class="category-tag" data-category="geral">Geral</span>
+        </div>
+
+        <!-- FAQ Grid -->
+        <div class="faq-grid" id="faqGrid">
+            <!-- Categoria: Servidores -->
+            <div class="faq-item" data-category="servidores">
+                <div class="faq-question">
+                    <span class="faq-icon">Q:</span>
+                    <h3>Qual a configuração mínima de hardware para um servidor Minecraft Bedrock com 50 jogadores?</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>Para 50 jogadores simultâneos, recomendamos: CPU com pelo menos 8 núcleos (Intel i7 ou AMD Ryzen 7), 16GB de RAM (sendo 8GB alocados para o servidor) e armazenamento SSD NVMe. O servidor Bedrock é menos exigente que o Java, mas addons e mundos grandes podem aumentar a demanda.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="servidores">
+                <div class="faq-question">
+                    <span class="faq-icon">Q:</span>
+                    <h3>É possível rodar um servidor Bedrock no Linux?</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>Sim! O servidor dedicado do Minecraft Bedrock (BDS) tem versão oficial para Linux. Recomendamos Ubuntu Server 22.04 LTS ou superior. Veja nosso guia completo em <a href="otimizacao-servidor-bedrock-linux-2026.html">Otimização de Servidores Bedrock no Linux</a>.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="servidores">
+                <div class="faq-question">
+                    <span class="faq-icon">Q:</span>
+                    <h3>Como configurar um firewall para proteger meu servidor?</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>Recomendamos usar iptables ou UFW no Linux. As portas padrão do Bedrock são 19132-19133 (UDP). Além disso, considere usar um proxy como o BDS Proxy para proteção adicional contra ataques DDoS.</p>
+                </div>
+            </div>
+
+            <!-- Categoria: Hardware -->
+            <div class="faq-item" data-category="hardware">
+                <div class="faq-question">
+                    <span class="faq-icon">Q:</span>
+                    <h3>Qual processador é melhor para Minecraft Bedrock: Intel ou AMD?</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>Ambos são excelentes. Para jogar, processadores com melhor desempenho single-core (como Intel Core i9-14900K ou AMD Ryzen 9 7950X3D) são ideais. Para servidores, AMD EPYC ou Intel Xeon com muitos núcleos e suporte a ECC são mais recomendados.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="hardware">
+                <div class="faq-question">
+                    <span class="faq-icon">Q:</span>
+                    <h3>Vale a pena investir em RAM DDR5 para Minecraft?</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>Sim, especialmente se você usa addons pesados ou servidores com muitos jogadores. O DDR5 oferece maior largura de banda, o que reduz o tempo de carregamento de chunks. Veja nosso comparativo <a href="comparativo-ddr5-camm2-servidor-minecraft.html">DDR5 vs CAMM2</a>.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="hardware">
+                <div class="faq-question">
+                    <span class="faq-icon">Q:</span>
+                    <h3>Qual placa de vídeo escolher para jogar com shaders e RTX?</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>Para Ray Tracing no Bedrock, recomendamos pelo menos uma NVIDIA RTX 3060 ou AMD Radeon RX 6600 XT. Para 4K com shaders pesados, uma RTX 4070 ou superior é ideal. Veja nosso guia <a href="rtx-vs-radeon-minecraft-bedrock-performance.html">RTX vs Radeon</a>.</p>
+                </div>
+            </div>
+
+            <!-- Categoria: Software / Scripting API -->
+            <div class="faq-item" data-category="software">
+                <div class="faq-question">
+                    <span class="faq-icon">Q:</span>
+                    <h3>Preciso saber JavaScript para criar addons?</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>Sim! A Scripting API do Minecraft Bedrock utiliza JavaScript (ou TypeScript). Recomendamos ter conhecimentos básicos de programação e lógica. Confira nosso tutorial <a href="scripting-api-minecraft-bedrock-addons-avancados.html">Scripting API para iniciantes</a>.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="software">
+                <div class="faq-question">
+                    <span class="faq-icon">Q:</span>
+                    <h3>Qual a diferença entre Behavior Packs e Resource Packs?</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>Behavior Packs alteram o comportamento do jogo (IA de mobs, regras, mecânicas). Resource Packs alteram a aparência (texturas, sons, modelos). Ambos podem ser usados juntos para criar experiências completas.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="software">
+                <div class="faq-question">
+                    <span class="faq-icon">Q:</span>
+                    <h3>Como faço para depurar erros em meus scripts?</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>Use o console do jogo (F1) e o arquivo de log do servidor. A Scripting API também permite usar console.log() para depuração. Recomendamos o uso do Visual Studio Code com as extensões oficiais da Microsoft.</p>
+                </div>
+            </div>
+
+            <!-- Categoria: Desempenho -->
+            <div class="faq-item" data-category="desempenho">
+                <div class="faq-question">
+                    <span class="faq-icon">Q:</span>
+                    <h3>Meu jogo está com FPS baixo, o que fazer?</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>Primeiro, verifique se seus drivers estão atualizados. Reduza a distância de renderização nas configurações. Desative partículas e sombras se necessário. Em PCs mais fracos, use o modo de vídeo "Gráficos rápidos". Veja nosso <a href="otimizacao-minecraft-bedrock-rtx-ryzen-performance.html">guia de otimização</a>.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="desempenho">
+                <div class="faq-question">
+                    <span class="faq-icon">Q:</span>
+                    <h3>O que é TPS e como monitorar?</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>TPS (Ticks Per Second) mede a performance do servidor. O ideal é 20 TPS. Valores abaixo indicam lag. Você pode monitorar com comandos como "status" no console do servidor ou usando addons de monitoramento.</p>
+                </div>
+            </div>
+
+            <!-- Categoria: Geral -->
+            <div class="faq-item" data-category="geral">
+                <div class="faq-question">
+                    <span class="faq-icon">Q:</span>
+                    <h3>Os artigos são revisados por especialistas?</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>Sim! Todo conteúdo do MINEADDONSNEWS é revisado por nosso conselho técnico, composto por Dr. Ricardo Albuquerque (MIT), Dra. Marina Sparvoli (Stanford) e Prof. Dr. Marcelo Silveira (POLI-USP).</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="geral">
+                <div class="faq-question">
+                    <span class="faq-icon">Q:</span>
+                    <h3>Posso sugerir um tema para artigo?</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>Claro! Adoramos sugestões da comunidade. Envie sua ideia através da nossa <a href="contato.html">página de contato</a> selecionando o assunto "Sugestão de pauta".</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="geral">
+                <div class="faq-question">
+                    <span class="faq-icon">Q:</span>
+                    <h3>Como citar um artigo do portal em trabalhos acadêmicos?</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>Você pode citar nossos artigos como fonte técnica. Recomendamos o formato ABNT: AUTOR. Título do artigo. MINEADDONSNEWS, ano. Disponível em: URL. Acesso em: dia mês ano.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ainda tem dúvidas? -->
+        <div class="contact-section">
+            <h2>🤔 Ainda tem dúvidas?</h2>
+            <p>Nossa equipe de especialistas está pronta para ajudar com questões técnicas mais específicas.</p>
+            <div class="contact-buttons">
+                <a href="contato.html" class="contact-btn">Enviar mensagem</a>
+                <a href="https://wa.me/(44) 99970-723634" class="contact-btn contact-btn-outline">WhatsApp</a>
+                <a href="mailto:contato@mineaddonsnews.online" class="contact-btn contact-btn-outline">E-mail</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="wrapper">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3 class="site-title" style="font-size: 1.2rem;">MINEADDONSNEWS</h3>
+                    <p>Portal independente de engenharia e tecnologia aplicada ao Minecraft Bedrock. Conteúdo revisado por especialistas.</p>
+                </div>
+                <div>
+                    <h4>Contato</h4>
+                    <div class="footer-contact">
+                        <p>Rua das Nações, 1010<br>Terra Roxa - PR, 85990-000</p>
+                        <p>contato@mineaddonsnews.online</p>
+                    </div>
+                </div>
+                <div>
+                    <h4>Institucional</h4>
+                    <div class="footer-links">
+                        <a href="sobre.html">Sobre Nós</a>
+                        <a href="expediente.html">Expediente</a>
+                        <a href="contato.html">Contato</a>
+                        <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Legal</h4>
+                    <div class="footer-links">
+                        <a href="privacidade.html">Privacidade</a>
+                        <a href="termos.html">Termos</a>
+                        <a href="cookies.html">Cookies</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Terra Roxa - PR · Brasil</p>
+                <div class="footer-legal">
+                    <a href="privacidade.html">Privacidade</a>
+                    <a href="termos.html">Termos</a>
+                    <a href="cookies.html">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- COOKIE BANNER -->
+    <div class="cookie-banner" id="cookie-banner">
+        <p>Utilizamos cookies para melhorar sua experiência. <a href="cookies.html">Saiba mais</a>.</p>
+        <button class="cookie-btn" onclick="document.getElementById('cookie-banner').style.display='none'">Aceitar</button>
+    </div>
+
+    <!-- Script para busca e categorias -->
+    <script>
+        // Filtro por categoria
+        document.querySelectorAll('.category-tag').forEach(tag => {
+            tag.addEventListener('click', function() {
+                document.querySelectorAll('.category-tag').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                const category = this.dataset.category;
+                const items = document.querySelectorAll('.faq-item');
+                
+                items.forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Busca
+        document.getElementById('faqSearch').addEventListener('keyup', function() {
+            const searchTerm = this.value.toLowerCase();
+            const items = document.querySelectorAll('.faq-item');
+            
+            items.forEach(item => {
+                const question = item.querySelector('h3').innerText.toLowerCase();
+                const answer = item.querySelector('.faq-answer p').innerText.toLowerCase();
+                
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+<div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 25px; margin: 30px 0; text-align: center;">
+  <h3 style="color: #3fb950; margin-bottom: 10px;">📊 Quer calcular o servidor ideal para você?</h3>
+  <p style="color: #8b949e; margin-bottom: 20px;">Use nossa calculadora interativa e descubra a configuração perfeita!</p>
+  <a href="https://mineaddonsnews.online/interativa.html" style="background: #3fb950; color: #000; padding: 12px 30px; border-radius: 6px; text-decoration: none; font-weight: bold; display: inline-block;">Calcular agora →</a>
+</div>
+</body>
+</html>
