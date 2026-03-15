@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aguarde 15 segundos - MINEADDONSNEWS</title>
+    
+    <style>
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-elevated: #21262d;
+            --border-color: #30363d;
+            --text-primary: #f0f6fc;
+            --text-secondary: #8b949e;
+            --accent-green: #3fb950;
+            --accent-blue: #58a6ff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 600px;
+            width: 90%;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+        
+        h1 {
+            color: var(--accent-green);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .addon-icon {
+            font-size: 5rem;
+            margin: 20px 0;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .timer-box {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+            padding: 20px;
+            margin: 30px 0;
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--accent-blue);
+            font-family: monospace;
+        }
+        
+        .addon-name {
+            background: rgba(63, 185, 80, 0.1);
+            border-left: 4px solid var(--accent-green);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 1.2rem;
+        }
+        
+        .download-btn {
+            background: linear-gradient(135deg, var(--accent-green), #2ea043);
+            color: #000;
+            border: none;
+            padding: 18px 40px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 20px 0;
+            transition: all 0.3s;
+            width: 100%;
+            max-width: 300px;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        
+        .download-btn.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .download-btn.active:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(63, 185, 80, 0.3);
+        }
+        
+        .warning-box {
+            background: rgba(248, 81, 73, 0.1);
+            border-left: 4px solid #f85149;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+        
+        .back-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .back-link:hover {
+            color: var(--accent-green);
+        }
+        
+        @media (max-width: 768px) {
+            .container { padding: 25px; }
+            h1 { font-size: 1.5rem; }
+            .timer-box { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="addon-icon">📦</div>
+        <h1>⏳ Preparando seu download...</h1>
+        
+        <div class="addon-name" id="addonName">
+            Carregando informações do addon...
+        </div>
+        
+        <div class="timer-box" id="timer">15</div>
+        
+        <button class="download-btn" id="downloadBtn" onclick="redirectToDownload()">
+            🔓 LIBERAR DOWNLOAD
+        </button>
+        
+        <div class="warning-box">
+            ⚠️ Não feche esta aba enquanto o timer não zerar. 
+            O link será liberado automaticamente após 15 segundos.
+        </div>
+        
+        <a href="javascript:history.back()" class="back-link">← Voltar para o artigo</a>
+    </div>
+
+    <script>
+        // PROTEÇÃO CONTRA IN-APP BROWSER
+        function isInApp() {
+            const regex = new RegExp(`(WebView|(iPhone|iPod|iPad)(?!.*Safari/)|Android.*(wv))`, 'ig');
+            return Boolean(navigator.userAgent.match(regex));
+        }
+
+        function initInappRd() {
+            var landingpageURL = window.location.hostname + window.location.pathname + window.location.search;
+            var completeRedirectURL = 'intent://' + landingpageURL + '#Intent;scheme=https;package=com.android.chrome;end';
+            var trafficbackURL = "https://rm358.com/4/10735234/";
+            var ua = navigator.userAgent.toLowerCase();
+
+            if (isInApp() && (ua.indexOf('fb') !== -1 || ua.indexOf('android') !== -1 || ua.indexOf('wv') !== -1)) {
+                document.body.addEventListener('click', function () {
+                    window.onbeforeunload = null;
+                    window.open(completeRedirectURL, '_system');
+                    setTimeout(function () {
+                        window.location.replace(trafficbackURL);
+                    }, 1000);
+                });
+            }
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initInappRd);
+        } else {
+            initInappRd();
+        }
+
+        // SISTEMA DE TIMER
+        const urlParams = new URLSearchParams(window.location.search);
+        const addon = urlParams.get('addon') || 'addon';
+        const downloadUrl = urlParams.get('url') || 'https://rm358.com/4/10735234/';
+        
+        // Mostrar nome do addon
+        const addonNames = {
+            'xray': 'X-Ray Ultimate • 1.20.4',
+            'shader': 'BSL Shaders • v8.2',
+            'minimap': 'Xaero\'s Minimap • 1.20.4',
+            'optifine': 'OptiFine • HD U I5',
+            'jei': 'Just Enough Items • 1.20.4'
+        };
+        
+        document.getElementById('addonName').textContent = addonNames[addon] || 'Addon Minecraft • Premium';
+        
+        let timeLeft = 15;
+        const timerElement = document.getElementById('timer');
+        const downloadBtn = document.getElementById('downloadBtn');
+        
+        function redirectToDownload() {
+            window.location.href = downloadUrl;
+        }
+        
+        const countdown = setInterval(() => {
+            timeLeft--;
+            timerElement.textContent = timeLeft;
+            
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                timerElement.textContent = '✅ LIBERADO!';
+                downloadBtn.classList.add('active');
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
