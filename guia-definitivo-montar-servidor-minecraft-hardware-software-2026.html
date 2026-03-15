@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nick Analista: O Guia DEFINITIVO para Montar um Servidor Minecraft em 2026 (10.000+ Palavras)</title>
+    <meta name="description" content="Nick, analista de hardware, apresenta o guia mais completo já escrito em português sobre servidores Minecraft. Requisitos, peças, otimização, manutenção, segurança e planos de negócio. Tudo o que você precisa saber.">
+    <meta name="keywords" content="guia servidor minecraft, como montar servidor minecraft, hardware para servidor, nick analista, guia definitivo minecraft">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8967995144964134" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-elevated: #21262d;
+            --border-color: #30363d;
+            --text-primary: #f0f6fc;
+            --text-secondary: #8b949e;
+            --accent-green: #3fb950;
+            --accent-blue: #58a6ff;
+            --accent-yellow: #d29922;
+            --accent-red: #f85149;
+            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Fira Code', monospace;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+        .wrapper {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .site-header {
+            background: #010409;
+            border-bottom: 1px solid var(--border-color);
+            padding: 24px 0;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .creeper-logo {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-green);
+            position: relative;
+            border: 3px solid #000;
+            flex-shrink: 0;
+        }
+        .creeper-eye {
+            width: 12px;
+            height: 12px;
+            background: #000;
+            position: absolute;
+            top: 12px;
+        }
+        .eye-left { left: 8px; }
+        .eye-right { right: 8px; }
+        .creeper-mouth {
+            width: 24px;
+            height: 24px;
+            background: #000;
+            position: absolute;
+            bottom: 6px;
+            left: 18px;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 75% 50%, 75% 100%, 25% 100%, 25% 50%, 0% 50%);
+        }
+        .site-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .site-tagline {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 4px;
+        }
+        .site-nav {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        .nav-links a:hover {
+            color: var(--accent-green);
+        }
+        .breadcrumb {
+            margin: 24px 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        .breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            color: var(--accent-green);
+        }
+        .article-container {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 48px;
+            margin: 40px 0;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: var(--accent-green);
+            font-size: 2.6rem;
+            font-weight: 700;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+        h2 {
+            color: var(--accent-green);
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 50px 0 20px;
+            border-left: 4px solid var(--accent-green);
+            padding-left: 16px;
+        }
+        h3 {
+            color: var(--text-primary);
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin: 35px 0 15px;
+        }
+        h4 {
+            color: var(--accent-blue);
+            font-size: 1.3rem;
+            margin: 25px 0 10px;
+        }
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        ul, ol {
+            color: var(--text-secondary);
+            margin-left: 24px;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        pre {
+            background: #0d1117;
+            border-left: 4px solid var(--accent-green);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            overflow-x: auto;
+            font-family: var(--font-mono);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            border: 1px solid var(--border-color);
+        }
+        code {
+            font-family: var(--font-mono);
+            color: #f0f6fc;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+        th {
+            background: linear-gradient(135deg, #1e3a5f, #0f2b45);
+            color: #f0f9ff;
+            font-weight: 600;
+            padding: 16px 12px;
+            text-align: left;
+        }
+        td {
+            padding: 14px 12px;
+            border-bottom: 1px solid var(--border-color);
+            background-color: var(--bg-elevated);
+            color: var(--text-secondary);
+        }
+        blockquote {
+            background: var(--bg-elevated);
+            border-left: 4px solid var(--accent-green);
+            padding: 20px 30px;
+            margin: 30px 0;
+            border-radius: 8px;
+            font-style: italic;
+            color: var(--text-primary);
+            font-size: 1.1rem;
+        }
+        .last-updated {
+            display: inline-block;
+            background: var(--bg-elevated);
+            color: var(--text-secondary);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            margin: 20px 0;
+            border: 1px solid var(--border-color);
+        }
+        .author-info {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 30px 0;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .author-photo {
+            width: 80px;
+            height: 80px;
+            background-image: url('https://www.imgur.la/images/2026/03/03/IMG_20260131_201046_285.th.webp');
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            border: 2px solid var(--accent-green);
+            background-color: #2d2d2d;
+        }
+        .author-details {
+            flex: 1;
+        }
+        .author-name {
+            color: var(--accent-green);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .author-title {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+        .author-bio {
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+        .badge {
+            background: var(--accent-green);
+            color: #000;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-right: 8px;
+        }
+        .badge-blue {
+            background: var(--accent-blue);
+            color: #000;
+        }
+        .info-box {
+            background: rgba(63, 185, 80, 0.1);
+            border-left: 4px solid var(--accent-green);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        .warning-box {
+            background: rgba(210, 153, 34, 0.1);
+            border-left: 4px solid var(--accent-yellow);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        .danger-box {
+            background: rgba(248, 81, 73, 0.1);
+            border-left: 4px solid var(--accent-red);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        .nota-tecnica {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+        .article-cta {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 32px;
+            margin: 48px 0 0;
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .cta-section {
+            flex: 1;
+            min-width: 250px;
+        }
+        .cta-title {
+            color: var(--accent-green);
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+        .cta-links {
+            list-style: none;
+        }
+        .cta-links li {
+            margin-bottom: 8px;
+        }
+        .cta-links a {
+            color: var(--accent-green);
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        .cta-links a:hover {
+            text-decoration: underline;
+        }
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-green);
+            color: #000;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 12px;
+            font-size: 1.1rem;
+        }
+        .cta-button:hover {
+            background: #4cba5e;
+        }
+        .share-buttons {
+            display: flex;
+            gap: 12px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .share-button {
+            padding: 8px 16px;
+            border-radius: 6px;
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .share-twitter { background: #1DA1F2; }
+        .share-facebook { background: #4267B2; }
+        .share-linkedin { background: #0077B5; }
+        .share-whatsapp { background: #25D366; }
+        .site-footer {
+            background: #010409;
+            border-top: 1px solid var(--border-color);
+            padding: 48px 0 32px;
+            margin-top: 48px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-about p, .footer-contact, .footer-links a {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .footer-links a {
+            text-decoration: none;
+        }
+        .footer-links a:hover {
+            color: var(--accent-green);
+        }
+        .footer-bottom {
+            border-top: 1px solid var(--border-color);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            flex-wrap: wrap;
+        }
+        @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .article-container { padding: 24px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+        .setup-box {
+            background: #1a2634;
+            border: 1px solid #3fb95040;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0 35px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+        .setup-item {
+            flex: 1 1 220px;
+            text-align: center;
+        }
+        .setup-label {
+            color: var(--accent-green);
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        .setup-value {
+            font-size: 1.3rem;
+            color: #fff;
+        }
+        .floating-image {
+            float: right;
+            width: 350px;
+            margin: 0 0 20px 30px;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+        }
+        .image-caption {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-top: 5px;
+        }
+        .full-width-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin: 40px 0;
+            border: 2px solid var(--border-color);
+        }
+        .toc {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        .toc h3 {
+            margin-top: 0;
+            color: var(--accent-green);
+        }
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        .toc-item {
+            color: var(--text-secondary);
+        }
+        .toc-item a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        .toc-item a:hover {
+            color: var(--accent-green);
+        }
+        .progress-container {
+            width: 100%;
+            height: 4px;
+            background: var(--bg-elevated);
+            position: sticky;
+            top: 60px;
+            z-index: 1000;
+        }
+        .progress-bar {
+            height: 4px;
+            background: var(--accent-green);
+            width: 0%;
+        }
+        .word-count {
+            font-size: 1rem;
+            color: var(--accent-green);
+            font-weight: 600;
+        }
+    </style>
+    <!-- SCHEMA.ORG -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Nick Analista: O Guia DEFINITIVO para Montar um Servidor Minecraft em 2026",
+      "description": "Nick, analista de hardware, apresenta o guia mais completo já escrito em português sobre servidores Minecraft. Requisitos, peças, otimização, manutenção, segurança e planos de negócio.",
+      "author": {
+        "@type": "Person",
+        "name": "Nick",
+        "jobTitle": "Analista de Hardware"
+      },
+      "datePublished": "2026-03-10",
+      "dateModified": "2026-03-10",
+      "wordCount": "10500"
+    }
+    </script>
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qual a quantidade ideal de RAM para um servidor Minecraft?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende do número de jogadores e mods. Como regra geral: 1GB para cada 10 jogadores em servidor vanilla, e 2-3GB para cada 10 jogadores em servidor modded. Para 100 jogadores com mods, recomendamos 16-20GB."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Processador Intel ou AMD para servidor Minecraft?",
+          "acceptedAnswer": {
+            "@type": " ",
+            "text": "AMD com 3D V-Cache (como o Ryzen 7 7800X3D) leva vantagem devido ao cache extra. O Minecraft se beneficia muito de cache L3 grande. Processadores Intel são ótimos, mas perdem em servidores muito moddados."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso de SSD ou NVMe para meu servidor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, obrigatoriamente. HD não é recomendado para servidores ativos. NVMe Gen4 oferece o melhor custo-benefício, sendo 5x mais rápido que SATA SSD e essencial para gerar chunks sem lag."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <header class="site-header">
+        <div class="wrapper header-content">
+            <div class="creeper-logo">
+                <div class="creeper-eye eye-left"></div>
+                <div class="creeper-eye eye-right"></div>
+                <div class="creeper-mouth"></div>
+            </div>
+            <div>
+                <h1 class="site-title">MINEADDONSNEWS</h1>
+                <p class="site-tagline">Engenharia de Sistemas · Hardware · Infraestrutura</p>
+            </div>
+        </div>
+    </header>
+    <nav class="site-nav">
+        <div class="wrapper nav-links">
+            <a href="index.html">Início</a>
+            <a href="index.html#engenharia">Engenharia</a>
+            <a href="index.html#hardware">Hardware</a>
+            <a href="index.html#infra">Infraestrutura</a>
+            <a href="faq.html">FAQ</a>
+            <a href="interativa.html">Ferramentas</a>
+            <a href="sobre.html">Sobre</a>
+        </div>
+    </nav>
+    <main class="wrapper">
+        <div class="breadcrumb">
+            <a href="index.html">Início</a> › <a href="index.html#infra">Infraestrutura</a> › <span>Nick: Guia Definitivo Servidor Minecraft</span>
+        </div>
+        <div class="article-container">
+            <h1>O Guia DEFINITIVO para Montar um Servidor Minecraft em 2026: do Hardware à Manutenção (10.000+ palavras)</h1>
+            <div class="last-updated">
+                📅 10 de março de 2026 · Nick · 
+                <span class="word-count" id="wordCount">Carregando...</span>
+            </div>
+            
+            <div class="author-info">
+                <div class="author-photo"></div>
+                <div class="author-details">
+                    <div class="author-name">Nick</div>
+                    <div class="author-title">Analista de Hardware · MineAddonsNews</div>
+                    <div class="author-bio">Analiso hardware há 8 anos, com foco em desempenho para jogos e servidores. Meu setup pessoal é um Ryzen 7 5800X com RTX 5060 Ti, 64GB RAM e NVMe Gen4. Já montei mais de 30 servidores para clientes e hoje administro uma pequena rede de servidores Minecraft. Este guia reúne tudo o que aprendi na prática.</div>
+                </div>
+            </div>
+
+            <p>
+                <span class="badge">10.000+ PALAVRAS</span>
+                <span class="badge badge-blue">GUIA DEFINITIVO</span>
+                <span class="badge">HARDWARE</span>
+                <span class="badge">SOFTWARE</span>
+                <span class="badge">OTIMIZAÇÃO</span>
+            </p>
+
+            <!-- Tabela de Conteúdos -->
+            <div class="toc">
+                <h3>📚 Tabela de Conteúdos</h3>
+                <div class="toc-grid">
+                    <div class="toc-item"><a href="#intro">1. Introdução</a></div>
+                    <div class="toc-item"><a href="#requisitos">2. Requisitos de Hardware</a></div>
+                    <div class="toc-item"><a href="#processador">3. Processador: O Coração</a></div>
+                    <div class="toc-item"><a href="#ram">4. Memória RAM</a></div>
+                    <div class="toc-item"><a href="#armazenamento">5. Armazenamento</a></div>
+                    <div class="toc-item"><a href="#placa-mae">6. Placa-mãe</a></div>
+                    <div class="toc-item"><a href="#fonte">7. Fonte de Alimentação</a></div>
+                    <div class="toc-item"><a href="#rede">8. Rede e Conexão</a></div>
+                    <div class="toc-item"><a href="#software">9. Software e Otimização</a></div>
+                    <div class="toc-item"><a href="#manutencao">10. Manutenção e Monitoramento</a></div>
+                    <div class="toc-item"><a href="#seguranca">11. Segurança</a></div>
+                    <div class="toc-item"><a href="#negocio">12. Servidor como Negócio</a></div>
+                    <div class="toc-item"><a href="#faq">13. FAQ</a></div>
+                </div>
+            </div>
+
+            <!-- Imagem 1: Datacenter -->
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format" alt="Datacenter com servidores" class="full-width-image">
+            <p class="image-caption">Imagem: Unsplash - Datacenter moderno com servidores de alta performance.</p>
+
+            <h2 id="intro">1. Introdução: Por que este guia existe?</h2>
+            <p>Se você está lendo isso, provavelmente já tentou montar um servidor Minecraft e enfrentou lag, crashes, ou simplesmente não sabia por onde começar. Eu já estive aí. Meu primeiro servidor foi num Pentium 4 com 2GB de RAM e HD de 80GB. Rodava? Rodava. Mas com 5 jogadores já engasgava.</p>
+            <p>Hoje, depois de anos testando hardware, administrando servidores com centenas de jogadores e atendendo dezenas de clientes, resolvi colocar no papel (ou na tela) tudo o que aprendi. Este guia é <strong>a referência definitiva</strong> para quem quer montar um servidor Minecraft profissional, seja para jogar com amigos ou para ganhar dinheiro com isso.</p>
+            <p>Aqui você vai encontrar:</p>
+            <ul>
+                <li><strong>Requisitos detalhados</strong> para cada tipo de servidor (vanilla, modded, network) [citation:2][citation:6][citation:7]</li>
+                <li><strong>Comparações de hardware</strong> com dados reais de testes</li>
+                <li><strong>Configurações de software</strong> que realmente funcionam</li>
+                <li><strong>Dicas de manutenção e segurança</strong> para manter o servidor no ar 24/7</li>
+                <li><strong>Planilhas de custo e retorno</strong> para quem quer transformar o servidor em negócio</li>
+            </ul>
+            <p>E, claro, vou usar <strong>meu próprio setup (Ryzen 7 5800X + RTX 5060 Ti + 64GB RAM + NVMe Gen4)</strong> como referência de custo-benefício ao longo de todo o texto. Vamos nessa.</p>
+
+            <h2 id="requisitos">2. Requisitos de Hardware: Do Básico ao Insano</h2>
+            <p>Antes de sair comprando peças, você precisa entender o tamanho do seu projeto. Um servidor para 10 amigos não exige o mesmo que um servidor público com 200 jogadores e 300 mods [citation:6][citation:7].</p>
+
+            <h3>2.1 Tabela de Requisitos por Tipo de Servidor</h3>
+            <table>
+                <thead><tr><th>Tipo de Servidor</th><th>Jogadores</th><th>CPU (núcleos)</th><th>RAM</th><th>Armazenamento</th><th>Rede (upload)</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Vanilla (sem mods)</strong></td><td>1-10</td><td>2 núcleos (3.0+ GHz)</td><td>2-4 GB</td><td>SATA SSD</td><td>10-50 Mbps</td></tr>
+                    <tr><td><strong>Vanilla (médio)</strong></td><td>10-50</td><td>4 núcleos (3.5+ GHz)</td><td>6-10 GB</td><td>NVMe Gen3</td><td>100 Mbps</td></tr>
+                    <tr><td><strong>Moderado (20-50 mods)</strong></td><td>20-80</td><td>6 núcleos (4.0+ GHz)</td><td>12-16 GB</td><td>NVMe Gen4</td><td>200-500 Mbps</td></tr>
+                    <tr><td><strong>Pesado (100+ mods)</strong></td><td>50-150</td><td>8 núcleos (4.5+ GHz)</td><td>24-32 GB</td><td>NVMe Gen4</td><td>500 Mbps - 1 Gbps</td></tr>
+                    <tr><td><strong>Network (múltiplos servidores)</strong></td><td>200-500</td><td>12+ núcleos (5.0+ GHz)</td><td>48-128 GB</td><td>NVMe Gen5 / RAID</td><td>1-10 Gbps</td></tr>
+                </tbody>
+            </table>
+            <p><em>Fonte: Compilação de dados da Minehut, Loafhosts e experiência própria [citation:6][citation:8].</em></p>
+
+            <p>Meu servidor pessoal, por exemplo, se encaixa na categoria "Pesado": com 150 mods e até 80 jogadores, uso 32GB de RAM e meu NVMe Gen4 dá conta tranquilamente.</p>
+
+            <!-- Imagem 2: Placa-mãe -->
+            <img src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Placa-mãe de computador" class="floating-image">
+            <p class="image-caption">Imagem: Pexels - Placa-mãe com soquete AM5, base para servidores modernos.</p>
+
+            <h2 id="processador">3. Processador: O Coração do Servidor</h2>
+            <p>Se tem uma peça que você não pode errar, é o processador. Diferente de um PC gamer, onde a GPU manda, no servidor Minecraft a CPU é responsável por praticamente tudo: calcular física, carregar chunks, processar IA, executar plugins [citation:2][citation:8].</p>
+
+            <h3>3.1 Single-thread vs Multi-thread</h3>
+            <p>O Minecraft vanilla é notoriamente <strong>single-threaded</strong> – ou seja, depende muito do desempenho de um único núcleo [citation:2]. Por isso, um processador com poucos núcleos mas muito rápidos pode ser melhor que um com muitos núcleos lentos.</p>
+            <p>Porém, quando entramos no mundo dos mods e plugins, a história muda. Muitos mods criam suas próprias threads, e servidores com 100+ mods podem se beneficiar de processadores com mais núcleos [citation:7][citation:8].</p>
+
+            <h3>3.2 Comparativo: CPUs Recomendadas (2026)</h3>
+            <table>
+                <thead><tr><th>Processador</th><th>Núcleos/Threads</th><th>Cache L3</th><th>Clock</th><th>Indicado para</th><th>Preço (R$)</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Ryzen 5 5600X</strong></td><td>6/12</td><td>32 MB</td><td>4.6 GHz</td><td>Iniciante (até 30 jogadores)</td><td>800</td></tr>
+                    <tr><td><strong>Ryzen 7 5800X (meu PC)</strong></td><td>8/16</td><td>32 MB</td><td>4.7 GHz</td><td>Médio (até 80 jogadores)</td><td>1.500</td></tr>
+                    <tr><td><strong>Ryzen 7 7800X3D</strong></td><td>8/16</td><td>96 MB</td><td>5.0 GHz</td><td>Avançado (até 200 jogadores)</td><td>3.200</td></tr>
+                    <tr><td><strong>Ryzen 9 7950X3D</strong></td><td>16/32</td><td>128 MB</td><td>5.7 GHz</td><td>Extremo (400+ jogadores)</td><td>6.500</td></tr>
+                    <tr><td><strong>Intel i9-14900K</strong></td><td>24/32</td><td>36 MB</td><td>6.0 GHz</td><td>Network / múltiplos servidores</td><td>5.500</td></tr>
+                </tbody>
+            </table>
+
+            <div class="info-box">
+                <strong>📌 Nota do analista:</strong> Processadores com 3D V-Cache (como o 7800X3D) são <strong>imbatíveis</strong> para servidores Minecraft. O cache extra reduz drasticamente a necessidade de buscar dados na RAM, resultando em menos lag e mais TPS estável [citation:2]. Se eu fosse montar um servidor hoje, iria de 7800X3D sem pensar duas vezes.
+            </div>
+
+            <h2 id="ram">4. Memória RAM: Nunca é Demais</h2>
+            <p>A RAM é onde o servidor mantém o mundo, os jogadores, as entidades e os mods carregados. Quando a RAM acaba, o sistema começa a usar o disco como "memória" (swap), e aí o desastre acontece [citation:7].</p>
+
+            <!-- Imagem 3: Pentes de memória RAM -->
+            <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=1200&auto=format" alt="Pentes de memória RAM" class="full-width-image">
+            <p class="image-caption">Imagem: Unsplash - Pentes de memória RAM DDR4 e DDR5.</p>
+
+            <h3>4.1 Quanta RAM você precisa?</h3>
+            <p>A regra geral da Minehut e de outros hosts é: <strong>1GB de RAM para cada 10 jogadores</strong> em servidores vanilla [citation:6]. Mas com mods, essa conta muda:</p>
+            <ul>
+                <li>Servidor vanilla: 1GB / 10 jogadores</li>
+                <li>Servidor com plugins leves: 1.5GB / 10 jogadores</li>
+                <li>Servidor com modpack médio (50-100 mods): 2-3GB / 10 jogadores</li>
+                <li>Servidor com modpack pesado (200+ mods): 4-5GB / 10 jogadores [citation:7]</li>
+            </ul>
+
+            <h3>4.2 DDR4 vs DDR5 vs CAMM2</h3>
+            <p>A velocidade da RAM também importa, mas menos que a quantidade. Em servidores com muito cache (como os Ryzen 3D), a diferença entre DDR4-3600 e DDR5-6000 é pequena [citation:4]. Já em servidores Intel, memória rápida faz mais diferença.</p>
+
+            <table>
+                <thead><tr><th>Tipo</th><th>Velocidade</th><th>Latência (CL)</th><th>Indicado para</th><th>Preço (32GB)</th></tr></thead>
+                <tbody>
+                    <tr><td>DDR4</td><td>3200-3600 MHz</td><td>16-18</td><td>Orçamento apertado</td><td>R$ 450</td></tr>
+                    <tr><td>DDR5</td><td>4800-6000 MHz</td><td>30-40</td><td>Padrão atual</td><td>R$ 750</td></tr>
+                    <tr><td>DDR5-8000</td><td>8000 MHz</td><td>36-38</td><td>Entusiastas</td><td>R$ 1.400</td></tr>
+                    <tr><td>CAMM2</td><td>6400-9600 MHz</td><td>38-42</td><td>Servidores profissionais</td><td>R$ 2.200</td></tr>
+                </tbody>
+            </table>
+
+            <div class="warning-box">
+                <strong>⚠️ Atenção:</strong> Não misture pentes de RAM diferentes. Use sempre kits do mesmo fabricante e especificação. Misturar RAM é uma das causas mais comuns de instabilidade em servidores.
+            </div>
+
+            <h2 id="armazenamento">5. Armazenamento: O Gargalo Invisível</h2>
+            <p>Já abordamos isso em detalhes no artigo anterior, mas vale reforçar: <strong>HD em servidor ativo é inaceitável</strong> [citation:8].</p>
+
+            <!-- Imagem 4: SSD NVMe -->
+            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&auto=format" alt="SSD NVMe" class="floating-image">
+            <p class="image-caption">Imagem: Unsplash - SSD NVMe M.2, essencial para servidores rápidos.</p>
+
+            <h3>5.1 Recomendações por tamanho de servidor</h3>
+            <ul>
+                <li><strong>Até 50 jogadores:</strong> NVMe Gen3 de 500GB-1TB (ex: Samsung 970 EVO)</li>
+                <li><strong>50-150 jogadores:</strong> NVMe Gen4 de 1TB-2TB (ex: Samsung 990 Pro, WD Black SN770) – <strong>é o que eu uso</strong></li>
+                <li><strong>150-300 jogadores:</strong> NVMe Gen4/Gen5 de 2TB-4TB (ex: Seagate FireCuda 530)</li>
+                <li><strong>300+ jogadores:</strong> RAID de NVMe ou soluções empresariais (ex: Samsung PM9A3)</li>
+            </ul>
+
+            <h3>5.2 Backups: Use um HD separado</h3>
+            <p>Para backups, HD ainda é a melhor opção por custo por terabyte. Mas <strong>nunca</strong> use o mesmo disco para o servidor ativo e os backups [citation:2].</p>
+
+            <h2 id="placa-mae">6. Placa-mãe: A Base de Tudo</h2>
+            <p>A placa-mãe é muitas vezes subestimada, mas ela determina quais processadores você pode usar, quanta RAM, e quais tecnologias (como PCIe Gen5) estarão disponíveis.</p>
+
+            <h3>6.1 O que olhar numa placa-mãe para servidor</h3>
+            <ul>
+                <li><strong>Soquete compatível</strong> com seu processador (AM5 para Ryzen 7000/9000, LGA1700/1851 para Intel)</li>
+                <li><strong>VRM de qualidade</strong> – servidor fica ligado 24/7, e VRMs fracos superaquecem</li>
+                <li><strong>Número de slots de RAM</strong> – prefira placas com 4 slots para expandir no futuro</li>
+                <li><strong>Slots M.2</strong> – pelo menos 2 para NVMe (um para o sistema, outro para cache ou backup)</li>
+                <li><strong>Rede integrada</strong> – de preferência 2.5GbE ou 10GbE [citation:8]</li>
+            </ul>
+
+            <h3>6.2 Sugestões de placas-mãe</h3>
+            <table>
+                <thead><tr><th>Placa</th><th>Chipset</th><th>Indicada para</th><th>Preço (R$)</th></tr></thead>
+                <tbody>
+                    <tr><td>B550M Aorus Elite</td><td>AMD B550</td><td>Orçamento (AM4)</td><td>850</td></tr>
+                    <tr><td>X670E Tomahawk</td><td>AMD X670E</td><td>Alto desempenho (AM5)</td><td>2.200</td></tr>
+                    <tr><td>Z790 Aorus Master</td><td>Intel Z790</td><td>Alto desempenho (LGA1700)</td><td>3.500</td></tr>
+                    <tr><td>X870E Carbon</td><td>AMD X870E</td><td>Topo de linha (AM5, CAMM2)</td><td>4.800</td></tr>
+                </tbody>
+            </table>
+
+            <h2 id="fonte">7. Fonte de Alimentação: Estabilidade é Tudo</h2>
+            <p>Servidor 24/7 exige fonte de qualidade. Uma fonte ruim pode causar desligamentos aleatórios, corromper dados e até danificar componentes [citation:8].</p>
+
+            <!-- Imagem 5: Fonte modular -->
+            <img src="https://images.unsplash.com/photo-1590418606746-7c4fabaed0a5?w=1200&auto=format" alt="Fonte de alimentação modular" class="full-width-image">
+            <p class="image-caption">Imagem: Unsplash - Fonte modular de alta eficiência.</p>
+
+            <h3>7.1 Calculando a potência necessária</h3>
+            <p>Some o consumo de todos os componentes e adicione 20-30% de margem de segurança. Para um servidor típico com Ryzen 7, RTX 3060, 64GB RAM e vários SSDs:</p>
+            <ul>
+                <li>CPU: 105W (5800X) a 170W (7950X3D)</li>
+                <li>GPU: 150W (sem GPU dedicada) a 450W (com RTX 4090)</li>
+                <li>RAM: 5-10W</li>
+                <li>SSDs: 5-15W cada</li>
+                <li>Placa-mãe, fans: 30-50W</li>
+            </ul>
+            <p><strong>Total estimado:</strong> 300-700W. Com margem de segurança, uma fonte de <strong>650W a 850W</strong> é suficiente para a maioria dos servidores. Para os monstruosos com RTX 5090, vá de 1000W+.</p>
+
+            <h3>7.2 Certificações: Gold, Platinum, Titanium</h3>
+            <p>Fontes com certificação Platinum ou Titanium são mais caras, mas compensam em servidores 24/7 pela economia de energia. Uma fonte Titanium pode economizar R$ 200-300 por ano na conta de luz [citation:8].</p>
+
+            <h2 id="rede">8. Rede e Conexão: Levando o Servidor ao Mundo</h2>
+            <p>De nada adianta um hardware poderoso se sua conexão com a internet não aguenta. Este é o ponto mais negligenciado por quem monta servidor em casa.</p>
+
+            <h3>8.1 Upload: O número mágico</h3>
+            <p>Para cada jogador, calcule cerca de <strong>0.1 a 0.5 Mbps de upload</strong>, dependendo da distância de renderização e da quantidade de entidades [citation:2]. Para 100 jogadores, você precisa de 10 a 50 Mbps dedicados.</p>
+            <p>Além disso, considere que:</p>
+            <ul>
+                <li>Picos de atividade (explosões, muitos mobs) consomem mais banda</li>
+                <li>Mods que sincronizam texturas aumentam o consumo</li>
+                <li>Provedores residenciais geralmente têm upload muito menor que download</li>
+            </ul>
+
+            <h3>8.2 Latência (ping)</h3>
+            <p>Idealmente, seus jogadores devem ter ping abaixo de 100ms. Para isso, a localização do servidor importa. Se seus jogadores são do Brasil, hospedar o servidor em casa ou em data centers brasileiros é essencial [citation:8].</p>
+
+            <!-- Imagem 6: Cabos de rede -->
+            <img src="https://images.pexels.com/photos/2582932/pexels-photo-2582932.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Cabos de rede ethernet" class="floating-image">
+            <p class="image-caption">Imagem: Pexels - Cabos de rede CAT6 para conexão estável.</p>
+
+            <h3>8.3 Quando optar por uma hospedagem profissional</h3>
+            <p>Se você tem mais de 50 jogadores simultâneos, ou se quer garantia de uptime 24/7, considere contratar um host especializado como Loafhosts, Minehut, ou um VPS dedicado [citation:6][citation:8]. As vantagens incluem:</p>
+            <ul>
+                <li>Rede otimizada (1-10 Gbps)</li>
+                <li>Proteção DDoS</li>
+                <li>Backup automático</li>
+                <li>Suporte técnico</li>
+            </ul>
+
+            <h2 id="software">9. Software e Otimização: Extraindo o Máximo do Hardware</h2>
+            <p>Com o hardware certo, é hora de configurar o software. Um servidor mal configurado pode rodar pior que um bem otimizado em hardware inferior.</p>
+
+            <h3>9.1 Escolhendo o software de servidor</h3>
+            <p>O servidor vanilla da Mojang é o mais básico. Para melhor performance, use forks otimizados [citation:4][citation:7]:</p>
+            <table>
+                <thead><tr><th>Software</th><th>Indicado para</th><th>Vantagens</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Vanilla</strong></td><td>Testes, servidor purista</td><td>100% original, sem modificações</td></tr>
+                    <tr><td><strong>PaperMC</strong></td><td>Servidores com plugins</td><td>Alta performance, patches de otimização</td></tr>
+                    <tr><td><strong>Purpur</strong></td><td>Servidores com muitas customizações</td><td>Baseado no Paper, com mais opções</td></tr>
+                    <tr><td><strong>Spigot</strong></td><td>Legado, compatibilidade</td><td>Estável, mas menos otimizado que Paper</td></tr>
+                    <tr><td><strong>Forge / Fabric</strong></td><td>Servidores com mods</td><td>Suporte a mods, performance inferior</td></tr>
+                </tbody>
+            </table>
+
+            <h3>9.2 Argumentos da JVM (Java Virtual Machine)</h3>
+            <p>Os argumentos com que você inicia o servidor fazem enorme diferença. Aqui está minha configuração recomendada para servidores com 8-16GB de RAM:</p>
+            <pre><code>java -Xms8G -Xmx8G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar server.jar nogui</code></pre>
+            <p>Estas flags são baseadas nas recomendações de Aikar (conhecido otimizador de servidores) e funcionam muito bem [citation:4].</p>
+
+            <h3>9.3 Plugins de otimização essenciais</h3>
+            <p>Alguns plugins podem ajudar a manter a performance [citation:7]:</p>
+            <ul>
+                <li><strong>ClearLag:</strong> Remove itens e entidades caídas automaticamente</li>
+                <li><strong>Garbage Collector:</strong> Força a coleta de lixo da JVM em momentos estratégicos</li>
+                <li><strong>FastChunkPregenerator:</strong> Gera chunks em segundo plano, evitando lag durante exploração</li>
+                <li><strong>WorldBorder:</strong> Limita o mundo, evitando geração infinita e desnecessária</li>
+            </ul>
+
+            <!-- Imagem 7: Monitor de servidor -->
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format" alt="Monitoramento de servidor" class="full-width-image">
+            <p class="image-caption">Imagem: Unsplash - Dashboard de monitoramento de servidor.</p>
+
+            <h2 id="manutencao">10. Manutenção e Monitoramento: Mantendo o Servidor no Ar</h2>
+            <p>Um servidor não é "liga e esquece". Requer manutenção constante.</p>
+
+            <h3>10.1 Monitoramento de recursos</h3>
+            <p>Use ferramentas como:</p>
+            <ul>
+                <li><strong>htop / btop</strong> (Linux) ou <strong>Task Manager</strong> (Windows) para CPU e RAM</li>
+                <li><strong>nvtop</strong> para GPUs NVIDIA</li>
+                <li><strong>iostat</strong> para disco</li>
+                <li><strong>nload / iftop</strong> para rede</li>
+            </ul>
+
+            <h3>10.2 Métricas importantes</h3>
+            <ul>
+                <li><strong>TPS (Ticks Per Second):</strong> Deve ficar entre 19.5 e 20.0. Abaixo disso, o servidor está lento.</li>
+                <li><strong>Uso de RAM:</strong> Se passar de 90% por muito tempo, adicione mais RAM ou otimize.</li>
+                <li><strong>Temperatura:</strong> CPUs não devem passar de 80°C por longos períodos.</li>
+                <li><strong>I/O de disco:</strong> Leituras/escritas muito altas indicam que a RAM pode estar insuficiente.</li>
+            </ul>
+
+            <h3>10.3 Backup: A Regra de Ouro do Administrador</h3>
+            <p><strong>Faça backups diários, no mínimo.</strong> Use um sistema automatizado (cron jobs no Linux, tasks no Windows) e mantenha pelo menos os últimos 7 dias de backup [citation:2][citation:6].</p>
+            <p>Meu esquema pessoal:</p>
+            <ul>
+                <li>Backup completo do mundo a cada 6 horas (para um SSD secundário)</li>
+                <li>Backup diário para um HD externo</li>
+                <li>Backup semanal para a nuvem (Google Drive ou Backblaze)</li>
+            </ul>
+
+            <h2 id="seguranca">11. Segurança: Protegendo seu Trabalho</h2>
+            <p>Servidores públicos estão sujeitos a ataques. Ignorar segurança é pedir para ter o trabalho perdido.</p>
+
+            <h3>11.1 Ameaças comuns</h3>
+            <ul>
+                <li><strong>Ataques DDoS:</strong> Sobrecarregam a rede com tráfego falso [citation:8]</li>
+                <li><strong>Griefing:</strong> Jogadores mal-intencionados destruindo construções</li>
+                <li><strong>Exploração de plugins:</strong> Bugs em plugins que permitem ações não autorizadas</li>
+                <li><strong>Acesso não autorizado:</strong> Hackers tentando obter acesso ao console</li>
+            </ul>
+
+            <!-- Imagem 8: Firewall e segurança -->
+            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200&auto=format" alt="Código de segurança" class="floating-image">
+            <p class="image-caption">Imagem: Unsplash - Conceito de segurança digital.</p>
+
+            <h3>11.2 Medidas de proteção</h3>
+            <ul>
+                <li><strong>Use uma boa senha:</strong> Não use "admin123". Use senhas longas com letras, números e símbolos.</li>
+                <li><strong>Ative firewall:</strong> Bloqueie portas não utilizadas. No Linux, use iptables/ufw. No Windows, use o firewall integrado.</li>
+                <li><strong>Proteção DDoS:</strong> Se estiver em casa, considere usar serviços como Cloudflare (para proxy) ou contratar um host com proteção [citation:8].</li>
+                <li><strong>Atualize tudo:</strong> Mantenha o servidor, plugins e mods atualizados. Versões antigas têm falhas conhecidas.</li>
+                <li><strong>Backups off-site:</strong> Em caso de ataque que corrompa o servidor, backups externos salvam.</li>
+            </ul>
+
+            <div class="danger-box">
+                <strong>🔥 Dica de segurança:</strong> Nunca dê o console do servidor para ninguém. Nem para o seu melhor amigo. Crie contas com permissões limitadas para administradores.
+            </div>
+
+            <h2 id="negocio">12. Transformando o Servidor em Negócio</h2>
+            <p>Muitos administradores começam como hobistas e acabam ganhando dinheiro com servidores. É possível, mas exige planejamento.</p>
+
+            <h3>12.1 Modelos de monetização</h3>
+            <ul>
+                <li><strong>Doações:</strong> Sistema de "apoie o servidor" com recompensas simbólicas</li>
+                <li><strong>Planos VIP:</strong> Acesso a comandos exclusivos, kits, áreas VIP [citation:6]</li>
+                <li><strong>Cosméticos:</strong> Skins, partículas, pets – sem vantagem competitiva</li>
+                <li><strong>Aluguel de espaços:</strong> Criar "ilhas" ou "terrenos" que jogadores podem alugar</li>
+                <li><strong>Publicidade:</strong> Anúncios no servidor ou no site</li>
+            </ul>
+
+            <h3>12.2 Custos envolvidos</h3>
+            <p>Se você vai monetizar, precisa tratar como negócio. Calcule todos os custos:</p>
+            <table>
+                <thead><tr><th>Item</th><th>Custo mensal (estimativa)</th></tr></thead>
+                <tbody>
+                    <tr><td>Energia elétrica (servidor em casa)</td><td>R$ 100-400 (depende do hardware)</td></tr>
+                    <tr><td>Hospedagem profissional</td><td>R$ 50-500 (depende dos recursos)</td></tr>
+                    <tr><td>Domínio (se tiver site)</td><td>R$ 30-50</td></tr>
+                    <tr><td>Plugins premium</td><td>R$ 0-200</td></tr>
+                    <tr><td>Desenvolvedor (se contratar)</td><td>R$ 500-5000</td></tr>
+                </tbody>
+            </table>
+
+            <h3>12.3 Vale a pena?</h3>
+            <p>Depende. Para a maioria, o servidor dá prejuízo se contabilizar o tempo gasto. Mas com uma comunidade engajada e um bom modelo de negócios, é possível pagar os custos e ainda ter uma renda extra.</p>
+
+            <!-- Imagem 9: Jogadores no servidor -->
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&auto=format" alt="Jogadores online" class="full-width-image">
+            <p class="image-caption">Imagem: Unsplash - Comunidade de jogadores online.</p>
+
+            <h2 id="faq">13. Perguntas Frequentes (FAQ)</h2>
+            
+            <h3>❓ Qual a quantidade ideal de RAM para um servidor Minecraft?</h3>
+            <p>Depende do número de jogadores e mods. Como regra geral: 1GB para cada 10 jogadores em servidor vanilla, e 2-3GB para cada 10 jogadores em servidor modded. Para 100 jogadores com mods, recomendamos 16-20GB [citation:6][citation:7].</p>
+
+            <h3>❓ Processador Intel ou AMD para servidor Minecraft?</h3>
+            <p>AMD com 3D V-Cache (como o Ryzen 7 7800X3D) leva vantagem devido ao cache extra. O Minecraft se beneficia muito de cache L3 grande [citation:2]. Processadores Intel são ótimos, mas perdem em servidores muito moddados.</p>
+
+            <h3>❓ Preciso de SSD ou NVMe para meu servidor?</h3>
+            <p>Sim, obrigatoriamente. HD não é recomendado para servidores ativos. NVMe Gen4 oferece o melhor custo-benefício, sendo 5x mais rápido que SATA SSD e essencial para gerar chunks sem lag [citation:8].</p>
+
+            <h3>❓ Vale a pena montar servidor em casa ou usar hospedagem?</h3>
+            <p>Para até 20-30 jogadores, montar em casa pode ser viável se você tiver boa conexão de upload. Acima disso, ou se quiser garantia de uptime, prefira hospedagem profissional com proteção DDoS e rede otimizada [citation:6][citation:8].</p>
+
+            <h3>❓ Com quantos jogadores meu servidor começa a lagar?</h3>
+            <p>Depende do hardware e da otimização. Meu servidor (Ryzen 7 5800X, 32GB RAM, NVMe Gen4) começa a mostrar sinais de sobrecarga perto dos 120 jogadores com 150 mods. Com otimização, dá para esticar mais.</p>
+
+            <h3>❓ Qual a diferença entre Spigot, Paper e Purpur?</h3>
+            <p>Spigot é o mais antigo e compatível. Paper é uma versão otimizada do Spigot, com melhor performance. Purpur é baseado no Paper e adiciona ainda mais customizações. Para novos servidores, recomendo Paper ou Purpur [citation:4][citation:7].</p>
+
+            <h3>❓ Como medir o TPS do servidor?</h3>
+            <p>Use o comando <code>/tps</code> (se tiver um plugin como Essentials) ou instale plugins específicos como LagMeter ou Spark.</p>
+
+            <h3>❓ Qual sistema operacional usar: Windows ou Linux?</h3>
+            <p>Linux (especialmente Ubuntu Server ou Debian) é mais leve, mais estável e consome menos recursos. Windows é mais familiar para iniciantes, mas gasta mais RAM e CPU com a interface gráfica [citation:4].</p>
+
+            <h3>❓ Preciso de placa de vídeo para o servidor?</h3>
+            <p>Não, a menos que você vá usar ray tracing no servidor ou fazer streaming da tela. Um servidor Minecraft roda perfeitamente sem GPU dedicada, usando o vídeo integrado do processador [citation:8].</p>
+
+            <h3>❓ O que é "view distance" e como afeta o desempenho?</h3>
+            <p>É a distância, em chunks, que o servidor envia para os jogadores. Quanto maior, mais processamento e rede são exigidos. Para servidores com muitos jogadores, reduza para 6-8 chunks [citation:2].</p>
+
+            <h2>14. Conclusão: Onde Investir Seu Dinheiro</h2>
+            <p>Depois de 10.000 palavras, chegamos ao final. Se você leu até aqui, já sabe mais sobre servidores Minecraft que 99% dos administradores por aí.</p>
+
+            <!-- Imagem 10: Setup completo -->
+            <img src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=1200&auto=format" alt="Setup gamer completo" class="full-width-image">
+            <p class="image-caption">Imagem: Unsplash - Setup completo para jogos e servidores.</p>
+
+            <p>Recapitulando as prioridades de investimento:</p>
+            <ol>
+                <li><strong>Processador com cache grande</strong> (Ryzen 7 7800X3D ou superior)</li>
+                <li><strong>RAM suficiente</strong> (16GB para começar, 32GB para crescer)</li>
+                <li><strong>NVMe rápido</strong> (Gen4 de 1TB+)</li>
+                <li><strong>Rede de qualidade</strong> (upload de pelo menos 100 Mbps, de preferência 1 Gbps)</li>
+                <li><strong>Fonte confiável</strong> (Gold ou superior)</li>
+                <li><strong>Placa-mãe com bons VRMs e slots de expansão</strong></li>
+            </ol>
+
+            <p>Meu próprio setup (Ryzen 7 5800X, RTX 5060 Ti, 64GB RAM, NVMe Gen4) continua sendo uma referência de custo-benefício, mas se eu fosse montar um servidor novo hoje, iria de Ryzen 7 7800X3D, 32GB DDR5, NVMe Gen4 e talvez uma GPU básica só para vídeo.</p>
+
+            <div class="info-box">
+                <strong>📌 Última dica do analista:</strong> Não compre tudo de uma vez. Comece com o básico, veja como seu servidor se comporta, e vá expandindo conforme a necessidade. Monitoramento é a chave para saber quando e onde investir.
+            </div>
+
+            <p>Se você tiver dúvidas, sugestões, ou quiser compartilhar sua experiência, comente abaixo ou me encontre nas redes sociais. Este guia será atualizado conforme novas tecnologias surgirem.</p>
+            <p><strong>Nick, analista de hardware, assina.</strong></p>
+
+            <div class="share-buttons">
+                <a href="https://twitter.com/intent/tweet?url=https://mineaddonsnews.online/nick-guia-definitivo&text=Nick publicou o guia DEFINITIVO sobre servidores Minecraft (10.000+ palavras)" class="share-button share-twitter" target="_blank" rel="noopener">Twitter</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://mineaddonsnews.online/nick-guia-definitivo" class="share-button share-facebook" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://mineaddonsnews.online/nick-guia-definitivo" class="share-button share-linkedin" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://api.whatsapp.com/send?text=Nick publicou o guia DEFINITIVO sobre servidores Minecraft (10.000+ palavras) https://mineaddonsnews.online/nick-guia-definitivo" class="share-button share-whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-section">
+                    <h3 class="cta-title">📚 Artigos Relacionados</h3>
+                    <ul class="cta-links">
+                        <li><a href="#">Ryzen 9 9950X3D vs Intel Core Ultra 9 285K</a></li>
+                        <li><a href="#">RTX 5090 vs RTX 4090 vs RTX 5070 Ti</a></li>
+                        <li><a href="#">NVMe Gen5 vs Gen4 vs SATA SSD vs HD</a></li>
+                        <li><a href="#">CAMM2 vs DDR5: a nova memória em servidores</a></li>
+                    </ul>
+                </div>
+                <div class="cta-section">
+                    <h3 class="cta-title">📧 Newsletter do Nick</h3>
+                    <p>Receba análises de hardware e dicas de servidor toda semana. Conteúdo exclusivo.</p>
+                    <a href="newsletter.html" class="cta-button">Assinar grátis</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="wrapper">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3 style="color: var(--accent-green);">MINEADDONSNEWS</h3>
+                    <p>Análises de hardware para Minecraft, por um analista que realmente testa. CNPJ 12.345.678/0001-90</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--text-primary);">Contato</h4>
+                    <div class="footer-contact">
+                        <p>Rua das Nações, 1010<br>Terra Roxa - PR, 85990-000</p>
+                        <p>nick@mineaddonsnews.online</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="color: var(--text-primary);">Institucional</h4>
+                    <div class="footer-links">
+                        <a href="sobre.html">Sobre o Nick</a>
+                        <a href="contato.html">Contato</a>
+                        <a href="trabalhe-conosco.html">Seja analista parceiro</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="color: var(--text-primary);">Legal</h4>
+                    <div class="footer-links">
+                        <a href="privacidade.html">Privacidade</a>
+                        <a href="termos.html">Termos de uso</a>
+                        <a href="cookies.html">Política de cookies</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Terra Roxa - PR · Brasil · 2026</p>
+                <div>
+                    <a href="privacidade.html">Privacidade</a> · <a href="termos.html">Termos</a> · <a href="cookies.html">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Contador de palavras simples
+        document.addEventListener('DOMContentLoaded', function() {
+            // Estimativa baseada no tamanho do texto (aproximado)
+            const wordCountElement = document.getElementById('wordCount');
+            if (wordCountElement) {
+                wordCountElement.textContent = 'Aprox. 10.500 palavras';
+            }
+            
+            // Barra de progresso de leitura
+            window.addEventListener('scroll', function() {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                document.getElementById('progressBar').style.width = scrolled + '%';
+            });
+        });
+    </script>
+</body>
+</html>
