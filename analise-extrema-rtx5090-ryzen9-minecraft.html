@@ -1,636 +1,630 @@
-<!DOCTYPE html><html lang="pt-br"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nick Analista de Hardware: RTX 5090 vs Ryzen 9 9950X3D para servidor Minecraft 2026</title>
-    <meta name="description" content="Nick, analista de hardware, testa as peças mais caras do momento (RTX 5090, Ryzen 9 9950X3D, CAMM2) em servidor Minecraft com 400 add-ons. Dados reais, tabelas e custo-benefício.">
-    <meta name="keywords" content="RTX 5090, Ryzen 9 9950X3D, CAMM2, servidor Minecraft, hardware alto CPC, Nick analista">
-    <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8967995144964134" crossorigin="anonymous"></script>
-    <style>
-        :root {
-            --bg-primary: #0d1117;
-            --bg-secondary: #161b22;
-            --bg-elevated: #21262d;
-            --border-color: #30363d;
-            --text-primary: #f0f6fc;
-            --text-secondary: #8b949e;
-            --accent-green: #3fb950;
-            --accent-green-muted: #2ea043;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Fira Code', monospace;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.7;
-            font-size: 16px;
-        }
-        .wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        .site-header {
-            background: #010409;
-            border-bottom: 1px solid var(--border-color);
-            padding: 24px 0;
-        }
-        .header-content {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-        .creeper-logo {
-            width: 60px;
-            height: 60px;
-            background: var(--accent-green);
-            position: relative;
-            border: 3px solid #000;
-            flex-shrink: 0;
-        }
-        .creeper-eye {
-            width: 12px;
-            height: 12px;
-            background: #000;
-            position: absolute;
-            top: 12px;
-        }
-        .eye-left { left: 8px; }
-        .eye-right { right: 8px; }
-        .creeper-mouth {
-            width: 24px;
-            height: 24px;
-            background: #000;
-            position: absolute;
-            bottom: 6px;
-            left: 18px;
-            clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 75% 50%, 75% 100%, 25% 100%, 25% 50%, 0% 50%);
-        }
-        .site-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--accent-green);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .site-tagline {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-top: 4px;
-        }
-        .site-nav {
-            background: var(--bg-secondary);
-            border-bottom: 1px solid var(--border-color);
-            padding: 12px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-        }
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            flex-wrap: wrap;
-        }
-        .nav-links a {
-            color: var(--text-secondary);
-            font-weight: 500;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            text-decoration: none;
-        }
-        .nav-links a:hover {
-            color: var(--accent-green);
-        }
-        .breadcrumb {
-            margin: 24px 0;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-        .breadcrumb a {
-            color: var(--text-secondary);
-            text-decoration: none;
-        }
-        .breadcrumb a:hover {
-            color: var(--accent-green);
-        }
-        .article-container {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 48px;
-            margin: 40px 0;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-        }
-        h1 {
-            color: var(--accent-green);
-            font-size: 2.4rem;
-            font-weight: 700;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 16px;
-            margin-bottom: 24px;
-        }
-        h2 {
-            color: var(--accent-green);
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin: 40px 0 20px;
-            border-left: 4px solid var(--accent-green);
-            padding-left: 16px;
-        }
-        h3 {
-            color: var(--text-primary);
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin: 30px 0 15px;
-        }
-        p {
-            color: var(--text-secondary);
-            margin-bottom: 20px;
-            font-size: 1.05rem;
-        }
-        ul, ol {
-            color: var(--text-secondary);
-            margin-left: 24px;
-            margin-bottom: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        pre {
-            background: #0d1117;
-            border-left: 4px solid var(--accent-green);
-            border-radius: 8px;
-            padding: 20px;
-            margin: 30px 0;
-            overflow-x: auto;
-            font-family: var(--font-mono);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            border: 1px solid var(--border-color);
-        }
-        code {
-            font-family: var(--font-mono);
-            color: #f0f6fc;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 30px 0;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid var(--border-color);
-        }
-        th {
-            background: linear-gradient(135deg, #1e3a5f, #0f2b45);
-            color: #f0f9ff;
-            font-weight: 600;
-            padding: 16px 12px;
-            text-align: left;
-        }
-        td {
-            padding: 14px 12px;
-            border-bottom: 1px solid var(--border-color);
-            background-color: var(--bg-elevated);
-            color: var(--text-secondary);
-        }
-        blockquote {
-            background: var(--bg-elevated);
-            border-left: 4px solid var(--accent-green);
-            padding: 20px 30px;
-            margin: 30px 0;
-            border-radius: 8px;
-            font-style: italic;
-            color: var(--text-primary);
-        }
-        .last-updated {
-            display: inline-block;
-            background: var(--bg-elevated);
-            color: var(--text-secondary);
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-size: 0.9rem;
-            margin: 20px 0;
-            border: 1px solid var(--border-color);
-        }
-        .author-info {
-            background: var(--bg-elevated);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 20px;
-            margin: 30px 0;
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-        .author-photo {
-            width: 80px;
-            height: 80px;
-            background-image: url('https://www.imgur.la/images/2026/03/03/IMG_20260131_201046_285.th.webp');
-            background-size: cover;
-            background-position: center;
-            border-radius: 50%;
-            border: 2px solid var(--accent-green);
-            background-color: #2d2d2d;
-        }
-        .author-details {
-            flex: 1;
-        }
-        .author-name {
-            color: var(--accent-green);
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-        .author-title {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 8px;
-        }
-        .author-bio {
-            color: var(--text-primary);
-            font-size: 0.95rem;
-        }
-        .badge {
-            background: var(--accent-green);
-            color: #000;
-            padding: 4px 12px;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-right: 8px;
-        }
-        .info-box {
-            background: rgba(63, 185, 80, 0.1);
-            border-left: 4px solid var(--accent-green);
-            padding: 20px;
-            border-radius: 8px;
-            margin: 30px 0;
-        }
-        .nota-tecnica {
-            background: var(--bg-elevated);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 30px;
-            margin: 40px 0;
-        }
-        .article-cta {
-            background: var(--bg-elevated);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 32px;
-            margin: 48px 0 0;
-            display: flex;
-            gap: 24px;
-            flex-wrap: wrap;
-        }
-        .cta-section {
-            flex: 1;
-            min-width: 250px;
-        }
-        .cta-title {
-            color: var(--accent-green);
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-        }
-        .cta-links {
-            list-style: none;
-        }
-        .cta-links li {
-            margin-bottom: 8px;
-        }
-        .cta-links a {
-            color: var(--accent-green);
-            text-decoration: none;
-        }
-        .cta-links a:hover {
-            text-decoration: underline;
-        }
-        .cta-button {
-            display: inline-block;
-            background: var(--accent-green);
-            color: #000;
-            padding: 12px 24px;
-            border-radius: 6px;
-            font-weight: 600;
-            text-decoration: none;
-            margin-top: 12px;
-        }
-        .cta-button:hover {
-            background: #4cba5e;
-        }
-        .share-buttons {
-            display: flex;
-            gap: 12px;
-            margin: 30px 0;
-            flex-wrap: wrap;
-        }
-        .share-button {
-            padding: 8px 16px;
-            border-radius: 6px;
-            color: white;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-        .share-twitter { background: #1DA1F2; }
-        .share-facebook { background: #4267B2; }
-        .share-linkedin { background: #0077B5; }
-        .share-whatsapp { background: #25D366; }
-        .site-footer {
-            background: #010409;
-            border-top: 1px solid var(--border-color);
-            padding: 48px 0 32px;
-            margin-top: 48px;
-        }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        .footer-about p, .footer-contact, .footer-links a {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        .footer-links a {
-            text-decoration: none;
-        }
-        .footer-links a:hover {
-            color: var(--accent-green);
-        }
-        .footer-bottom {
-            border-top: 1px solid var(--border-color);
-            padding-top: 24px;
-            display: flex;
-            justify-content: space-between;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-            flex-wrap: wrap;
-        }
-        @media (max-width: 1024px) {
-            .footer-grid { grid-template-columns: 1fr 1fr; }
-        }
-        @media (max-width: 768px) {
-            .article-container { padding: 24px; }
-            h1 { font-size: 1.8rem; }
-            h2 { font-size: 1.5rem; }
-            .footer-grid { grid-template-columns: 1fr; }
-        }
-        .setup-box {
-            background: #1a2634;
-            border: 1px solid #3fb95040;
-            border-radius: 12px;
-            padding: 20px;
-            margin: 20px 0 30px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .setup-item {
-            flex: 1 1 200px;
-            text-align: center;
-        }
-        .setup-label {
-            color: var(--accent-green);
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-        .setup-value {
-            font-size: 1.2rem;
-            color: #fff;
-        }
-    </style>
-    <!-- SCHEMA.ORG -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "TechArticle",
-      "headline": "Nick Analista de Hardware: RTX 5090 vs Ryzen 9 9950X3D para servidor Minecraft 2026",
-      "description": "Nick, analista de hardware, testa as peças mais caras do momento (RTX 5090, Ryzen 9 9950X3D, CAMM2) em servidor Minecraft com 400 add-ons. Dados reais, tabelas e custo-benefício.",
-      "author": {
-        "@type": "Person",
-        "name": "Nick",
-        "jobTitle": "Analista de Hardware"
-      },
-      "datePublished": "2026-03-05",
-      "dateModified": "2026-03-05"
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>HardwareBaseTech | Análises e Guias de Hardware com Dados Reais</title>
+  <meta name="description" content="HardwareBaseTech: análises, guias e comparativos de hardware baseados em benchmarks públicos, dados técnicos e testes documentados pela comunidade. Escolha com confiança.">
+  <meta name="robots" content="index, follow">
+  <!-- Schema.org para SEO e rich results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "HardwareBaseTech",
+    "url": "https://hardwarebasetech.online",
+    "logo": "https://hardwarebasetech.online/logo.png",
+    "sameAs": [],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "contato@hardwarebasetech.online",
+      "contactType": "customer service"
+    },
+    "description": "Análises e guias de hardware com base em dados reais, benchmarks públicos e testes da comunidade."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "HardwareBaseTech",
+    "url": "https://hardwarebasetech.online",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://hardwarebasetech.online/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
     }
-    </script>
-<meta name="author" content="Nick"><meta property="og:title" content="Nick Analista: MINEADDONSNEWS"><meta property="og:description" content="Análise completa de MINEADDONSNEWS com testes reais."><meta property="og:image" content="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200"><link rel="canonical" href="https://mineaddonsnews.online/analise-extrema-rtx5090-ryzen9-minecraft.html"></head>
+  }
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f5f7fa;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.5;
+      color: #1e2a3a;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.02);
+    }
+
+    /* HEADER */
+    .site-header {
+      padding: 1.5rem 2rem 0.75rem 2rem;
+      border-bottom: 1px solid #eef2f6;
+      background: #ffffff;
+    }
+
+    .brand {
+      margin-bottom: 1rem;
+    }
+
+    .brand h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #0f2b3d;
+      line-height: 1.2;
+    }
+
+    .brand .subhead {
+      font-size: 0.95rem;
+      color: #4a627a;
+      margin-top: 0.25rem;
+      font-weight: 400;
+      border-left: 3px solid #2c7da0;
+      padding-left: 0.75rem;
+    }
+
+    /* NAV */
+    .main-nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      list-style: none;
+      padding: 0.75rem 0 0.25rem 0;
+      border-top: 1px solid #eef2f6;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #1f3b4c;
+      font-size: 1rem;
+      transition: color 0.2s ease;
+    }
+
+    .main-nav a:hover {
+      color: #2c7da0;
+    }
+
+    /* HERO */
+    .hero {
+      background: #f0f4f9;
+      margin: 1.5rem 2rem;
+      padding: 2.5rem 2rem;
+      border-radius: 28px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #0b2b3b;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #2c4b63;
+      max-width: 720px;
+      margin: 0 auto 1.8rem auto;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background-color: #2c7da0;
+      color: white;
+      font-weight: 600;
+      padding: 0.85rem 2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background 0.2s, transform 0.1s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .btn-primary:hover {
+      background-color: #1f5e7a;
+    }
+
+    /* TWO COLUMNS LAYOUT */
+    .two-columns {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin: 2rem 2rem 2rem 2rem;
+    }
+
+    /* MAIN CONTENT */
+    .main-content section {
+      margin-bottom: 3rem;
+    }
+
+    .section-title {
+      font-size: 1.7rem;
+      font-weight: 600;
+      border-left: 5px solid #2c7da0;
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+      color: #0f2b3d;
+    }
+
+    /* ARTICLES GRID */
+    .articles-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
+    }
+
+    .post-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 1.25rem 1.5rem;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.03);
+      border: 1px solid #eef2f8;
+      transition: all 0.2s;
+    }
+
+    .post-card:hover {
+      border-color: #d4e0ea;
+      box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.08);
+    }
+
+    .post-category {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      background: #eef2fa;
+      padding: 0.2rem 0.7rem;
+      border-radius: 30px;
+      color: #2c7da0;
+      letter-spacing: 0.3px;
+      margin-bottom: 0.75rem;
+    }
+
+    .post-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+      color: #0f2b3d;
+    }
+
+    .post-summary {
+      color: #3a5a72;
+      font-size: 0.95rem;
+      margin: 0.5rem 0 0.75rem 0;
+      line-height: 1.45;
+    }
+
+    .post-meta {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #6b8a9e;
+      margin-top: 0.5rem;
+      border-top: 1px solid #edf2f7;
+      padding-top: 0.75rem;
+    }
+
+    /* CATEGORIES BOXES */
+    .categories-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .cat-item {
+      background: #f8fafd;
+      border: 1px solid #e2e9f0;
+      border-radius: 60px;
+      padding: 0.6rem 1.4rem;
+      font-weight: 500;
+      color: #2c7da0;
+      text-decoration: none;
+      transition: all 0.2s;
+      font-size: 0.95rem;
+    }
+
+    .cat-item:hover {
+      background: #e9f0f5;
+      border-color: #cbdde9;
+    }
+
+    /* ABOUT & TRUST */
+    .about-card, .trust-card {
+      background: #fbfdfe;
+      padding: 1.5rem 1.8rem;
+      border-radius: 24px;
+      border: 1px solid #eef2f8;
+      margin-bottom: 1.8rem;
+    }
+
+    .about-card h3, .trust-card h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: #1e3b4c;
+    }
+
+    .about-card p, .trust-card p {
+      color: #2b4b62;
+      line-height: 1.55;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      background: #fafcff;
+      border-radius: 28px;
+      border: 1px solid #eef2f8;
+      padding: 1.6rem 1.6rem;
+      height: fit-content;
+    }
+
+    .sidebar-widget {
+      margin-bottom: 2rem;
+    }
+
+    .sidebar-widget h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-bottom: 2px solid #e2eaf1;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      color: #1e3b4c;
+    }
+
+    .popular-list, .guides-list {
+      list-style: none;
+    }
+
+    .popular-list li, .guides-list li {
+      margin-bottom: 1rem;
+      border-bottom: 1px dashed #eef2f6;
+      padding-bottom: 0.75rem;
+    }
+
+    .popular-list a, .guides-list a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #2c7da0;
+      transition: color 0.2s;
+    }
+
+    .popular-list a:hover, .guides-list a:hover {
+      color: #0f5c7a;
+      text-decoration: underline;
+    }
+
+    .guides-list li:last-child, .popular-list li:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    /* CONTACT SECTION (simples) */
+    .contact-section {
+      margin: 2rem 2rem 1rem 2rem;
+      background: #f8fafd;
+      border-radius: 28px;
+      padding: 1.8rem 2rem;
+      text-align: center;
+      border: 1px solid #eef2f8;
+    }
+
+    .contact-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #1e3b4c;
+    }
+
+    .contact-section p {
+      color: #2b4b62;
+      max-width: 600px;
+      margin: 0 auto 1rem;
+    }
+
+    .contact-email {
+      font-size: 1.2rem;
+      font-weight: 500;
+      background: white;
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      border-radius: 60px;
+      border: 1px solid #dce5ed;
+      color: #2c7da0;
+      text-decoration: none;
+    }
+
+    .contact-email:hover {
+      background: #eef3fc;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: #f0f4fa;
+      margin-top: 2rem;
+      padding: 2.5rem 2rem 2rem;
+      border-top: 1px solid #e2e9f0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-col h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1e3b4c;
+    }
+
+    .footer-col p, .footer-col address, .footer-col a {
+      font-size: 0.9rem;
+      color: #3a5a72;
+      line-height: 1.5;
+      text-decoration: none;
+    }
+
+    .footer-col a:hover {
+      color: #2c7da0;
+      text-decoration: underline;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.5rem;
+    }
+
+    .copyright {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #5c7f96;
+      border-top: 1px solid #dfe7ef;
+      padding-top: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    /* RESPONSIVE */
+    @media (min-width: 768px) {
+      .articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .two-columns {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .articles-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .hero h2 {
+        font-size: 2.4rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .site-header, .hero, .two-columns, .contact-section {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+      .hero {
+        padding: 2rem 1rem;
+      }
+      .post-card {
+        padding: 1rem;
+      }
+      .main-nav ul {
+        gap: 1rem;
+      }
+      .brand h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
 <body>
-    <header class="site-header">
-        <div class="wrapper header-content">
-            <div class="creeper-logo">
-                <div class="creeper-eye eye-left"></div>
-                <div class="creeper-eye eye-right"></div>
-                <div class="creeper-mouth"></div>
-            </div>
-            <div>
-                <h1 class="site-title">MINEADDONSNEWS</h1>
-                <p class="site-tagline">Engenharia de Sistemas · Hardware · Infraestrutura</p>
-            </div>
-        </div>
-    </header>
-    <nav class="site-nav">
-        <div class="wrapper nav-links">
-            <a href="index.html">Início</a>
-            <a href="index.html#engenharia">Engenharia</a>
-            <a href="index.html#hardware">Hardware</a>
-            <a href="index.html#infra">Infraestrutura</a>
-            <a href="faq.html">FAQ</a>
-            <a href="interativa.html">Ferramentas</a>
-            <a href="sobre.html">Sobre</a>
-        </div>
+<div class="container">
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="brand">
+      <h1>HardwareBaseTech</h1>
+      <div class="subhead">Análises e guias de hardware com base em dados reais</div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="/hardware/">Hardware</a></li>
+        <li><a href="/guias/">Guias</a></li>
+        <li><a href="/comparativos/">Comparativos</a></li>
+        <li><a href="/sobre/">Sobre</a></li>
+        <li><a href="/contato/">Contato</a></li>
+      </ul>
     </nav>
-    <main class="wrapper">
-        <div class="breadcrumb">
-            <a href="index.html">Início</a> › <a href="index.html#hardware">Hardware</a> › <span>Nick: RTX 5090 vs Ryzen 9</span>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h2>Escolha o hardware certo com base em dados, não em marketing</h2>
+    <p>Análises objetivas, benchmarks públicos e guias técnicos para você tomar decisões de compra e configuração com confiança.</p>
+    <a href="/analises/" class="btn-primary">Ver análises recentes</a>
+  </section>
+
+  <!-- MAIN + SIDEBAR LAYOUT -->
+  <div class="two-columns">
+    <main class="main-content">
+      <!-- RECENT ARTICLES SECTION -->
+      <section id="artigos-recentes">
+        <h2 class="section-title">Artigos recentes</h2>
+        <div class="articles-grid">
+          <!-- ARTIGO 1 -->
+          <article class="post-card">
+            <span class="post-category">Hardware</span>
+            <h3 class="post-title">Melhor CPU custo-benefício para 2026: análise de desempenho e preço</h3>
+            <p class="post-summary">Comparação entre AMD Ryzen 5 e Intel Core i5 com dados de jogos, produtividade e eficiência energética.</p>
+            <div class="post-meta"><span>📅 10 de abril, 2026</span><span>🏷️ Hardware</span></div>
+          </article>
+          <!-- ARTIGO 2 -->
+          <article class="post-card">
+            <span class="post-category">Comparativos</span>
+            <h3 class="post-title">Ryzen vs Intel: Qual plataforma vale mais a pena em 2026?</h3>
+            <p class="post-summary">Benchmarks reais de processadores das duas marcas em aplicações profissionais e jogos. Análise de consumo e plataforma.</p>
+            <div class="post-meta"><span>📅 5 de abril, 2026</span><span>🏷️ Comparativos</span></div>
+          </article>
+          <!-- ARTIGO 3 -->
+          <article class="post-card">
+            <span class="post-category">Guias</span>
+            <h3 class="post-title">Guia definitivo: Quanta RAM você precisa para servidores e workstations?</h3>
+            <p class="post-summary">Entenda a relação entre capacidade de memória, cargas intensivas e virtualização. Dados de uso real e recomendações.</p>
+            <div class="post-meta"><span>📅 28 de março, 2026</span><span>🏷️ Guias</span></div>
+          </article>
+          <!-- ARTIGO 4 -->
+          <article class="post-card">
+            <span class="post-category">Guias</span>
+            <h3 class="post-title">Como montar seu PC do zero: passo a passo com boas práticas</h3>
+            <p class="post-summary">Guia completo de montagem, escolha de componentes, compatibilidade e cuidados com eletrostática.</p>
+            <div class="post-meta"><span>📅 20 de março, 2026</span><span>🏷️ Guias</span></div>
+          </article>
+          <!-- ARTIGO 5 -->
+          <article class="post-card">
+            <span class="post-category">Hardware</span>
+            <h3 class="post-title">Placas de vídeo: NVIDIA vs AMD, desempenho por real gasto</h3>
+            <p class="post-summary">Testes comparativos com jogos populares e workloads de criação. FPS por watt e valor por quadro.</p>
+            <div class="post-meta"><span>📅 15 de março, 2026</span><span>🏷️ Hardware</span></div>
+          </article>
+          <!-- ARTIGO 6 -->
+          <article class="post-card">
+            <span class="post-category">Hardware</span>
+            <h3 class="post-title">SSD NVMe vs SATA: Vale o upgrade? Velocidade e uso real</h3>
+            <p class="post-summary">Benchmarks de transferência, tempos de carregamento e impacto em jogos e produtividade.</p>
+            <div class="post-meta"><span>📅 10 de março, 2026</span><span>🏷️ Hardware</span></div>
+          </article>
         </div>
-        <div class="article-container">
-            <h1>Nick Analista de Hardware: RTX 5090 vs Ryzen 9 9950X3D – qual peça realmente faz diferença num servidor Minecraft pesado?</h1>
-            <div class="last-updated">📅 5 de março de 2026 · Nick · 12 min de leitura</div>
-            
-            <div class="author-info">
-                <div class="author-photo"></div>
-                <div class="author-details">
-                    <div class="author-name">Nick</div>
-                    <div class="author-title">Analista de Hardware · MineAddonsNews</div>
-                    <div class="author-bio">Analiso hardware há 8 anos, com foco em desempenho para jogos e servidores. Meu setup pessoal é um Ryzen 7 5800X com RTX 5060 Ti e 64GB RAM – uso ele diariamente para testar mods e servidores. Aqui no portal, traduzo dados técnicos em recomendações práticas.</div>
-                </div>
-            </div>
+      </section>
 
-            <p><span class="badge">RTX 5090</span> <span class="badge">Ryzen 9 9950X3D</span> <span class="badge">CAMM2</span> <span class="badge">DDR5</span> <span class="badge">NVMe Gen5</span></p>
-
-            <p>Se você acompanha lançamentos de hardware, sabe que 2026 tá surreal: <strong>RTX 5090 com 32GB GDDR7, Ryzen 9 9950X3D com 144MB de cache, CAMM2 chegando aos 9600 MT/s</strong>. Mas será que tudo isso faz sentido pra um servidor de Minecraft? Ou é só marketing pra gente gastar dinheiro à toa? Peguei cada uma dessas peças (emprestadas, claro – meu bolso não dá conta) e testei num servidor com mais de 400 mods ativos. Os resultados são bem diferentes do que você vê em review de jogo single player.</p>
-
-            <h2>Meu setup de testes (e meu PC de guerra)</h2>
-            <div class="setup-box">
-                <div class="setup-item"><span class="setup-label">PC Pessoal (meu dia a dia)</span><span class="setup-value">Ryzen 7 5800X · RTX 5060 Ti · 64GB DDR4-3600</span></div>
-                <div class="setup-item"><span class="setup-label">Servidor de testes</span><span class="setup-value">Ryzen 9 9950X3D · RTX 5090 · 128GB CAMM2-8000</span></div>
-                <div class="setup-item"><span class="setup-label">Fonte usada</span><span class="setup-value">Super Flower Leadex 1600W Titanium</span></div>
-            </div>
-
-            <p>Antes de continuar: sim, meu PC ainda é um Ryzen 7 5800X com RTX 5060 Ti. Roda tudo o que preciso, inclusive servidores com 150 mods. Os testes com hardware top foram feitos numa bancada que montei com parceria de uma loja local. Então os números são reais, com direito a stress test de 72h seguidas.</p>
-
-            <h2>1. RTX 5090: um absurdo de placa, mas pra servidor?</h2>
-            <p>Muita gente acha que placa de vídeo não importa em servidor. Ledo engano. Com a chegada de add-ons que usam ray tracing no servidor (pra calcular iluminação global e mandar compactado pros clientes), a GPU virou peça crítica. A RTX 5090 tem 32GB de VRAM e 4ª geração de RT Cores. Nos testes:</p>
-            <ul>
-                <li><strong>Servidor com ray tracing ativo e 300 jogadores:</strong> RTX 4090 usava 21GB de VRAM e começava a dar drop. A 5090 ficou em 28GB, mas estável.</li>
-                <li><strong>Compilação de shaders:</strong> na 4090 levava 3,2 segundos, na 5090 caiu pra 1,1 segundo (menos lag na entrada de jogadores).</li>
-                <li><strong>Consumo:</strong> a 5090 puxa 520W em pico, então fonte Titanium é quase obrigatória.</li>
-            </ul>
-            <p><strong>Veredito:</strong> se você quer um servidor profissional com ray tracing e centenas de jogadores, a 5090 é a única que segura. Mas pro seu servidor de 20 amigos, é completamente overkill.</p>
-
-            <h2>2. Ryzen 9 9950X3D: o rei do cache</h2>
-            <p>Processador com 3D V-Cache empilhado: 144MB L3. Isso é importante porque Minecraft (e especialmente servidores modados) adora cache. Quanto mais dados cabem perto dos núcleos, menos ele precisa buscar na RAM lenta.</p>
-            <table>
-                <thead><tr><th>Processador</th><th>Cache L3</th><th>Tick rate (TPS) médio</th><th>Quedas abaixo de 19 TPS</th></tr></thead>
-                <tbody>
-                    <tr><td>Ryzen 9 7950X</td><td>64MB</td><td>19,2</td><td>8% do tempo</td></tr>
-                    <tr><td>Intel i9-14900K</td><td>36MB</td><td>19,0</td><td>12% do tempo</td></tr>
-                    <tr><td><strong>Ryzen 9 9950X3D</strong></td><td><strong>144MB</strong></td><td><strong>19,9</strong></td><td><strong>0,5% do tempo</strong></td></tr>
-                </tbody>
-            </table>
-            <p>Na prática, o servidor simplesmente não engasga. Mesmo com 400 mods e geração de chunks pesada, o tick rate se mantém perto do máximo. Pra mim, analista de hardware, é o componente que mais justifica o preço (cerca de R$ 9.000).</p>
-
-            <h2>3. CAMM2 vs DDR5: a nova memória já vale a pena?</h2>
-            <p>Testei dois kits: <strong>DDR5-8000 CL38 (G.Skill)</strong> e <strong>CAMM2-8000 CL38 (Corsair)</strong>. Ambos com 128GB.</p>
-            <table>
-                <thead><tr><th>Métrica</th><th>DDR5-8000</th><th>CAMM2-8000</th></tr></thead>
-                <tbody>
-                    <tr><td>Largura de banda real (AIDA64)</td><td>112 GB/s</td><td>121 GB/s</td></tr>
-                    <tr><td>Latência (nanossegundos)</td><td>63,2 ns</td><td>59,8 ns</td></tr>
-                    <tr><td>Temperatura em carga (24h)</td><td>58°C</td><td>52°C</td></tr>
-                    <tr><td>Consumo (pico)</td><td>6,8W por módulo</td><td>5,9W por módulo</td></tr>
-                </tbody>
-            </table>
-            <p>O CAMM2 é tecnicamente superior: mais banda, menos latência, mais frio. Mas o preço ainda dói: 128GB CAMM2 custa cerca de R$ 9.800, enquanto DDR5 equivalente sai por R$ 5.500. Minha opinião: pra servidor novo que vai rodar 3+ anos, CAMM2 é investimento. Pra upgrade em plataforma antiga, DDR5 ainda é a escolha racional.</p>
-
-            <h2>4. NVMe Gen5: carregamento instantâneo?</h2>
-            <p>Testei um SSD Gen5 contra um Gen4 excelente (Samsung 990 Pro). Diferença no carregamento do mundo com 400 mods:</p>
-            <ul>
-                <li><strong>NVMe Gen4:</strong> 31 segundos</li>
-                <li><strong>NVMe Gen5:</strong> 22 segundos</li>
-            </ul>
-            <p>Ganho de 9 segundos. É legal? É. Mas custa o dobro. Pra servidor, Gen4 ainda é o melhor custo-benefício. Só vá de Gen5 se dinheiro não for problema.</p>
-
-            <h2>5. E o meu setup (Ryzen 7 5800X + RTX 5060 Ti), como se sai?</h2>
-            <p>Testei o mesmo servidor com meu PC. Resultados:</p>
-            <ul>
-                <li><strong>Máximo de jogadores com 150 mods:</strong> 80 antes de começar a lag</li>
-                <li><strong>Consumo de RAM:</strong> 42GB (meus 64GB dão folga)</li>
-                <li><strong>GPU:</strong> 5060 Ti aguenta bem, mas com shaders pesados a VRAM de 8GB enche rápido</li>
-            </ul>
-            <p>Conclusão: meu PC ainda é extremamente capaz. Se você tem algo nessa linha, não precisa trocar. Só considere upgrade se for passar de 150 mods ou 100 jogadores simultâneos.</p>
-
-            <h2>6. Tabelão comparativo: peças de alto CPC</h2>
-            <table>
-                <thead><tr><th>Componente</th><th>Preço médio (R$)</th><th>Ganho real em servidor</th><th>Vale a pena?</th></tr></thead>
-                <tbody>
-                    <tr><td>RTX 5090 32GB</td><td>29.990</td><td>Suporta ray tracing pesado com 400 jogadores</td><td>Só para servidores profissionais</td></tr>
-                    <tr><td>Ryzen 9 9950X3D</td><td>8.999</td><td>+35% estabilidade no tick rate</td><td>Sim, se você tem muitos mods</td></tr>
-                    <tr><td>CAMM2 128GB 8000MT/s</td><td>9.800</td><td>+8% banda, -3°C</td><td>Apenas em build novo topo</td></tr>
-                    <tr><td>NVMe Gen5 2TB</td><td>3.200</td><td>Carrega mundo 30% mais rápido</td><td>Legal, mas não essencial</td></tr>
-                    <tr><td>Fonte 1600W Titanium</td><td>3.800</td><td>Estabilidade e economia de energia</td><td>Pra setups muito parrudos</td></tr>
-                </tbody>
-            </table>
-
-            <h2>7. Resumo do analista (TL;DR)</h2>
-            <div class="nota-tecnica">
-                <ul>
-                    <li><strong>RTX 5090</strong> é exagero para 99% dos servidores. A RTX 5060 Ti do meu PC já dá conta de cenários pesados.</li>
-                    <li><strong>Ryzen 9 9950X3D</strong> é o componente que mais entrega ganho real em servidores modados. O cache 3D faz diferença.</li>
-                    <li><strong>CAMM2</strong> é o futuro, mas DDR5 ainda é o presente racional.</li>
-                    <li><strong>Nunca subestime a fonte</strong> – uma boa Titanium evita dores de cabeça.</li>
-                    <li><strong>Meu setup (5800X + 5060 Ti)</strong> ainda é referência de custo-benefício. Não caia na pilha de trocar todo ano.</li>
-                </ul>
-            </div>
-
-            <h2>Perguntas que eu mais recebo</h2>
-            <div>
-                <h3>❓ Nick, qual PC você recomenda pra um servidor com 200 mods?</h3>
-                <p>Ryzen 7 7800X3D (ou 5800X3D usado), 64GB RAM, RTX 4060 e NVMe Gen4. Gaste o grosso no processador.</p>
-                <h3>❓ RTX 5060 Ti é suficiente?</h3>
-                <p>Sim. Eu uso ela e nunca travou. Só fique de olho na VRAM se for usar texturas 8K.</p>
-                <h3>❓ Vale a pena comprar uma RTX 5090 usada daqui 2 anos?</h3>
-                <p>Com certeza. Hardware top desvaloriza, mas continua sendo top por anos.</p>
-                <h3>❓ CAMM2 vai substituir DDR5?</h3>
-                <p>Em servidores, sim. Mas leva uns 3 anos até o preço ficar bom.</p>
-                <h3>❓ Por que você ainda usa DDR4?</h3>
-                <p>Porque meu setup ainda atende. Quando precisar trocar a plataforma, aí vou de CAMM2.</p>
-            </div>
-
-            <div class="share-buttons">
-                <a href="https://twitter.com/intent/tweet?url=https://mineaddonsnews.online/nick-rtx5090-ryzen9&amp;text=Nick analista de hardware: RTX 5090 vs Ryzen 9 9950X3D para servidor Minecraft" class="share-button share-twitter" target="_blank" rel="noopener">Twitter</a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://mineaddonsnews.online/nick-rtx5090-ryzen9" class="share-button share-facebook" target="_blank" rel="noopener">Facebook</a>
-                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://mineaddonsnews.online/nick-rtx5090-ryzen9" class="share-button share-linkedin" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="https://api.whatsapp.com/send?text=Nick analista: RTX 5090 vs Ryzen 9 9950X3D para servidor Minecraft https://mineaddonsnews.online/nick-rtx5090-ryzen9" class="share-button share-whatsapp" target="_blank" rel="noopener">WhatsApp</a>
-            </div>
-
-            <div class="article-cta">
-                <div class="cta-section">
-                    <h3 class="cta-title">📚 Leia também</h3>
-                    <ul class="cta-links">
-                        <li><a href="#">DDR5 vs CAMM2: comparativo técnico</a></li>
-                        <li><a href="#">Montando um servidor com Ryzen 7 5800X</a></li>
-                        <li><a href="#">RTX 5060 Ti: review para jogadores e admins</a></li>
-                    </ul>
-                </div>
-                <div class="cta-section">
-                    <h3 class="cta-title">📧 Newsletter</h3>
-                    <p>Dicas de hardware direto de um analista.</p>
-                    <a href="newsletter.html" class="cta-button">Assinar</a>
-                </div>
-            </div>
+      <!-- CATEGORIES SECTION -->
+      <section>
+        <h2 class="section-title">Categorias</h2>
+        <div class="categories-grid">
+          <a href="/hardware/" class="cat-item">🔧 Hardware</a>
+          <a href="/comparativos/" class="cat-item">📊 Comparativos</a>
+          <a href="/guias/" class="cat-item">📘 Guias</a>
+          <a href="/infraestrutura/" class="cat-item">🏢 Infraestrutura</a>
         </div>
+      </section>
+
+      <!-- SOBRE O SITE -->
+      <section>
+        <div class="about-card">
+          <h3>Sobre o HardwareBaseTech</h3>
+          <p>Todo o conteúdo é construído a partir de benchmarks públicos, especificações técnicas divulgadas por fabricantes e análises documentadas da comunidade de hardware. Nosso compromisso é oferecer informações neutras e técnicas para que você escolha seus componentes com segurança, sem exageros ou marketing enganoso.</p>
+          <p style="margin-top: 1rem;"><strong>Quem mantém o site:</strong> entusiasta de hardware com experiência prática em montagem e testes de sistemas, focado em trazer dados verificáveis e guias objetivos.</p>
+        </div>
+      </section>
+
+      <!-- SEÇÃO DE CONFIANÇA -->
+      <section>
+        <div class="trust-card">
+          <h3>🔍 Como analisamos hardware</h3>
+          <p>Utilizamos dados consolidados de testes de mercado (como Cinebench, 3DMark, SPEC), documentação de fabricantes e resultados replicáveis da comunidade técnica. Dessa forma, apresentamos análises baseadas em evidências — sem testes próprios não verificados — garantindo transparência e credibilidade.</p>
+        </div>
+      </section>
     </main>
-    <footer class="site-footer">
-        <div class="wrapper">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <h3 style="color: var(--accent-green);">MINEADDONSNEWS</h3>
-                    <p>Análises de hardware para Minecraft, por um analista que realmente testa.</p>
-                </div>
-                <div>
-                    <h4 style="color: var(--text-primary);">Contato</h4>
-                    <div class="footer-contact">
-                        <p>contato@mineaddonsnews.online</p>
-                    </div>
-                </div>
-                <div>
-                    <h4 style="color: var(--text-primary);">Institucional</h4>
-                    <div class="footer-links">
-                        <a href="sobre.html">Sobre</a>
-                        <a href="contato.html">Contato</a>
-                    </div>
-                </div>
-                <div>
-                    <h4 style="color: var(--text-primary);">Legal</h4>
-                    <div class="footer-links">
-                        <a href="privacidade.html">Privacidade</a>
-                        <a href="termos.html">Termos</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>Terra Roxa - PR</p>
-                <div>
-                    <a href="privacidade.html">Privacidade</a> · <a href="termos.html">Termos</a>
-                </div>
-            </div>
-        </div>
-    </footer>
 
+    <!-- SIDEBAR (OPCIONAL) -->
+    <aside class="sidebar">
+      <div class="sidebar-widget">
+        <h4>📈 Artigos populares</h4>
+        <ul class="popular-list">
+          <li><a href="/hardware/melhores-placas-mae-ryzen/">Melhores placas-mãe para Ryzen 7000 (dados de VRM)</a></li>
+          <li><a href="/guias/overclock-seguro/">Guia de overclock seguro: limites e temperaturas</a></li>
+          <li><a href="/hardware/ssd-vs-hdd-servidores/">SSD vs HDD para armazenamento em servidores</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-widget">
+        <h4>📚 Guias recomendados</h4>
+        <ul class="guides-list">
+          <li><a href="/guias/escolher-fonte/">Como escolher fonte de alimentação: potência e certificações</a></li>
+          <li><a href="/guias/water-cooler-vs-air-cooler/">Water cooler vs air cooler: análise térmica</a></li>
+          <li><a href="/guias/latencia-ram/">Guia de latência e frequência para memórias RAM</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
 
-</body></html>
+  <!-- CONTATO SIMPLES -->
+  <div class="contact-section" id="contato">
+    <h3>Fale conosco</h3>
+    <p>Dúvidas, sugestões de pauta ou parcerias? Envie um e-mail e responderemos em até 2 dias úteis.</p>
+    <a href="mailto:contato@hardwarebasetech.online" class="contact-email">contato@hardwarebasetech.online</a>
+  </div>
+
+  <!-- FOOTER COMPLETO -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Sobre resumido</h4>
+        <p>HardwareBaseTech fornece análises técnicas, comparativos e guias para profissionais e entusiastas. Baseamos nosso trabalho em dados públicos e benchmarks confiáveis.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <p>📧 <a href="mailto:contato@hardwarebasetech.online">contato@hardwarebasetech.online</a></p>
+        <p>📍 Brasil</p>
+      </div>
+      <div class="footer-col">
+        <h4>Links legais</h4>
+        <ul class="footer-links">
+          <li><a href="/politica-de-privacidade/">Política de Privacidade</a></li>
+          <li><a href="/termos-de-uso/">Termos de Uso</a></li>
+          <li><a href="/politica-de-cookies/">Política de Cookies</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Localização</h4>
+        <address>Brasil — Conteúdo editorial independente</address>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 HardwareBaseTech — Todos os dados baseados em fontes públicas e benchmarks da indústria. Transparência em hardware.
+    </div>
+  </footer>
+</div>
+</body>
+</html>
