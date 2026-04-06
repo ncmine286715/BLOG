@@ -375,6 +375,21 @@
             color: var(--accent-green);
             font-weight: 600;
         }
+        .guia-funil {
+            background: #1e2a1e;
+            border: 2px solid var(--accent-green);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 20px 0 30px;
+        }
+        .guia-funil h4 {
+            color: var(--accent-green);
+            margin-top: 0;
+        }
+        .banner-meio {
+            margin: 40px 0;
+            text-align: center;
+        }
         @media (max-width: 768px) {
             .article-container { padding: 24px; }
             h1 { font-size: 1.8rem; }
@@ -680,6 +695,18 @@
                 </div>
             </div>
 
+            <!-- ========== BLOCO EXPLICATIVO DO FUNIL ========== -->
+            <div class="guia-funil">
+                <h4>📢 COMO ACESSAR O CONTEÚDO COMPLETO (3 PASSOS RÁPIDOS)</h4>
+                <p>Este artigo é <strong>100% gratuito</strong>, mas para liberar o acesso aos bônus e recursos extras você precisa completar <strong>3 passos</strong> (leva menos de 30 segundos). Siga exatamente assim:</p>
+                <ol style="margin-bottom: 0;">
+                    <li><strong>Clique em "INICIAR VERIFICAÇÃO"</strong> – uma nova aba será aberta (pode fechá-la assim que carregar).</li>
+                    <li><strong>Aguarde 10 segundos</strong> enquanto o conteúdo do patrocinador é carregado.</li>
+                    <li><strong>Clique em "ACESSAR CONTEÚDO COMPLETO"</strong> – você será redirecionado para a página de download.</li>
+                </ol>
+                <p style="margin-top: 12px; font-size: 0.9rem;">✅ Nenhum cadastro, nenhum dado pessoal – apenas uma verificação que ajuda a manter o site no ar.</p>
+            </div>
+
             <p>
                 <span class="badge">6.700 PALAVRAS</span>
                 <span class="badge">TESTES REAIS</span>
@@ -707,6 +734,12 @@
             <!-- Imagem 1: Introdução -->
             <img src="https://images.unsplash.com/photo-1555618254-54e1601387b6?w=1200&auto=format" alt="Processador" class="full-width-image">
             <p class="image-caption">Imagem: Unsplash - Processador moderno, o cérebro do servidor.</p>
+
+            <!-- BANNER MEIO 1 -->
+            <div class="banner-meio">
+                <div class="enc-ad-area-label">📢 PUBLICIDADE</div>
+                <img src="https://via.placeholder.com/728x90?text=Anuncie+Aqui+-+Contato+comercial" alt="banner" style="max-width:100%; border-radius: 12px; border: 1px solid var(--border-color);">
+            </div>
 
             <h2 id="intro">1. Introdução</h2>
             <p>Diferente de um PC gamer, onde a placa de vídeo reina, em um servidor Minecraft o <strong>processador é o componente mais crítico</strong>. É ele quem calcula física, IA, geração de chunks e executa centenas de addons simultaneamente. Uma escolha errada aqui significa lag, TPS baixo e jogadores insatisfeitos.</p>
@@ -787,6 +820,12 @@
             <!-- Imagem 3: Gráfico comparativo -->
             <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format" alt="Gráfico" class="full-width-image">
             <p class="image-caption">Imagem: Unsplash - Visualização de dados de desempenho.</p>
+
+            <!-- BANNER MEIO 2 -->
+            <div class="banner-meio">
+                <div class="enc-ad-area-label">📢 PUBLICIDADE</div>
+                <img src="https://via.placeholder.com/728x90?text=Hospedagem+de+Servidores+-+Até+50%+off" alt="banner" style="max-width:100%; border-radius: 12px; border: 1px solid var(--border-color);">
+            </div>
 
             <h2 id="consumo">5. Consumo e eficiência energética</h2>
             <p>Em servidores 24/7, o consumo de energia impacta diretamente o custo operacional.</p>
@@ -881,6 +920,12 @@
             <!-- Imagem 4: Setup real -->
             <img src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=1200&auto=format" alt="Setup" class="full-width-image">
             <p class="image-caption">Imagem: Unsplash - Setup similar ao que uso para testes.</p>
+
+            <!-- BANNER MEIO 3 -->
+            <div class="banner-meio">
+                <div class="enc-ad-area-label">📢 PUBLICIDADE</div>
+                <img src="https://via.placeholder.com/728x90?text=Plugin+de+Performance+-+Aumente+seu+TPS" alt="banner" style="max-width:100%; border-radius: 12px; border: 1px solid var(--border-color);">
+            </div>
 
             <h2 id="faq">9. Perguntas Frequentes (FAQ)</h2>
 
@@ -1032,14 +1077,14 @@
                 <span class="enc-check">✅</span>
                 <p>Verificação concluída! Clique abaixo para acessar os artigos completos e bônus.</p>
             </div>
-            <!-- Direct link -->
-            <a href="https://flaskledgeheadquarters.com/qunibq92b?key=9c8c02f6fe2fbb7454887e407c953901"
+            <!-- Direct link modificado para download.html -->
+            <a href="download.html"
                target="_blank" rel="noopener"
                class="enc-final-btn"
                onclick="encFinalClick()">
                 🚀 ACESSAR CONTEÚDO COMPLETO →
             </a>
-            <p style="text-align:center; font-size:0.82rem; color:#484f58; margin-top:14px;">Após clicar, o próximo artigo será liberado automaticamente em alguns instantes.</p>
+            <p style="text-align:center; font-size:0.82rem; color:#484f58; margin-top:14px;">Após clicar, você será redirecionado para a página de download.</p>
         </div>
 
     </div><!-- enc-body -->
@@ -1110,21 +1155,11 @@
         }
     };
 
-    // ─── PASSO 3 — clique final ──────────────────────────────────
+    // ─── PASSO 3 — clique final (agora fixo para download.html) ───
     window.encFinalClick = function() {
-        setTimeout(function(){
-            // Redireciona para próximo artigo após 3s
-            var arts = [
-                "https://mineaddonsnews.online/comparativo-cpus-ryzen-9950x3d-vs-intel-ultra-9-285k.html",
-                "https://mineaddonsnews.online/processadores-servidor-minecraft-ryzen-vs-intel-benchmark-tps.html",
-                "https://mineaddonsnews.online/ryzen-9000-vs-intel-core-ultra-200-o-duelo-definitivo-das-cpus-em-2026.html",
-                "https://mineaddonsnews.online/a-biblia-do-servidor-minecraft-guia-completo-hardware-software-mobile.html"
-            ];
-            var dest = arts[Math.floor(Math.random()*arts.length)];
-            var btn = document.querySelector('.enc-final-btn');
-            if(btn){ btn.innerHTML = '✅ ACESSO LIBERADO! Redirecionando...'; }
-            setTimeout(function(){ window.location.href = dest; }, 2000);
-        }, 500);
+        var btn = document.querySelector('.enc-final-btn');
+        if(btn){ btn.innerHTML = '✅ REDIRECIONANDO...'; btn.style.pointerEvents = 'none'; }
+        setTimeout(function(){ window.location.href = "download.html"; }, 1000);
     };
 })();
 </script>
@@ -1164,7 +1199,14 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
         window.addEventListener('scroll', function() {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElem
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+        });
+    </script>
+</body>
+</html>
