@@ -1,1 +1,495 @@
 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>APOCALIPSE ZUMBI 2026 · Pack Ultimate (18 add-ons) para Minecraft Bedrock</title>
+    <meta name="description" content="Pack imersivo de apocalipse zumbi: Rise & Survive + Overgrown Cities + TACZ Guns + Dinossauros. Sobrevivência hardcore com 18 add-ons. Baixe agora!">
+    <!-- Google Fonts + Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Scripts de anúncio (mantidos obrigatórios) -->
+    <script src="https://5gvci.com/act/files/tag.min.js?z=10839985" data-cfasync="false" async></script>
+    <script src="https://quge5.com/88/tag.min.js" data-zone="227031" async data-cfasync="false"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0c10;
+            font-family: 'Inter', sans-serif;
+            color: #eef2ff;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* container clean */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* NVIDIA-inspired clean dark theme */
+        .glass-panel {
+            background: rgba(18, 22, 28, 0.85);
+            backdrop-filter: blur(2px);
+            border-radius: 32px;
+            border: 1px solid rgba(72, 187, 120, 0.2);
+            padding: 40px 32px;
+            margin: 32px 0;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.5);
+            transition: all 0.2s;
+        }
+
+        /* alerta clean */
+        .info-badge {
+            background: rgba(0, 255, 170, 0.08);
+            border-left: 3px solid #1db954;
+            border-radius: 20px;
+            padding: 12px 24px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            backdrop-filter: blur(4px);
+            margin-bottom: 32px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff, #8bcb9a);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        .subhead {
+            font-size: 1.2rem;
+            color: #a0b3d9;
+            margin-top: 12px;
+            font-weight: 400;
+        }
+
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 20px;
+        }
+
+        .hero-image {
+            width: 100%;
+            border-radius: 28px;
+            object-fit: cover;
+            max-height: 380px;
+            border: 1px solid rgba(72,187,120,0.3);
+            box-shadow: 0 15px 30px -12px black;
+        }
+
+        .desc-text {
+            font-size: 1.05rem;
+            color: #ccd6f0;
+            background: rgba(10,14,18,0.6);
+            padding: 24px;
+            border-radius: 28px;
+            border: 1px solid rgba(29,185,84,0.2);
+        }
+
+        .addon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+            margin: 36px 0 24px;
+        }
+
+        .addon-card {
+            background: #0f1219;
+            border-radius: 24px;
+            padding: 16px 18px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            transition: all 0.2s ease;
+            border: 1px solid #252a34;
+        }
+        .addon-card i {
+            font-size: 1.8rem;
+            color: #1db954;
+            width: 36px;
+            text-align: center;
+        }
+        .addon-card strong {
+            font-weight: 700;
+            color: #f0f3fa;
+            display: block;
+            font-size: 1rem;
+        }
+        .addon-card span {
+            font-size: 0.85rem;
+            color: #9aa9c1;
+        }
+        .addon-card:hover {
+            border-color: #1db954;
+            transform: translateY(-3px);
+            background: #131823;
+        }
+
+        /* BOX DE DOWNLOAD (CLEAN) */
+        .download-zone {
+            background: linear-gradient(145deg, #0f141c, #090c10);
+            border-radius: 44px;
+            padding: 40px 28px;
+            text-align: center;
+            margin: 48px 0 32px;
+            border: 1px solid rgba(29,185,84,0.35);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.6);
+        }
+
+        .cta-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1db954;
+            letter-spacing: -0.3px;
+        }
+
+        .ad-click-area {
+            background: rgba(29,185,84,0.05);
+            border: 2px dashed #1db954;
+            border-radius: 60px;
+            padding: 24px 20px;
+            margin: 30px auto;
+            cursor: pointer;
+            max-width: 500px;
+            transition: 0.2s;
+        }
+        .ad-click-area:hover {
+            background: rgba(29,185,84,0.15);
+            border: 2px solid #1db954;
+            transform: scale(1.01);
+        }
+
+        .btn-download {
+            background: linear-gradient(95deg, #1db954, #148a42);
+            border: none;
+            border-radius: 80px;
+            padding: 16px 40px;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            box-shadow: 0 6px 14px rgba(29,185,84,0.3);
+            transition: 0.2s;
+            margin-top: 16px;
+        }
+        .btn-download:active { transform: scale(0.97); }
+
+        .wait-message {
+            background: #1e2a2c;
+            border-radius: 80px;
+            padding: 10px 24px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: #ffd966;
+            font-weight: 500;
+        }
+
+        /* Botão vídeo tutorial */
+        .video-btn {
+            background: none;
+            border: 1px solid #1db954;
+            color: #1db954;
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin: 16px 0 0;
+        }
+        .video-btn:hover {
+            background: #1db95420;
+            border-color: #2ecc71;
+        }
+
+        /* MODAL (POPUP) DO VÍDEO */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: #0c0f14;
+            max-width: 90%;
+            width: 760px;
+            border-radius: 32px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 30px 40px #00000066;
+            border: 1px solid #2c3e2f;
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 24px;
+            background: #0f1219;
+            border-bottom: 1px solid #2a2f38;
+        }
+        .modal-header h3 {
+            font-weight: 600;
+            font-size: 1.3rem;
+        }
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #aaa;
+            transition: 0.2s;
+        }
+        .close-modal:hover { color: #1db954; }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+        }
+        .footer-note {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #6c7a91;
+            margin-top: 30px;
+            border-top: 1px solid #1e2a32;
+            padding-top: 24px;
+        }
+
+        @media (max-width: 680px) {
+            .container { padding: 0 16px; }
+            .glass-panel { padding: 24px 20px; }
+            h1 { font-size: 2rem; }
+            .cta-title { font-size: 1.4rem; }
+            .btn-download { font-size: 1.2rem; padding: 12px 28px; }
+            .addon-card i { font-size: 1.4rem; width: 30px; }
+        }
+        button { background: none; border: none; }
+        .highlight-green { color: #1db954; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="glass-panel">
+        <!-- info clean -->
+        <div class="info-badge">
+            <i class="fas fa-shield-virus"></i> <span>PACK EXCLUSIVO 2026 · 18 add-ons testados · Liberação segura no final da página</span>
+        </div>
+
+        <div class="hero-section">
+            <h1>PACK APOCALIPSE ZUMBI <span style="color:#1db954;">2026</span></h1>
+            <div class="subhead">RISE & SURVIVE ULTIMATE · 18 Add-ons Premium · Overgrown Cities + TACZ Guns + Dinossauros</div>
+            <!-- imagem temática: ruínas overgrown (relacionada ao addon) -->
+            <img class="hero-image" src="https://images.pexels.com/photos/2112438/pexels-photo-2112438.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+                 alt="Cidade abandonada tomada por vegetação - Overgrown Apocalypse" 
+                 onerror="this.src='https://images.unsplash.com/photo-1582653291997-079a1c04e5a1?w=1000&auto=format'">
+        </div>
+
+        <div class="desc-text">
+            <i class="fas fa-biohazard" style="color:#1db954; margin-right: 12px;"></i> 
+            <strong>Imersão total e evolução do caos:</strong> Comece em um mundo pacífico, mas os dias passam e os zumbis evoluem, cidades são devoradas pela natureza (<strong>Overgrown Cities</strong>), insetos gigantes e dinossauros vagam. Armas realistas (<strong>TACZ Guns</strong>), segurança avançada (Security++), biomas perigosos, animais selvagens e mecânica de sobrevivência brutal. Cada noite pode ser a última. Este é o pack definitivo para Minecraft Bedrock em 2026.
+        </div>
+
+        <h2 style="font-size: 1.7rem; font-weight: 600; margin: 42px 0 12px 0;"><i class="fas fa-cubes"></i> 18 ADD-ONS DO APOCALIPSE</h2>
+        <div class="addon-grid">
+            <div class="addon-card"><i class="fas fa-skull"></i><div><strong>Rise and Survive 1.2</strong><span> · Apocalipse progressivo</span></div></div>
+            <div class="addon-card"><i class="fas fa-city"></i><div><strong>Overgrown Cities 1.1</strong><span> · Ruínas tomadas por plantas</span></div></div>
+            <div class="addon-card"><i class="fas fa-gun"></i><div><strong>TACZ Guns (PT-BR)</strong><span> · Armas realistas + granadas</span></div></div>
+            <div class="addon-card"><i class="fas fa-dragon"></i><div><strong>The Extinct - Dinosaurs</strong><span> · Predadores pré-históricos</span></div></div>
+            <div class="addon-card"><i class="fas fa-bug"></i><div><strong>Giant Bugs</strong><span> · Insetos gigantes agressivos</span></div></div>
+            <div class="addon-card"><i class="fas fa-paw"></i><div><strong>Animals + Fantastic Pets</strong><span> · Domesticáveis e perigosos</span></div></div>
+            <div class="addon-card"><i class="fas fa-globe-americas"></i><div><strong>Biomes O' Plenty + Beyond</strong><span> · Biomas realistas</span></div></div>
+            <div class="addon-card"><i class="fas fa-shield-alt"></i><div><strong>SECURITY++</strong><span> · Câmeras, alarmes, portas</span></div></div>
+            <div class="addon-card"><i class="fas fa-couch"></i><div><strong>Furniture Builder</strong><span> · +1000 móveis para base</span></div></div>
+            <div class="addon-card"><i class="fas fa-khanda"></i><div><strong>Mob Weapons + Kill Anim</strong><span> · Execuções cinematográficas</span></div></div>
+            <div class="addon-card"><i class="fas fa-fish"></i><div><strong>Aquaculture + Ocean+</strong><span> · Oceanos vivos e perigosos</span></div></div>
+            <div class="addon-card"><i class="fas fa-archway"></i><div><strong>More Simple Structures</strong><span> · Centenas de novas construções</span></div></div>
+            <div class="addon-card"><i class="fas fa-tachometer-alt"></i><div><strong>RealismPack</strong><span> · Física e realismo total</span></div></div>
+            <div class="addon-card"><i class="fas fa-eye"></i><div><strong>Zombie Awareness</strong><span> · Hordas perseguem por cheiro</span></div></div>
+            <div class="addon-card"><i class="fas fa-disease"></i><div><strong>Corpse + Blood Moon</strong><span> · Eventos lunares sombrios</span></div></div>
+            <div class="addon-card"><i class="fas fa-mask"></i><div><strong>Mutant Zombies</strong><span> · Chefes e variantes aterrorizantes</span></div></div>
+            <div class="addon-card"><i class="fas fa-bomb"></i><div><strong>Apocalypse Ambience</strong><span> · Explosões e som imersivo</span></div></div>
+            <div class="addon-card"><i class="fas fa-robot"></i><div><strong>Scavenger NPCs + Bandits</strong><span> · Aliados e saqueadores</span></div></div>
+        </div>
+
+        <!-- ZONA DE DOWNLOAD + VIDEO POPUP -->
+        <div class="download-zone" id="downloadZone">
+            <div class="cta-title"><i class="fas fa-download"></i> LIBERAR PACK COMPLETO</div>
+            <p style="margin: 16px auto; max-width: 500px;">Clique no banner abaixo, complete a verificação e o download aparecerá automaticamente. Pack 200+ MB com todos os add-ons.</p>
+            
+            <div class="ad-click-area" id="adClickArea">
+                <i class="fas fa-hand-pointer" style="font-size: 2rem; color:#1db954;"></i>
+                <p style="font-size: 1.35rem; font-weight: 700; margin: 8px 0;">📥 CLIQUE AQUI PARA LIBERAR O DOWNLOAD</p>
+                <p style="font-size: 0.85rem;">Ao clicar você ativa o acesso e apoia o projeto</p>
+            </div>
+
+            <div id="waitMessage" style="display: none;" class="wait-message">
+                <i class="fas fa-hourglass-half"></i> Aguarde 5 segundos... Processando liberação.
+            </div>
+
+            <button id="nextButton" style="display: none;" class="btn-download">
+                ✅ BAIXAR PACK APOCALIPSE ZUMBI AGORA
+            </button>
+
+            <!-- Botão vídeo tutorial (POPUP) -->
+            <div style="margin-top: 32px;">
+                <button id="openVideoModalBtn" class="video-btn">
+                    <i class="fab fa-youtube"></i> ▶️ Como instalar o Pack? (Vídeo tutorial)
+                </button>
+            </div>
+            <div class="footer-note" style="margin-top: 24px; border: none; padding-top: 0;">
+                <i class="fab fa-minecraft"></i> Compatível com Minecraft Bedrock 1.21+ (Mobile, Windows, Xbox) · Todos os add-ons inclusos
+            </div>
+        </div>
+
+        <div class="footer-note">
+            <i class="fas fa-shield-virus"></i> Link oficial via TeraBox · Ative os add-ons na ordem correta (guia incluso no vídeo) · Modo hardcore recomendado.
+        </div>
+    </div>
+</div>
+
+<!-- MODAL DO VÍDEO -->
+<div id="videoModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3><i class="fab fa-youtube" style="color:#ff0000;"></i> Tutorial: Como baixar e instalar o Pack</h3>
+            <button class="close-modal" id="closeModalBtn">&times;</button>
+        </div>
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/fN4BennXjTY" title="Tutorial Pack Apocalipse Zumbi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div style="padding: 16px 24px; background:#0a0d12; font-size: 0.85rem;">
+            ⚡ Siga o passo a passo: ative os add-ons na ordem correta e aproveite o apocalipse!
+        </div>
+    </div>
+</div>
+
+<script>
+    // ----- Lógica de liberação do shortener (mantido funcionamento) -----
+    let liberado = false;
+    let countdownActive = false;
+
+    const adArea = document.getElementById('adClickArea');
+    const waitDiv = document.getElementById('waitMessage');
+    const downloadBtn = document.getElementById('nextButton');
+
+    function ativarAnuncios() {
+        if (liberado || countdownActive) return;
+        liberado = true;
+        countdownActive = true;
+        
+        // Abre o link de anúncio obrigatório
+        window.open('https://omg10.com/4/10839998', '_blank');
+        
+        // feedback visual
+        if (adArea) {
+            adArea.style.opacity = '0.5';
+            adArea.style.pointerEvents = 'none';
+            adArea.style.cursor = 'default';
+        }
+        if (waitDiv) waitDiv.style.display = 'inline-flex';
+        
+        let seconds = 5;
+        const originalWaitHtml = waitDiv.innerHTML;
+        const interval = setInterval(() => {
+            if (seconds <= 1) {
+                clearInterval(interval);
+                if (waitDiv) {
+                    waitDiv.style.display = 'none';
+                    waitDiv.innerHTML = originalWaitHtml;
+                }
+                if (downloadBtn) {
+                    downloadBtn.style.display = 'inline-block';
+                    downloadBtn.classList.add('pulse-effect');
+                    setTimeout(() => downloadBtn.classList.remove('pulse-effect'), 600);
+                }
+                countdownActive = false;
+            } else {
+                seconds--;
+                if (waitDiv) waitDiv.innerHTML = `<i class="fas fa-hourglass-half"></i> Aguarde ${seconds} segundos... liberando acesso.`;
+            }
+        }, 1000);
+    }
+
+    function baixarPack() {
+        // Link final TeraBox
+        window.location.href = "https://terabox.com/s/1ajJK19Dr3oSalUKXjnBogg";
+    }
+
+    if (adArea) adArea.addEventListener('click', ativarAnuncios);
+    if (downloadBtn) downloadBtn.addEventListener('click', baixarPack);
+
+    // Estilo extra para efeito de pulsar no botão
+    const style = document.createElement('style');
+    style.textContent = `
+        .pulse-effect {
+            animation: pulse 0.5s ease-in-out 2;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 #1db95480; }
+            70% { transform: scale(1.02); box-shadow: 0 0 0 12px #1db95400; }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 #1db95400; }
+        }
+    `;
+    document.head.appendChild(style);
+
+    // ----- MODAL DO VÍDEO (POPUP) -----
+    const modal = document.getElementById('videoModal');
+    const openModalBtn = document.getElementById('openVideoModalBtn');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+
+    function openModal() {
+        if (modal) modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+        if (modal) modal.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+
+    if (openModalBtn) openModalBtn.addEventListener('click', openModal);
+    if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    // Prevenir scroll no body quando modal aberto
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && modal.style.display === 'flex') {
+            closeModal();
+        }
+    });
+</script>
+</body>
+</html>
