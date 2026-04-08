@@ -1,26 +1,9 @@
-# robots.txt para MINEADDONSNEWS
 User-agent: *
 Allow: /
-Disallow: /cgi-bin/
-Disallow: /tmp/
+Disallow: /e8aee174b3aaffb75823556a684f74f9.html
+Disallow: /download.html
+Disallow: /pagina-intermediaria.html
+Disallow: /interativa.html
+Disallow: /pc.html
 
-# Sitemap
-Sitemap: https://www.mineaddonsnews.online/sitemap.xml
-
-# Atraso de crawl (opcional - para não sobrecarregar o servidor)
-Crawl-delay: 5
-
-# Google Adsense
-User-agent: Mediapartners-Google
-Allow: /
-
-# Google Images
-User-agent: Googlebot-Image
-Allow: /*.jpg$
-Allow: /*.png$
-Allow: /*.webp$
-Allow: /*.svg$
-
-# Bing
-User-agent: bingbot
-Allow: /
+Sitemap: https://hardwarebasetech.online/sitemap.xml

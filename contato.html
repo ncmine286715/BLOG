@@ -1,1016 +1,201 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <!-- META TAGS PRIMÁRIAS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - MINEADDONSNEWS | Fale com Nick Analista</title>
-    <meta name="description" content="Entre em contato com Nick Analista de Hardware. Tire dúvidas sobre servidores Minecraft, sugira pautas, parcerias ou reporte problemas.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://mineaddonsnews.online/contato.html">
-    
-    <!-- OPEN GRAPH -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mineaddonsnews.online/contato.html">
-    <meta property="og:title" content="Contato - MINEADDONSNEWS">
-    <meta property="og:description" content="Canais oficiais de contato com Nick Analista de Hardware.">
-    <meta property="og:image" content="https://mineaddonsnews.online/img/og-contato.jpg">
-    
-    <!-- SCRIPTS DE MONETIZAÇÃO -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYBSXRH3TF"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-RYBSXRH3TF');</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8967995144964134" crossorigin="anonymous"></script>
-    <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
-    <script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
-    <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
-    <script>
-        window.ezstandalone = window.ezstandalone || {};
-        ezstandalone.cmd = ezstandalone.cmd || [];
-    </script>
     <meta name="google-adsense-account" content="ca-pub-8967995144964134">
-    
-    <!-- FONTE GOOGLE FONTS -->
+    <title>Contato — HardwareBaseTech</title>
+    <meta name="description" content="Entre em contato com o HardwareBaseTech. Envie dúvidas técnicas, sugestões de artigos, propostas de parceria ou correções. Respondemos em até 48 horas úteis.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://hardwarebasetech.online/contato.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hardwarebasetech.online/contato.html">
+    <meta property="og:title" content="Contato — HardwareBaseTech">
+    <meta property="og:description" content="Entre em contato com o HardwareBaseTech. Respondemos em até 48 horas úteis.">
+    <meta property="og:image" content="https://hardwarebasetech.online/img/og-image.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --bg-primary: #0d1117;
-            --bg-secondary: #161b22;
-            --bg-elevated: #21262d;
-            --border-color: #30363d;
-            --text-primary: #f0f6fc;
-            --text-secondary: #8b949e;
-            --accent-green: #3fb950;
-            --accent-green-muted: #2ea043;
-            --header-bg: #010409;
-            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            --danger: #f85149;
-            --info: #58a6ff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font-primary);
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.7;
-            font-size: 16px;
-        }
-
-        .wrapper {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* HEADER */
-        .site-header {
-            background: var(--header-bg);
-            border-bottom: 1px solid var(--border-color);
-            padding: 24px 0;
-        }
-
-        .header-content {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .creeper-logo {
-            width: 60px;
-            height: 60px;
-            background: var(--accent-green);
-            position: relative;
-            border: 3px solid #000;
-            flex-shrink: 0;
-        }
-
-        .creeper-eye {
-            width: 12px;
-            height: 12px;
-            background: #000;
-            position: absolute;
-            top: 12px;
-        }
-
-        .eye-left { left: 8px; }
-        .eye-right { right: 8px; }
-
-        .creeper-mouth {
-            width: 24px;
-            height: 12px;
-            background: #000;
-            position: absolute;
-            bottom: 10px;
-            left: 18px;
-            clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 75% 50%, 75% 100%, 25% 100%, 25% 50%, 0% 50%);
-        }
-
-        .site-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--accent-green);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .site-tagline {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-top: 4px;
-        }
-
-        /* NAVEGAÇÃO */
-        .site-nav {
-            background: var(--bg-secondary);
-            border-bottom: 1px solid var(--border-color);
-            padding: 12px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .nav-links a {
-            color: var(--text-secondary);
-            font-weight: 500;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: var(--accent-green);
-        }
-
-        /* BREADCRUMB */
-        .breadcrumb {
-            margin: 24px 0 16px;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-        }
-
-        .breadcrumb a {
-            color: var(--text-secondary);
-            text-decoration: none;
-        }
-
-        .breadcrumb a:hover {
-            color: var(--accent-green);
-        }
-
-        .breadcrumb span {
-            color: var(--text-primary);
-        }
-
-        /* SOCIAL LINKS NO HEADER */
-        .social-header-links {
-            display: flex;
-            gap: 12px;
-            margin-left: auto;
-        }
-
-        .social-header-links a {
-            color: var(--text-secondary);
-            font-size: 1.2rem;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .social-header-links a:hover {
-            color: var(--accent-green);
-        }
-
-        /* PAGE HEADER */
-        .page-header {
-            margin: 32px 0 24px;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 16px;
-        }
-
-        .page-header h1 {
-            font-size: 2.5rem;
-            color: var(--accent-green);
-            margin-bottom: 8px;
-        }
-
-        .page-header p {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            max-width: 800px;
-        }
-
-        /* ALERTA */
-        .alert {
-            padding: 16px 20px;
-            border-radius: 8px;
-            margin-bottom: 24px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            background: rgba(88, 166, 255, 0.15);
-            border: 1px solid var(--info);
-            color: var(--info);
-        }
-
-        /* CONTACT GRID */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 380px;
-            gap: 40px;
-            margin: 40px 0;
-        }
-
-        /* FORMULÁRIO */
-        .contact-form-container {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 32px;
-        }
-
-        .form-title {
-            font-size: 1.6rem;
-            color: var(--accent-green);
-            margin-bottom: 8px;
-        }
-
-        .form-subtitle {
-            color: var(--text-secondary);
-            margin-bottom: 32px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .form-group {
-            margin-bottom: 24px;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--text-primary);
-            font-weight: 500;
-            font-size: 0.95rem;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 14px 18px;
-            background: var(--bg-primary);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            color: var(--text-primary);
-            font-size: 1rem;
-            transition: 0.2s;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--accent-green);
-            box-shadow: 0 0 0 3px rgba(63, 185, 80, 0.1);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
-
-        .checkbox-group {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            margin: 24px 0;
-        }
-
-        .checkbox-group input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
-            margin-top: 2px;
-            accent-color: var(--accent-green);
-            cursor: pointer;
-        }
-
-        .checkbox-group label {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.5;
-            cursor: pointer;
-        }
-
-        .checkbox-group a {
-            color: var(--accent-green);
-            text-decoration: none;
-        }
-
-        .checkbox-group a:hover {
-            text-decoration: underline;
-        }
-
-        .btn-submit {
-            background: var(--accent-green);
-            color: #000;
-            border: none;
-            padding: 16px 32px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            border-radius: 8px;
-            cursor: pointer;
-            width: 100%;
-            transition: background 0.2s, transform 0.1s;
-        }
-
-        .btn-submit:hover {
-            background: #4cba5e;
-        }
-
-        .btn-submit:active {
-            transform: scale(0.98);
-        }
-
-        /* SIDEBAR CARDS */
-        .contact-info-sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-
-        .info-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 28px;
-        }
-
-        .info-card h3 {
-            color: var(--accent-green);
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .contact-method {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 24px;
-            align-items: flex-start;
-        }
-
-        .contact-icon {
-            width: 48px;
-            height: 48px;
-            background: rgba(63, 185, 80, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: var(--accent-green);
-            flex-shrink: 0;
-        }
-
-        .contact-details h4 {
-            color: var(--text-primary);
-            margin-bottom: 4px;
-            font-size: 1.1rem;
-        }
-
-        .contact-details p {
-            color: var(--text-secondary);
-            margin-bottom: 4px;
-        }
-
-        .contact-details a {
-            color: var(--accent-green);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .contact-details a:hover {
-            text-decoration: underline;
-        }
-
-        .business-hours {
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .business-hours p {
-            color: var(--text-secondary);
-            margin-bottom: 8px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .business-hours span {
-            color: var(--text-primary);
-            font-weight: 500;
-        }
-
-        .social-links-card {
-            display: flex;
-            gap: 12px;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-
-        .social-link-card {
-            width: 44px;
-            height: 44px;
-            background: var(--bg-elevated);
-            border: 1px solid var(--border-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 1.3rem;
-            transition: 0.2s;
-        }
-
-        .social-link-card:hover {
-            background: var(--accent-green);
-            color: #000;
-            border-color: var(--accent-green);
-            transform: translateY(-2px);
-        }
-
-        /* FAQ SECTION */
-        .faq-section {
-            margin: 60px 0;
-        }
-
-        .faq-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .faq-header h2 {
-            font-size: 2rem;
-            color: var(--accent-green);
-            margin-bottom: 12px;
-        }
-
-        .faq-header p {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-        }
-
-        .faq-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 24px;
-        }
-
-        .faq-item {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 24px;
-        }
-
-        .faq-question {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 12px;
-        }
-
-        .faq-question span {
-            color: var(--accent-green);
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        .faq-question h3 {
-            color: var(--text-primary);
-            font-size: 1.1rem;
-        }
-
-        .faq-item p {
-            color: var(--text-secondary);
-            margin-left: 28px;
-        }
-
-        /* MAPA */
-        .map-section {
-            margin: 40px 0;
-        }
-
-        .map-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 28px;
-        }
-
-        .map-card h3 {
-            color: var(--accent-green);
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-        }
-
-        .map-placeholder {
-            background: linear-gradient(135deg, #1f4037 0%, #0f2027 100%);
-            height: 250px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-secondary);
-            border: 1px solid var(--border-color);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .map-placeholder span {
-            background: rgba(0,0,0,0.7);
-            padding: 8px 20px;
-            border-radius: 30px;
-            backdrop-filter: blur(4px);
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .address-details {
-            margin-top: 24px;
-            display: flex;
-            gap: 40px;
-            color: var(--text-secondary);
-        }
-
-        /* FOOTER */
-        .site-footer {
-            background: var(--header-bg);
-            border-top: 1px solid var(--border-color);
-            padding: 48px 0 32px;
-            margin-top: 48px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-about p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin: 16px 0;
-        }
-
-        .footer-social {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .footer-social a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
-
-        .footer-social a:hover {
-            color: var(--accent-green);
-        }
-
-        .footer-contact {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.8;
-        }
-
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .footer-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-green);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid var(--border-color);
-            padding-top: 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-
-        .footer-legal a {
-            color: var(--text-secondary);
-            margin-left: 20px;
-            text-decoration: none;
-        }
-
-        .footer-legal a:hover {
-            color: var(--accent-green);
-        }
-
-        /* COOKIE BANNER */
-        .cookie-banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: var(--bg-secondary);
-            border-top: 2px solid var(--accent-green);
-            padding: 16px 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-
-        .cookie-btn {
-            background: var(--accent-green);
-            color: #000;
-            border: none;
-            padding: 8px 24px;
-            font-weight: 600;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-
-        /* RESPONSIVIDADE */
-        @media (max-width: 1024px) {
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-            .faq-grid {
-                grid-template-columns: 1fr;
-            }
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-            .footer-bottom {
-                flex-direction: column;
-                text-align: center;
-            }
-            .address-details {
-                flex-direction: column;
-                gap: 20px;
-            }
-            .nav-links {
-                gap: 16px;
-                justify-content: center;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","name":"Contato — HardwareBaseTech","url":"https://hardwarebasetech.online/contato.html","publisher":{"@type":"Organization","name":"HardwareBaseTech","url":"https://hardwarebasetech.online/"}}</script>
 </head>
 <body>
     <header class="site-header">
         <div class="wrapper header-content">
-            <div class="creeper-logo">
-                <div class="creeper-eye eye-left"></div>
-                <div class="creeper-eye eye-right"></div>
-                <div class="creeper-mouth"></div>
-            </div>
-            <div>
-                <h1 class="site-title">MINEADDONSNEWS</h1>
-                <p class="site-tagline">Hardware para Servidores Minecraft · por Nick</p>
-            </div>
+            <a href="index.html" class="site-logo">
+                <img src="img/logo.png" alt="HardwareBaseTech Logo" class="logo-img">
+                <div>
+                    <div class="site-title">HardwareBaseTech</div>
+                    <div class="site-tagline">Análises Técnicas de Hardware · Benchmarks Reais</div>
+                </div>
+            </a>
             <div class="social-header-links">
-                <a href="https://www.instagram.com/nicolastrx1/" target="_blank" rel="noopener" title="Instagram">📷</a>
-                <a href="https://www.tiktok.com/@ncmine" target="_blank" rel="noopener" title="TikTok">🎵</a>
-                <a href="https://www.youtube.com/@Ncmine" target="_blank" rel="noopener" title="YouTube">▶️</a>
-                <a href="https://github.com/ncmine286715" target="_blank" rel="noopener" title="GitHub">⌨️</a>
+                <a href="https://www.instagram.com/nicolastrx1/" target="_blank" rel="noopener noreferrer" title="Instagram">📷</a>
+                <a href="https://www.tiktok.com/@ncmine" target="_blank" rel="noopener noreferrer" title="TikTok">🎵</a>
+                <a href="https://www.youtube.com/@Ncmine" target="_blank" rel="noopener noreferrer" title="YouTube">▶️</a>
             </div>
         </div>
     </header>
-
-    <nav class="site-nav">
+    <nav class="site-nav" aria-label="Navegação principal">
         <div class="wrapper nav-links">
             <a href="index.html">Início</a>
-            <a href="index.html#hardware">Hardware</a>
+            <a href="index.html#cpus">CPUs</a>
+            <a href="index.html#placas-de-video">Placas de Vídeo</a>
+            <a href="index.html#memoria-ram">Memória RAM</a>
+            <a href="index.html#armazenamento">Armazenamento</a>
             <a href="index.html#guias">Guias</a>
-            <a href="sobre.html">Sobre Nick</a>
+            <a href="sobre.html">Sobre</a>
             <a href="contato.html" class="active">Contato</a>
-            <a href="privacidade.html">Privacidade</a>
         </div>
     </nav>
-
     <main class="wrapper">
-        <!-- BREADCRUMB -->
-        <div class="breadcrumb">
-            <a href="index.html">Início</a> › <span>Contato</span>
-        </div>
-
-        <!-- PAGE HEADER -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Início</a>
+            <span class="breadcrumb-sep">›</span>
+            <span>Contato</span>
+        </nav>
         <div class="page-header">
-            <h1>Fale com Nick</h1>
-            <p>Dúvidas técnicas, sugestões de pautas, parcerias ou correções — estamos aqui para ajudar.</p>
+            <h1>Entre em Contato</h1>
+            <p>Dúvidas técnicas, sugestões, parcerias ou correções — estamos aqui para ajudar</p>
         </div>
-
-        <!-- ALERTA -->
-        <div class="alert">
-            <span>⏱️</span>
-            <p><strong>Tempo médio de resposta:</strong> Nick responde em até 24 horas úteis.</p>
+        <div class="ad-container" aria-label="Publicidade">
+            <div class="ad-label">Publicidade</div>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8967995144964134" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
-
-        <!-- CONTACT GRID -->
         <div class="contact-grid">
-            <!-- FORMULÁRIO -->
-            <div class="contact-form-container">
-                <h2 class="form-title">Envie sua mensagem</h2>
-                <p class="form-subtitle">Preencha o formulário abaixo que Nick responderá pessoalmente.</p>
-
-                <form action="https://formspree.io/f/meelbzwo" method="POST">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="nome">Nome completo *</label>
-                            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-mail *</label>
-                            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
-                        </div>
+            <div class="contact-form">
+                <h2>Enviar Mensagem</h2>
+                <form action="https://formsubmit.co/contato@hardwarebasetech.online" method="POST">
+                    <input type="hidden" name="_subject" value="Contato via HardwareBaseTech">
+                    <input type="hidden" name="_next" value="https://hardwarebasetech.online/obrigado.html">
+                    <input type="hidden" name="_captcha" value="false">
+                    <div class="form-group">
+                        <label for="nome">Seu Nome *</label>
+                        <input type="text" id="nome" name="nome" placeholder="Ex: João Silva" required>
                     </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="telefone">WhatsApp</label>
-                            <input type="tel" id="telefone" name="telefone" placeholder="(44) 99970-7236">
-                        </div>
-                        <div class="form-group">
-                            <label for="assunto">Assunto *</label>
-                            <select id="assunto" name="assunto" required>
-                                <option value="">Selecione</option>
-                                <option value="duvida">Dúvida técnica</option>
-                                <option value="sugestao">Sugestão de pauta</option>
-                                <option value="parceria">Parceria</option>
-                                <option value="correcao">Correção de artigo</option>
-                                <option value="outro">Outro</option>
-                            </select>
-                        </div>
+                    <div class="form-group">
+                        <label for="email">Seu E-mail *</label>
+                        <input type="email" id="email" name="email" placeholder="Ex: joao@email.com" required>
                     </div>
-
+                    <div class="form-group">
+                        <label for="assunto">Assunto *</label>
+                        <select id="assunto" name="assunto" required>
+                            <option value="">Selecione o assunto...</option>
+                            <option value="Dúvida Técnica">Dúvida Técnica sobre Hardware</option>
+                            <option value="Sugestão de Artigo">Sugestão de Artigo</option>
+                            <option value="Correção de Conteúdo">Correção de Conteúdo</option>
+                            <option value="Parceria Editorial">Parceria Editorial</option>
+                            <option value="Envio de Produto para Análise">Envio de Produto para Análise</option>
+                            <option value="Publicidade">Publicidade</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
                     <div class="form-group">
                         <label for="mensagem">Mensagem *</label>
-                        <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem com detalhes..." required></textarea>
+                        <textarea id="mensagem" name="mensagem" placeholder="Descreva sua dúvida, sugestão ou proposta em detalhes..." required></textarea>
                     </div>
-
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="lgpd" name="lgpd" required>
-                        <label for="lgpd">Concordo com a <a href="privacidade.html">Política de Privacidade</a> e autorizo o uso dos meus dados para resposta.</label>
-                    </div>
-
-                    <button type="submit" class="btn-submit">Enviar mensagem →</button>
+                    <button type="submit" class="form-submit">Enviar Mensagem →</button>
                 </form>
             </div>
-
-            <!-- SIDEBAR -->
-            <div class="contact-info-sidebar">
-                <!-- CONTATO DIRETO -->
-                <div class="info-card">
-                    <h3>📞 Contato direto</h3>
-                    
-                    <div class="contact-method">
-                        <div class="contact-icon">📧</div>
-                        <div class="contact-details">
-                            <h4>E-mail</h4>
-                            <p>Resposta em até 24h</p>
-                            <a href="mailto: ncmine75@gmail.com">ncmine75@gmail.com</a>
-                        </div>
+            <div>
+                <div class="contact-info-card">
+                    <h3>Informações de Contato</h3>
+                    <div class="contact-info-item">
+                        <span class="contact-info-icon">📧</span>
+                        <p><strong>E-mail</strong>contato@hardwarebasetech.online</p>
                     </div>
-
-                    <div class="contact-method">
-                        <div class="contact-icon">📱</div>
-                        <div class="contact-details">
-                            <h4>WhatsApp</h4>
-                            <p>Atendimento comercial</p>
-                            <a href="https://wa.me/5544999707236">+55 (44) 99970-7236</a>
-                        </div>
+                    <div class="contact-info-item">
+                        <span class="contact-info-icon">📍</span>
+                        <p><strong>Localização</strong>Terra Roxa, Paraná — Brasil</p>
                     </div>
-
-                    <div class="business-hours">
-                        <p>Segunda a Sexta <span>9:00 - 18:00</span></p>
-                        <p>Sábado <span>9:00 - 12:00</span></p>
-                        <p>Domingo <span>Fechado</span></p>
+                    <div class="contact-info-item">
+                        <span class="contact-info-icon">⏱️</span>
+                        <p><strong>Tempo de Resposta</strong>Até 48 horas úteis</p>
                     </div>
                 </div>
-
-                <!-- REDES SOCIAIS -->
-                <div class="info-card">
-                    <h3>🌐 Redes Sociais</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 20px;">Acompanhe Nick nas redes:</p>
-                    
-                    <div class="social-links-card">
-                        <a href="https://www.instagram.com/nicolastrx1/" target="_blank" class="social-link-card" title="Instagram">📷</a>
-                        <a href="https://www.tiktok.com/@ncmine" target="_blank" class="social-link-card" title="TikTok">🎵</a>
-                        <a href="https://www.youtube.com/@Ncmine" target="_blank" class="social-link-card" title="YouTube">▶️</a>
-                        <a href="https://github.com/ncmine286715" target="_blank" class="social-link-card" title="GitHub">⌨️</a>
+                <div class="contact-info-card">
+                    <h3>Redes Sociais</h3>
+                    <div class="contact-info-item">
+                        <span class="contact-info-icon">📷</span>
+                        <p><strong>Instagram</strong><a href="https://www.instagram.com/nicolastrx1/" target="_blank" rel="noopener noreferrer">@nicolastrx1</a></p>
+                    </div>
+                    <div class="contact-info-item">
+                        <span class="contact-info-icon">🎵</span>
+                        <p><strong>TikTok</strong><a href="https://www.tiktok.com/@ncmine" target="_blank" rel="noopener noreferrer">@ncmine</a></p>
+                    </div>
+                    <div class="contact-info-item">
+                        <span class="contact-info-icon">▶️</span>
+                        <p><strong>YouTube</strong><a href="https://www.youtube.com/@Ncmine" target="_blank" rel="noopener noreferrer">@Ncmine</a></p>
+                    </div>
+                    <div class="contact-info-item">
+                        <span class="contact-info-icon">⌨️</span>
+                        <p><strong>GitHub</strong><a href="https://github.com/ncmine286715" target="_blank" rel="noopener noreferrer">ncmine286715</a></p>
                     </div>
                 </div>
-
-                <!-- ATENDIMENTO ESPECIALIZADO -->
-                <div class="info-card">
-                    <h3>🔧 Atendimento</h3>
-                    
-                    <div class="contact-method" style="margin-bottom: 16px;">
-                        <div class="contact-icon">⚙️</div>
-                        <div class="contact-details">
-                            <h4>Suporte Técnico</h4>
-                            <p>Dúvidas sobre artigos e hardware</p>
-                            <a href="mailto: ncmine75@gmail.com">ncmine75@gmail.com</a>
-                        </div>
-                    </div>
-
-                    <div class="contact-method">
-                        <div class="contact-icon">🤝</div>
-                        <div class="contact-details">
-                            <h4>Parcerias</h4>
-                            <p>Comercial e patrocínios</p>
-                            <a href="mailto: ncmine75@gmail.com">ncmine75@gmail.com</a>
-                        </div>
-                    </div>
+                <div class="contact-info-card">
+                    <h3>Parcerias e Análises</h3>
+                    <p style="color:var(--text-secondary);font-size:0.88rem;line-height:1.6;">Fabricantes e distribuidores interessados em enviar produtos para análise técnica podem entrar em contato pelo formulário ou pelo e-mail. Todas as análises são realizadas com total independência editorial.</p>
+                </div>
+                <div class="ad-container" aria-label="Publicidade">
+                    <div class="ad-label">Publicidade</div>
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8967995144964134" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
                 </div>
             </div>
         </div>
-
-        <!-- LOCALIZAÇÃO -->
-        <section class="map-section">
-            <div class="map-card">
-                <h3>📍 Onde estamos</h3>
-                <div class="map-placeholder">
-                    <span>MINEADDONSNEWS - Terra Roxa, PR</span>
-                </div>
-                <div class="address-details">
-                    <div>
-                        <p style="color: var(--text-primary); font-weight: 600;">Matriz</p>
-                        <p>Rua das Nações, 1010</p>
-                        <p>Centro - Terra Roxa/PR</p>
-                        <p>CEP: 85990-000</p>
-                    </div>
-                    <div>
-                        <p style="color: var(--text-primary); font-weight: 600;">Horário</p>
-                        <p>Segunda a Sexta: 9h às 18h</p>
-                        <p>Sábado: 9h às 12h</p>
-                        <p>Atendimento online 24/7</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ -->
-        <section class="faq-section">
-            <div class="faq-header">
-                <h2>❓ Perguntas Frequentes</h2>
-                <p>Antes de enviar mensagem, confira as respostas para dúvidas comuns:</p>
-            </div>
-
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>01</span>
-                        <h3>Como sugerir um tema para artigo?</h3>
-                    </div>
-                    <p>Use o formulário com assunto "Sugestão de pauta". Nick analisa todas as sugestões.</p>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>02</span>
-                        <h3>Posso enviar meu hardware para teste?</h3>
-                    </div>
-                    <p>Sim! Entre em contato pelo e-mail comercial para alinhar condições de análise.</p>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>03</span>
-                        <h3>Como anunciar no portal?</h3>
-                    </div>
-                    <p>Entre em contato pelo WhatsApp comercial ou e-mail parcerias@mineaddonsnews.online</p>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>04</span>
-                        <h3>Encontrei um erro em um artigo</h3>
-                    </div>
-                    <p>Use o formulário com assunto "Correção de artigo" e indique o link. Nick corrige rapidamente.</p>
-                </div>
-            </div>
-        </section>
     </main>
-
-    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="wrapper">
             <div class="footer-grid">
-                <div class="footer-about">
-                    <h3 style="color: var(--accent-green); font-size: 1.2rem;">MINEADDONSNEWS</h3>
-                    <p>Análises de hardware para servidores Minecraft, por um analista que realmente testa.</p>
+                <div class="footer-brand">
+                    <span class="site-title">HardwareBaseTech</span>
+                    <p>Análises técnicas independentes de hardware: CPUs, GPUs, memória RAM, SSDs e muito mais.</p>
                     <div class="footer-social">
-                        <a href="https://www.instagram.com/nicolastrx1/" target="_blank">📷</a>
-                        <a href="https://www.tiktok.com/@ncmine" target="_blank">🎵</a>
-                        <a href="https://www.youtube.com/@Ncmine" target="_blank">▶️</a>
-                        <a href="https://github.com/ncmine286715" target="_blank">⌨️</a>
+                        <a href="https://www.instagram.com/nicolastrx1/" target="_blank" rel="noopener noreferrer" title="Instagram">📷</a>
+                        <a href="https://www.tiktok.com/@ncmine" target="_blank" rel="noopener noreferrer" title="TikTok">🎵</a>
+                        <a href="https://www.youtube.com/@Ncmine" target="_blank" rel="noopener noreferrer" title="YouTube">▶️</a>
                     </div>
                 </div>
-                <div>
-                    <h4 style="color: var(--text-primary);">Contato</h4>
-                    <div class="footer-contact">
-                        <p>ncmine75@gmail.com</p>
-                        <p>Rua das Nações, 1010</p>
-                        <p>Terra Roxa - PR</p>
-                        <p>📱 +55 (44) 99970-7236</p>
-                    </div>
+                <div class="footer-col">
+                    <h4>Hardware</h4>
+                    <a href="index.html#cpus">Processadores</a>
+                    <a href="index.html#placas-de-video">Placas de Vídeo</a>
+                    <a href="index.html#memoria-ram">Memória RAM</a>
+                    <a href="index.html#armazenamento">Armazenamento</a>
                 </div>
-                <div>
-                    <h4 style="color: var(--text-primary);">Links</h4>
-                    <div class="footer-links">
-                        <a href="sobre.html">Sobre Nick</a>
-                        <a href="contato.html">Contato</a>
-                        <a href="privacidade.html">Privacidade</a>
-                        <a href="termos.html">Termos</a>
-                        <a href="cookies.html">Cookies</a>
-                    </div>
+                <div class="footer-col">
+                    <h4>Site</h4>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="metodologia.html">Metodologia</a>
+                    <a href="contato.html">Contato</a>
+                    <a href="faq.html">FAQ</a>
                 </div>
-                <div>
-                    <h4 style="color: var(--text-primary);">Redes</h4>
-                    <div class="footer-links">
-                        <a href="https://www.instagram.com/nicolastrx1/">Instagram</a>
-                        <a href="https://www.tiktok.com/@ncmine">TikTok</a>
-                        <a href="https://www.youtube.com/@Ncmine">YouTube</a>
-                        <a href="https://github.com/ncmine286715">GitHub</a>
-                    </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="privacidade.html">Política de Privacidade</a>
+                    <a href="termos.html">Termos de Uso</a>
+                    <a href="cookies.html">Política de Cookies</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>Terra Roxa - PR · Brasil</p>
-                <div class="footer-legal">
+                <p>Terra Roxa — Paraná · Brasil · © 2026 HardwareBaseTech · Todos os direitos reservados</p>
+                <div class="footer-bottom-links">
                     <a href="privacidade.html">Privacidade</a>
                     <a href="termos.html">Termos</a>
-                    <a href="cookies.html">Cookies</a>
+                    <a href="sitemap.xml">Sitemap</a>
                 </div>
             </div>
         </div>
     </footer>
-
-    <!-- COOKIE BANNER -->
-    <div class="cookie-banner" id="cookieBanner">
-        <p>Utilizamos cookies para melhorar sua experiência. <a href="cookies.html">Saiba mais</a></p>
-        <button class="cookie-btn" onclick="document.getElementById('cookieBanner').style.display='none'">Aceitar</button>
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Aviso de cookies">
+        <p>Utilizamos cookies para melhorar sua experiência. <a href="cookies.html">Saiba mais</a>.</p>
+        <button class="cookie-btn" id="cookieAccept">Aceitar</button>
     </div>
-
-    <script>
-        // Fechar cookie banner
-        document.querySelector('.cookie-btn')?.addEventListener('click', function() {
-            document.getElementById('cookieBanner').style.display = 'none';
-        });
-    </script>
+    <script>(function(){var b=document.getElementById('cookieBanner'),btn=document.getElementById('cookieAccept');if(localStorage.getItem('cookiesAccepted'))b.style.display='none';if(btn)btn.addEventListener('click',function(){localStorage.setItem('cookiesAccepted','1');b.style.display='none';});})();</script>
 </body>
 </html>

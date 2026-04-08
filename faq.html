@@ -1,771 +1,219 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://mineaddonsnews.online/$(basename "$file")">
-    <meta property="og:title" content="MINEADDONSNEWS - Artigo Técnico">
-    <meta property="og:description" content="Análise técnica aprofundada sobre hardware e engenharia para Minecraft Bedrock.">
-    <meta property="og:image" content="https://mineaddonsnews.online/og-image.jpg">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-(44) 99970-723664134" crossorigin="anonymous"></script>
-    
-    <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
-    <script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
-    <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
-    <script>
-        window.ezstandalone = window.ezstandalone || {};
-        ezstandalone.cmd = ezstandalone.cmd || [];
-    </script>
-    <script src="//ezoicanalytics.com/analytics.js"></script>
-    
-    <meta name="google-adsense-account" content="ca-pub-(44) 99970-723664134">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perguntas Frequentes (FAQ) - MINEADDONSNEWS</title>
-    <meta name="description" content="Encontre respostas para as perguntas mais frequentes sobre Minecraft Bedrock, otimização de servidores, hardware, Scripting API e nossos artigos técnicos.">
-    <link rel="canonical" href="https://www.mineaddonsnews.online/faq.html">
-    <style>
-        :root {
-            --bg-primary: #0d1117;
-            --bg-secondary: #161b22;
-            --bg-elevated: #21262d;
-            --border-color: #30363d;
-            --text-primary: #f0f6fc;
-            --text-secondary: #8b949e;
-            --accent-green: #3fb950;
-            --accent-green-muted: #2ea043;
-            --header-bg: #010409;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
-            font-size: 16px;
-        }
-
-        .wrapper {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Header */
-        .site-header {
-            background: var(--header-bg);
-            border-bottom: 1px solid var(--border-color);
-            padding: 24px 0;
-        }
-
-        .header-content {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .creeper-logo {
-            width: 60px;
-            height: 60px;
-            background: var(--accent-green);
-            position: relative;
-            border: 3px solid #000;
-            flex-shrink: 0;
-        }
-
-        .creeper-eye {
-            width: 12px;
-            height: 12px;
-            background: #000;
-            position: absolute;
-            top: 12px;
-        }
-
-        .eye-left { left: 8px; }
-        .eye-right { right: 8px; }
-
-        .creeper-mouth {
-            width: 24px;
-            height: 24px;
-            background: #000;
-            position: absolute;
-            bottom: 6px;
-            left: 18px;
-            clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 75% 50%, 75% 100%, 25% 100%, 25% 50%, 0% 50%);
-        }
-
-        .site-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--accent-green);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .site-tagline {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-top: 4px;
-        }
-
-        /* Navegação */
-        .site-nav {
-            background: var(--bg-secondary);
-            border-bottom: 1px solid var(--border-color);
-            padding: 12px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .nav-links a {
-            color: var(--text-secondary);
-            font-weight: 500;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            text-decoration: none;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-green);
-        }
-
-        /* Breadcrumb */
-        .breadcrumb {
-            margin: 24px 0;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        .breadcrumb a {
-            color: var(--text-secondary);
-            text-decoration: none;
-        }
-
-        .breadcrumb a:hover {
-            color: var(--accent-green);
-        }
-
-        .breadcrumb span {
-            color: var(--text-primary);
-        }
-
-        /* Page Header */
-        .page-header {
-            margin: 32px 0 24px 0;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 16px;
-        }
-
-        .page-header h1 {
-            font-size: 2.5rem;
-            color: var(--accent-green);
-            margin-bottom: 8px;
-        }
-
-        .page-header p {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            max-width: 800px;
-        }
-
-        /* Busca FAQ */
-        .faq-search {
-            margin: 32px 0;
-        }
-
-        .faq-search input {
-            width: 100%;
-            padding: 16px 20px;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            color: var(--text-primary);
-            font-size: 1rem;
-        }
-
-        .faq-search input:focus {
-            outline: none;
-            border-color: var(--accent-green);
-            box-shadow: 0 0 0 3px rgba(63, 185, 80, 0.1);
-        }
-
-        /* Categorias FAQ */
-        .faq-categories {
-            display: flex;
-            gap: 16px;
-            margin: 32px 0;
-            flex-wrap: wrap;
-        }
-
-        .category-tag {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            padding: 10px 24px;
-            border-radius: 30px;
-            color: var(--text-secondary);
-            cursor: pointer;
-            transition: 0.2s;
-            font-size: 0.95rem;
-        }
-
-        .category-tag:hover,
-        .category-tag.active {
-            background: var(--accent-green);
-            color: #000;
-            border-color: var(--accent-green);
-        }
-
-        /* Grid FAQ */
-        .faq-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-            margin: 40px 0;
-        }
-
-        .faq-item {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 28px;
-            transition: 0.2s;
-        }
-
-        .faq-item:hover {
-            border-color: var(--accent-green);
-            transform: translateY(-2px);
-        }
-
-        .faq-question {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 16px;
-            align-items: flex-start;
-        }
-
-        .faq-icon {
-            color: var(--accent-green);
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .faq-question h3 {
-            color: var(--text-primary);
-            font-size: 1.1rem;
-            line-height: 1.4;
-        }
-
-        .faq-answer {
-            color: var(--text-secondary);
-            margin-left: 36px;
-        }
-
-        .faq-answer p {
-            margin-bottom: 12px;
-        }
-
-        .faq-answer a {
-            color: var(--accent-green);
-            text-decoration: none;
-        }
-
-        .faq-answer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Ainda tem dúvidas? */
-        .contact-section {
-            background: linear-gradient(135deg, #1f4037 0%, #0f2027 100%);
-            border-radius: 16px;
-            padding: 48px;
-            margin: 48px 0;
-            text-align: center;
-            border: 1px solid var(--border-color);
-        }
-
-        .contact-section h2 {
-            color: var(--accent-green);
-            font-size: 2rem;
-            margin-bottom: 16px;
-        }
-
-        .contact-section p {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            margin-bottom: 32px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .contact-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .contact-btn {
-            background: var(--accent-green);
-            color: #000;
-            padding: 14px 32px;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: 0.2s;
-            border: 2px solid var(--accent-green);
-        }
-
-        .contact-btn:hover {
-            background: transparent;
-            color: var(--accent-green);
-        }
-
-        .contact-btn-outline {
-            background: transparent;
-            color: var(--text-primary);
-            border: 2px solid var(--border-color);
-        }
-
-        .contact-btn-outline:hover {
-            border-color: var(--accent-green);
-            color: var(--accent-green);
-            background: transparent;
-        }
-
-        /* Footer */
-        .site-footer {
-            background: var(--header-bg);
-            border-top: 1px solid var(--border-color);
-            padding: 48px 0 32px 0;
-            margin-top: 48px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-about p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin: 16px 0;
-        }
-
-        .footer-contact {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.8;
-        }
-
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .footer-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-green);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid var(--border-color);
-            padding-top: 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-
-        .footer-legal a {
-            color: var(--text-secondary);
-            margin-left: 20px;
-            text-decoration: none;
-        }
-
-        /* Cookie Banner */
-        .cookie-banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: var(--bg-secondary);
-            border-top: 2px solid var(--accent-green);
-            padding: 16px 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-
-        .cookie-btn {
-            background: var(--accent-green);
-            color: #000;
-            border: none;
-            padding: 8px 24px;
-            font-weight: 600;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-
-        @media (max-width: 1024px) {
-            .faq-grid {
-                grid-template-columns: 1fr;
-            }
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-            .footer-bottom {
-                flex-direction: column;
-                text-align: center;
-            }
-            .contact-buttons {
-                flex-direction: column;
-            }
-        }
-    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYBSXRH3TF"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-RYBSXRH3TF');</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8967995144964134" crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-8967995144964134">
+    <title>FAQ — Perguntas Frequentes sobre Hardware | HardwareBaseTech</title>
+    <meta name="description" content="Respostas para as perguntas mais frequentes sobre hardware: CPUs, GPUs, RAM, SSDs, montagem de PCs e análises técnicas do HardwareBaseTech.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://hardwarebasetech.online/faq.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hardwarebasetech.online/faq.html">
+    <meta property="og:title" content="FAQ — Perguntas Frequentes sobre Hardware | HardwareBaseTech">
+    <meta property="og:description" content="Respostas para as perguntas mais frequentes sobre hardware, benchmarks e análises técnicas.">
+    <meta property="og:image" content="https://hardwarebasetech.online/img/og-image.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Qual a diferença entre DDR4 e DDR5?","acceptedAnswer":{"@type":"Answer","text":"DDR5 oferece maior largura de banda e capacidade por módulo, mas DDR4 ainda tem melhor latência em muitos cenários. Para a maioria dos usuários, a diferença prática em jogos é de 2-5%."}},
+    {"@type":"Question","name":"Vale a pena comprar uma GPU com ray tracing?","acceptedAnswer":{"@type":"Answer","text":"Depende do seu uso. Para jogos modernos em 1440p ou 4K com ray tracing ativado, sim. Para 1080p competitivo, o ray tracing pode impactar negativamente o FPS."}},
+    {"@type":"Question","name":"NVMe Gen5 vale mais que Gen4?","acceptedAnswer":{"@type":"Answer","text":"Para a maioria dos usuários, não. A diferença em aplicações do dia a dia é imperceptível. Gen5 brilha em workstations com grandes transferências de arquivos."}}
+    ]}</script>
 </head>
 <body>
     <header class="site-header">
         <div class="wrapper header-content">
-            <div class="creeper-logo">
-                <div class="creeper-eye eye-left"></div>
-                <div class="creeper-eye eye-right"></div>
-                <div class="creeper-mouth"></div>
-            </div>
-            <div>
-                <h1 class="site-title">MINEADDONSNEWS</h1>
-                <p class="site-tagline">Engenharia de Sistemas · Hardware · Tutoriais Técnicos</p>
+            <a href="index.html" class="site-logo">
+                <img src="img/logo.png" alt="HardwareBaseTech Logo" class="logo-img">
+                <div>
+                    <div class="site-title">HardwareBaseTech</div>
+                    <div class="site-tagline">Análises Técnicas de Hardware · Benchmarks Reais</div>
+                </div>
+            </a>
+            <div class="social-header-links">
+                <a href="https://www.instagram.com/nicolastrx1/" target="_blank" rel="noopener noreferrer" title="Instagram">📷</a>
+                <a href="https://www.tiktok.com/@ncmine" target="_blank" rel="noopener noreferrer" title="TikTok">🎵</a>
+                <a href="https://www.youtube.com/@Ncmine" target="_blank" rel="noopener noreferrer" title="YouTube">▶️</a>
             </div>
         </div>
     </header>
-
-    <nav class="site-nav">
+    <nav class="site-nav" aria-label="Navegação principal">
         <div class="wrapper nav-links">
             <a href="index.html">Início</a>
-            <a href="index.html#engenharia">Engenharia</a>
-            <a href="index.html#hardware">Hardware</a>
-            <a href="index.html#infra">Infraestrutura</a>
-            <a href="sobre.html">Sobre Nós</a>
+            <a href="index.html#cpus">CPUs</a>
+            <a href="index.html#placas-de-video">Placas de Vídeo</a>
+            <a href="index.html#memoria-ram">Memória RAM</a>
+            <a href="index.html#armazenamento">Armazenamento</a>
+            <a href="index.html#guias">Guias</a>
+            <a href="sobre.html">Sobre</a>
             <a href="contato.html">Contato</a>
-            <a href="privacidade.html">Privacidade</a>
         </div>
     </nav>
-
     <main class="wrapper">
-        <!-- Breadcrumb -->
-        <div class="breadcrumb">
-            <a href="index.html">Início</a> › <span>Perguntas Frequentes (FAQ)</span>
-        </div>
-
-        <!-- Page Header -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Início</a>
+            <span class="breadcrumb-sep">›</span>
+            <span>FAQ</span>
+        </nav>
         <div class="page-header">
-            <h1>❓ Perguntas Frequentes</h1>
-            <p>Encontre respostas para as dúvidas mais comuns sobre Minecraft Bedrock, otimização de servidores, hardware e nossos artigos técnicos.</p>
+            <h1>Perguntas Frequentes (FAQ)</h1>
+            <p>Respostas para as dúvidas mais comuns sobre hardware, benchmarks e análises técnicas</p>
         </div>
 
-        <!-- Busca -->
-        <div class="faq-search">
-            <input type="text" id="faqSearch" placeholder="🔍 Buscar perguntas... (ex: servidor, fps, RAM, Scripting API)">
+        <div class="ad-container" aria-label="Publicidade">
+            <div class="ad-label">Publicidade</div>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8967995144964134" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
-        <!-- Categorias -->
-        <div class="faq-categories" id="faqCategories">
-            <span class="category-tag active" data-category="all">Todas</span>
-            <span class="category-tag" data-category="servidores">Servidores</span>
-            <span class="category-tag" data-category="hardware">Hardware</span>
-            <span class="category-tag" data-category="software">Scripting API</span>
-            <span class="category-tag" data-category="desempenho">Desempenho</span>
-            <span class="category-tag" data-category="geral">Geral</span>
-        </div>
+        <div class="content-with-sidebar">
+            <div>
+                <div class="article-content">
 
-        <!-- FAQ Grid -->
-        <div class="faq-grid" id="faqGrid">
-            <!-- Categoria: Servidores -->
-            <div class="faq-item" data-category="servidores">
-                <div class="faq-question">
-                    <span class="faq-icon">Q:</span>
-                    <h3>Qual a configuração mínima de hardware para um servidor Minecraft Bedrock com 50 jogadores?</h3>
-                </div>
-                <div class="faq-answer">
-                    <p>Para 50 jogadores simultâneos, recomendamos: CPU com pelo menos 8 núcleos (Intel i7 ou AMD Ryzen 7), 16GB de RAM (sendo 8GB alocados para o servidor) e armazenamento SSD NVMe. O servidor Bedrock é menos exigente que o Java, mas addons e mundos grandes podem aumentar a demanda.</p>
+                    <h2>Sobre o HardwareBaseTech</h2>
+
+                    <h3>O que é o HardwareBaseTech?</h3>
+                    <p>O HardwareBaseTech é um site de análises técnicas independentes de hardware de computadores. Publicamos benchmarks reais, comparativos e guias completos de CPUs, GPUs, memória RAM, SSDs, placas-mãe e periféricos, com foco em ajudar você a tomar a melhor decisão de compra.</p>
+
+                    <h3>Quem escreve os artigos?</h3>
+                    <p>Os artigos são escritos por <strong>Nicolas</strong>, entusiasta de hardware com mais de 8 anos de experiência em montagem, análise e otimização de sistemas. Saiba mais na nossa <a href="sobre.html">página Sobre</a>.</p>
+
+                    <h3>Os artigos são pagos por fabricantes?</h3>
+                    <p>Não. O HardwareBaseTech é 100% independente. Nossa receita vem exclusivamente de publicidade contextual (Google AdSense) e links de afiliados. Quando recebemos produtos para teste, isso é sempre declarado explicitamente no artigo. Nossas conclusões técnicas nunca são influenciadas por fabricantes.</p>
+
+                    <h2>Sobre Hardware</h2>
+
+                    <h3>Qual a diferença entre DDR4 e DDR5?</h3>
+                    <p>A <strong>DDR5</strong> oferece maior largura de banda teórica (até 6400+ MT/s), maior capacidade por módulo e consumo energético mais eficiente. No entanto, a <strong>DDR4</strong> ainda tem latências menores em muitos cenários. Para a maioria dos usuários, a diferença prática em jogos é de apenas 2 a 5%. A DDR5 brilha em aplicações de produtividade que se beneficiam de alta largura de banda, como edição de vídeo e renderização 3D.</p>
+
+                    <h3>Vale a pena investir em uma GPU com ray tracing?</h3>
+                    <p>Depende do seu perfil de uso. Para jogos modernos em resoluções de <strong>1440p ou 4K</strong> com ray tracing ativado, as GPUs NVIDIA RTX 40/50 e AMD RX 7000/9000 entregam experiências visuais impressionantes. Para jogos competitivos em <strong>1080p</strong> com foco em alto FPS, o ray tracing pode impactar negativamente o desempenho. Nosso guia <a href="nvidia-rtx-50-series-vs-amd-radeon-rx-9000-o-duelo-definitivo-das-placas-de-video-em-2026.html">RTX 50 vs RX 9000</a> explora isso em detalhes.</p>
+
+                    <h3>NVMe Gen5 vale mais que Gen4 para uso geral?</h3>
+                    <p>Para a maioria dos usuários domésticos e gamers, <strong>não</strong>. A diferença em aplicações do dia a dia é praticamente imperceptível, pois o gargalo está em outros componentes. O NVMe Gen5 brilha em workstations com grandes transferências de arquivos sequenciais (edição de vídeo 8K, virtualização). Veja nossa análise completa em <a href="melhor-ssd-nvme-servidor-minecraft-gen5-vs-gen4-testes-latencia.html">NVMe Gen5 vs Gen4</a>.</p>
+
+                    <h3>AMD ou Intel para jogos em 2026?</h3>
+                    <p>Em 2026, ambas as plataformas são excelentes. Os processadores <strong>AMD Ryzen com tecnologia 3D V-Cache</strong> (como o Ryzen 9 9950X3D) lideram em jogos que se beneficiam de cache L3 maior. A Intel <strong>Core Ultra 200</strong> tem vantagem em produtividade e eficiência energética. Para a maioria dos jogos, a diferença é menor que 5%. Veja nosso comparativo completo em <a href="comparativo-cpus-ryzen-9950x3d-vs-intel-ultra-9-285k.html">Ryzen 9950X3D vs Intel Ultra 9 285K</a>.</p>
+
+                    <h3>Como escolher a fonte de alimentação certa?</h3>
+                    <p>A regra geral é escolher uma fonte com <strong>20-30% de headroom</strong> acima do consumo máximo do sistema. Para um PC com RTX 5090 e Ryzen 9, uma fonte de <strong>1000W a 1200W</strong> com certificação 80 Plus Gold ou superior é recomendada. Evite fontes sem certificação ou de marcas desconhecidas — elas podem danificar seus componentes.</p>
+
+                    <h3>Qual a importância do cooler para o processador?</h3>
+                    <p>O cooler é fundamental para manter o processador dentro da temperatura operacional segura e garantir desempenho sustentado. CPUs modernas com TDP de 125W ou mais (como o Intel Core Ultra 9 285K com 253W de MTP) exigem <strong>coolers de alta performance</strong> — seja air cooler de dupla torre ou water cooler de 240mm ou mais. Um cooler inadequado causa throttling térmico e reduz o desempenho.</p>
+
+                    <h2>Sobre Benchmarks e Testes</h2>
+
+                    <h3>Como vocês realizam os benchmarks?</h3>
+                    <p>Todos os testes são realizados em ambiente controlado (22-24°C), com configurações padronizadas de BIOS (XMP/EXPO ativado quando aplicável) e pasta térmica padronizada. Cada benchmark é executado pelo menos 3 vezes para garantir consistência. Utilizamos ferramentas profissionais como Cinebench, 3DMark, FrameView e CrystalDiskMark. Veja nossa <a href="metodologia.html">metodologia completa</a>.</p>
+
+                    <h3>Os resultados de benchmark são confiáveis?</h3>
+                    <p>Sim, dentro do nosso ambiente de teste específico. Resultados podem variar em outros sistemas devido a diferenças de temperatura ambiente, configurações de BIOS, versão de drivers e outros fatores. Sempre informamos as configurações exatas usadas em cada teste para que você possa comparar com seus próprios resultados.</p>
+
+                    <h3>Por que os resultados diferem de outros sites?</h3>
+                    <p>Diferenças de resultados entre sites são normais e esperadas. Fatores como versão de drivers, configurações de BIOS, temperatura ambiente, pasta térmica e até a placa-mãe utilizada podem influenciar os resultados. O importante é comparar componentes dentro do mesmo ambiente de teste.</p>
+
+                    <h2>Sobre Links de Afiliados e Publicidade</h2>
+
+                    <h3>Os links de compra são links de afiliados?</h3>
+                    <p>Alguns links para produtos em nossos artigos são links de afiliados (Amazon, Kabum, Pichau). Isso significa que podemos receber uma pequena comissão se você comprar pelo link, sem custo adicional para você. Isso <strong>nunca influencia</strong> nossas avaliações técnicas.</p>
+
+                    <h3>Por que o site exibe anúncios?</h3>
+                    <p>Os anúncios são nossa principal fonte de receita e nos permitem manter o site funcionando e publicar conteúdo gratuito de qualidade. Utilizamos o Google AdSense, que exibe anúncios contextuais relevantes. Se você usa bloqueador de anúncios, considere desativá-lo para o nosso site — isso nos ajuda muito!</p>
+
+                    <h2>Dúvidas Gerais</h2>
+
+                    <h3>Como posso sugerir um artigo?</h3>
+                    <p>Use nosso <a href="contato.html">formulário de contato</a> e selecione "Sugestão de Artigo". Lemos todas as sugestões e priorizamos os temas mais solicitados pela comunidade.</p>
+
+                    <h3>Encontrei um erro em um artigo. O que faço?</h3>
+                    <p>Agradecemos muito! Use o <a href="contato.html">formulário de contato</a> e selecione "Correção de Conteúdo". Informe o artigo, o trecho com erro e a correção sugerida. Respondemos em até 48 horas úteis.</p>
+
                 </div>
             </div>
 
-            <div class="faq-item" data-category="servidores">
-                <div class="faq-question">
-                    <span class="faq-icon">Q:</span>
-                    <h3>É possível rodar um servidor Bedrock no Linux?</h3>
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3>Navegação Rápida</h3>
+                    <ul class="sidebar-list">
+                        <li><a href="sobre.html">Sobre o Site</a></li>
+                        <li><a href="metodologia.html">Nossa Metodologia</a></li>
+                        <li><a href="contato.html">Fale Conosco</a></li>
+                        <li><a href="privacidade.html">Privacidade</a></li>
+                        <li><a href="termos.html">Termos de Uso</a></li>
+                    </ul>
                 </div>
-                <div class="faq-answer">
-                    <p>Sim! O servidor dedicado do Minecraft Bedrock (BDS) tem versão oficial para Linux. Recomendamos Ubuntu Server 22.04 LTS ou superior. Veja nosso guia completo em <a href="otimizacao-servidor-bedrock-linux-2026.html">Otimização de Servidores Bedrock no Linux</a>.</p>
+                <div class="sidebar-widget">
+                    <h3>Artigos Populares</h3>
+                    <ul class="sidebar-list">
+                        <li><a href="comparativo-cpus-ryzen-9950x3d-vs-intel-ultra-9-285k.html">Ryzen 9950X3D vs Intel Ultra 9 285K</a></li>
+                        <li><a href="analise-tecnica-rtx-5090.html">Análise: RTX 5090</a></li>
+                        <li><a href="melhor-ssd-nvme-servidor-minecraft-gen5-vs-gen4-testes-latencia.html">NVMe Gen5 vs Gen4</a></li>
+                        <li><a href="guia-memoria-ram-servidor-minecraft-ddr4-ddr5-camm2-latencia.html">DDR4 vs DDR5 vs CAMM2</a></li>
+                    </ul>
                 </div>
-            </div>
-
-            <div class="faq-item" data-category="servidores">
-                <div class="faq-question">
-                    <span class="faq-icon">Q:</span>
-                    <h3>Como configurar um firewall para proteger meu servidor?</h3>
+                <div class="ad-container" aria-label="Publicidade">
+                    <div class="ad-label">Publicidade</div>
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8967995144964134" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
                 </div>
-                <div class="faq-answer">
-                    <p>Recomendamos usar iptables ou UFW no Linux. As portas padrão do Bedrock são 19132-19133 (UDP). Além disso, considere usar um proxy como o BDS Proxy para proteção adicional contra ataques DDoS.</p>
-                </div>
-            </div>
-
-            <!-- Categoria: Hardware -->
-            <div class="faq-item" data-category="hardware">
-                <div class="faq-question">
-                    <span class="faq-icon">Q:</span>
-                    <h3>Qual processador é melhor para Minecraft Bedrock: Intel ou AMD?</h3>
-                </div>
-                <div class="faq-answer">
-                    <p>Ambos são excelentes. Para jogar, processadores com melhor desempenho single-core (como Intel Core i9-14900K ou AMD Ryzen 9 7950X3D) são ideais. Para servidores, AMD EPYC ou Intel Xeon com muitos núcleos e suporte a ECC são mais recomendados.</p>
-                </div>
-            </div>
-
-            <div class="faq-item" data-category="hardware">
-                <div class="faq-question">
-                    <span class="faq-icon">Q:</span>
-                    <h3>Vale a pena investir em RAM DDR5 para Minecraft?</h3>
-                </div>
-                <div class="faq-answer">
-                    <p>Sim, especialmente se você usa addons pesados ou servidores com muitos jogadores. O DDR5 oferece maior largura de banda, o que reduz o tempo de carregamento de chunks. Veja nosso comparativo <a href="comparativo-ddr5-camm2-servidor-minecraft.html">DDR5 vs CAMM2</a>.</p>
-                </div>
-            </div>
-
-            <div class="faq-item" data-category="hardware">
-                <div class="faq-question">
-                    <span class="faq-icon">Q:</span>
-                    <h3>Qual placa de vídeo escolher para jogar com shaders e RTX?</h3>
-                </div>
-                <div class="faq-answer">
-                    <p>Para Ray Tracing no Bedrock, recomendamos pelo menos uma NVIDIA RTX 3060 ou AMD Radeon RX 6600 XT. Para 4K com shaders pesados, uma RTX 4070 ou superior é ideal. Veja nosso guia <a href="rtx-vs-radeon-minecraft-bedrock-performance.html">RTX vs Radeon</a>.</p>
-                </div>
-            </div>
-
-            <!-- Categoria: Software / Scripting API -->
-            <div class="faq-item" data-category="software">
-                <div class="faq-question">
-                    <span class="faq-icon">Q:</span>
-                    <h3>Preciso saber JavaScript para criar addons?</h3>
-                </div>
-                <div class="faq-answer">
-                    <p>Sim! A Scripting API do Minecraft Bedrock utiliza JavaScript (ou TypeScript). Recomendamos ter conhecimentos básicos de programação e lógica. Confira nosso tutorial <a href="scripting-api-minecraft-bedrock-addons-avancados.html">Scripting API para iniciantes</a>.</p>
-                </div>
-            </div>
-
-            <div class="faq-item" data-category="software">
-                <div class="faq-question">
-                    <span class="faq-icon">Q:</span>
-                    <h3>Qual a diferença entre Behavior Packs e Resource Packs?</h3>
-                </div>
-                <div class="faq-answer">
-                    <p>Behavior Packs alteram o comportamento do jogo (IA de mobs, regras, mecânicas). Resource Packs alteram a aparência (texturas, sons, modelos). Ambos podem ser usados juntos para criar experiências completas.</p>
-                </div>
-            </div>
-
-            <div class="faq-item" data-category="software">
-                <div class="faq-question">
-                    <span class="faq-icon">Q:</span>
-                    <h3>Como faço para depurar erros em meus scripts?</h3>
-                </div>
-                <div class="faq-answer">
-                    <p>Use o console do jogo (F1) e o arquivo de log do servidor. A Scripting API também permite usar console.log() para depuração. Recomendamos o uso do Visual Studio Code com as extensões oficiais da Microsoft.</p>
-                </div>
-            </div>
-
-            <!-- Categoria: Desempenho -->
-            <div class="faq-item" data-category="desempenho">
-                <div class="faq-question">
-                    <span class="faq-icon">Q:</span>
-                    <h3>Meu jogo está com FPS baixo, o que fazer?</h3>
-                </div>
-                <div class="faq-answer">
-                    <p>Primeiro, verifique se seus drivers estão atualizados. Reduza a distância de renderização nas configurações. Desative partículas e sombras se necessário. Em PCs mais fracos, use o modo de vídeo "Gráficos rápidos". Veja nosso <a href="otimizacao-minecraft-bedrock-rtx-ryzen-performance.html">guia de otimização</a>.</p>
-                </div>
-            </div>
-
-            <div class="faq-item" data-category="desempenho">
-                <div class="faq-question">
-                    <span class="faq-icon">Q:</span>
-                    <h3>O que é TPS e como monitorar?</h3>
-                </div>
-                <div class="faq-answer">
-                    <p>TPS (Ticks Per Second) mede a performance do servidor. O ideal é 20 TPS. Valores abaixo indicam lag. Você pode monitorar com comandos como "status" no console do servidor ou usando addons de monitoramento.</p>
-                </div>
-            </div>
-
-            <!-- Categoria: Geral -->
-            <div class="faq-item" data-category="geral">
-                <div class="faq-question">
-                    <span class="faq-icon">Q:</span>
-                    <h3>Os artigos são revisados por especialistas?</h3>
-                </div>
-                <div class="faq-answer">
-                    <p>Sim! Todo conteúdo do MINEADDONSNEWS é revisado por nosso conselho técnico, composto por Dr. Ricardo Albuquerque (MIT), Dra. Marina Sparvoli (Stanford) e Prof. Dr. Marcelo Silveira (POLI-USP).</p>
-                </div>
-            </div>
-
-            <div class="faq-item" data-category="geral">
-                <div class="faq-question">
-                    <span class="faq-icon">Q:</span>
-                    <h3>Posso sugerir um tema para artigo?</h3>
-                </div>
-                <div class="faq-answer">
-                    <p>Claro! Adoramos sugestões da comunidade. Envie sua ideia através da nossa <a href="contato.html">página de contato</a> selecionando o assunto "Sugestão de pauta".</p>
-                </div>
-            </div>
-
-            <div class="faq-item" data-category="geral">
-                <div class="faq-question">
-                    <span class="faq-icon">Q:</span>
-                    <h3>Como citar um artigo do portal em trabalhos acadêmicos?</h3>
-                </div>
-                <div class="faq-answer">
-                    <p>Você pode citar nossos artigos como fonte técnica. Recomendamos o formato ABNT: AUTOR. Título do artigo. MINEADDONSNEWS, ano. Disponível em: URL. Acesso em: dia mês ano.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Ainda tem dúvidas? -->
-        <div class="contact-section">
-            <h2>🤔 Ainda tem dúvidas?</h2>
-            <p>Nossa equipe de especialistas está pronta para ajudar com questões técnicas mais específicas.</p>
-            <div class="contact-buttons">
-                <a href="contato.html" class="contact-btn">Enviar mensagem</a>
-                <a href="https://wa.me/(44) 99970-723634" class="contact-btn contact-btn-outline">WhatsApp</a>
-                <a href="mailto:contato@mineaddonsnews.online" class="contact-btn contact-btn-outline">E-mail</a>
-            </div>
+            </aside>
         </div>
     </main>
-
-    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="wrapper">
             <div class="footer-grid">
-                <div class="footer-about">
-                    <h3 class="site-title" style="font-size: 1.2rem;">MINEADDONSNEWS</h3>
-                    <p>Portal independente de engenharia e tecnologia aplicada ao Minecraft Bedrock. Conteúdo revisado por especialistas.</p>
-                </div>
-                <div>
-                    <h4>Contato</h4>
-                    <div class="footer-contact">
-                        <p>Rua das Nações, 1010<br>Terra Roxa - PR, 85990-000</p>
-                        <p>contato@mineaddonsnews.online</p>
+                <div class="footer-brand">
+                    <span class="site-title">HardwareBaseTech</span>
+                    <p>Análises técnicas independentes de hardware: CPUs, GPUs, memória RAM, SSDs e muito mais.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/nicolastrx1/" target="_blank" rel="noopener noreferrer" title="Instagram">📷</a>
+                        <a href="https://www.tiktok.com/@ncmine" target="_blank" rel="noopener noreferrer" title="TikTok">🎵</a>
+                        <a href="https://www.youtube.com/@Ncmine" target="_blank" rel="noopener noreferrer" title="YouTube">▶️</a>
                     </div>
                 </div>
-                <div>
-                    <h4>Institucional</h4>
-                    <div class="footer-links">
-                        <a href="sobre.html">Sobre Nós</a>
-                        <a href="expediente.html">Expediente</a>
-                        <a href="contato.html">Contato</a>
-                        <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
-                    </div>
+                <div class="footer-col">
+                    <h4>Hardware</h4>
+                    <a href="index.html#cpus">Processadores</a>
+                    <a href="index.html#placas-de-video">Placas de Vídeo</a>
+                    <a href="index.html#memoria-ram">Memória RAM</a>
+                    <a href="index.html#armazenamento">Armazenamento</a>
                 </div>
-                <div>
+                <div class="footer-col">
+                    <h4>Site</h4>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="metodologia.html">Metodologia</a>
+                    <a href="contato.html">Contato</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+                <div class="footer-col">
                     <h4>Legal</h4>
-                    <div class="footer-links">
-                        <a href="privacidade.html">Privacidade</a>
-                        <a href="termos.html">Termos</a>
-                        <a href="cookies.html">Cookies</a>
-                    </div>
+                    <a href="privacidade.html">Política de Privacidade</a>
+                    <a href="termos.html">Termos de Uso</a>
+                    <a href="cookies.html">Política de Cookies</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>Terra Roxa - PR · Brasil</p>
-                <div class="footer-legal">
+                <p>Terra Roxa — Paraná · Brasil · © 2026 HardwareBaseTech · Todos os direitos reservados</p>
+                <div class="footer-bottom-links">
                     <a href="privacidade.html">Privacidade</a>
                     <a href="termos.html">Termos</a>
-                    <a href="cookies.html">Cookies</a>
+                    <a href="sitemap.xml">Sitemap</a>
                 </div>
             </div>
         </div>
     </footer>
-
-    <!-- COOKIE BANNER -->
-    <div class="cookie-banner" id="cookie-banner">
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Aviso de cookies">
         <p>Utilizamos cookies para melhorar sua experiência. <a href="cookies.html">Saiba mais</a>.</p>
-        <button class="cookie-btn" onclick="document.getElementById('cookie-banner').style.display='none'">Aceitar</button>
+        <button class="cookie-btn" id="cookieAccept">Aceitar</button>
     </div>
-
-    <!-- Script para busca e categorias -->
-    <script>
-        // Filtro por categoria
-        document.querySelectorAll('.category-tag').forEach(tag => {
-            tag.addEventListener('click', function() {
-                document.querySelectorAll('.category-tag').forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
-                
-                const category = this.dataset.category;
-                const items = document.querySelectorAll('.faq-item');
-                
-                items.forEach(item => {
-                    if (category === 'all' || item.dataset.category === category) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        });
-
-        // Busca
-        document.getElementById('faqSearch').addEventListener('keyup', function() {
-            const searchTerm = this.value.toLowerCase();
-            const items = document.querySelectorAll('.faq-item');
-            
-            items.forEach(item => {
-                const question = item.querySelector('h3').innerText.toLowerCase();
-                const answer = item.querySelector('.faq-answer p').innerText.toLowerCase();
-                
-                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        });
-    </script>
-<div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 25px; margin: 30px 0; text-align: center;">
-  <h3 style="color: #3fb950; margin-bottom: 10px;">📊 Quer calcular o servidor ideal para você?</h3>
-  <p style="color: #8b949e; margin-bottom: 20px;">Use nossa calculadora interativa e descubra a configuração perfeita!</p>
-  <a href="https://mineaddonsnews.online/interativa.html" style="background: #3fb950; color: #000; padding: 12px 30px; border-radius: 6px; text-decoration: none; font-weight: bold; display: inline-block;">Calcular agora →</a>
-</div>
+    <script>(function(){var b=document.getElementById('cookieBanner'),btn=document.getElementById('cookieAccept');if(localStorage.getItem('cookiesAccepted'))b.style.display='none';if(btn)btn.addEventListener('click',function(){localStorage.setItem('cookiesAccepted','1');b.style.display='none';});})();</script>
 </body>
 </html>

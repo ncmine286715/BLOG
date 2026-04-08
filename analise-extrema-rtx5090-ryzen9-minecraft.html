@@ -2,6 +2,8 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYBSXRH3TF"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-RYBSXRH3TF');</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>HardwareBaseTech | Análises e Guias de Hardware com Dados Reais</title>
   <meta name="description" content="HardwareBaseTech: análises, guias e comparativos de hardware baseados em benchmarks públicos, dados técnicos e testes documentados pela comunidade. Escolha com confiança.">
@@ -36,449 +38,33 @@
     }
   }
   </script>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: #f5f7fa;
-      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-      line-height: 1.5;
-      color: #1e2a3a;
-    }
-
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      background-color: #ffffff;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.02);
-    }
-
-    /* HEADER */
-    .site-header {
-      padding: 1.5rem 2rem 0.75rem 2rem;
-      border-bottom: 1px solid #eef2f6;
-      background: #ffffff;
-    }
-
-    .brand {
-      margin-bottom: 1rem;
-    }
-
-    .brand h1 {
-      font-size: 1.9rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: #0f2b3d;
-      line-height: 1.2;
-    }
-
-    .brand .subhead {
-      font-size: 0.95rem;
-      color: #4a627a;
-      margin-top: 0.25rem;
-      font-weight: 400;
-      border-left: 3px solid #2c7da0;
-      padding-left: 0.75rem;
-    }
-
-    /* NAV */
-    .main-nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.8rem;
-      list-style: none;
-      padding: 0.75rem 0 0.25rem 0;
-      border-top: 1px solid #eef2f6;
-    }
-
-    .main-nav a {
-      text-decoration: none;
-      font-weight: 500;
-      color: #1f3b4c;
-      font-size: 1rem;
-      transition: color 0.2s ease;
-    }
-
-    .main-nav a:hover {
-      color: #2c7da0;
-    }
-
-    /* HERO */
-    .hero {
-      background: #f0f4f9;
-      margin: 1.5rem 2rem;
-      padding: 2.5rem 2rem;
-      border-radius: 28px;
-      text-align: center;
-    }
-
-    .hero h2 {
-      font-size: 1.9rem;
-      font-weight: 700;
-      color: #0b2b3b;
-      margin-bottom: 1rem;
-      line-height: 1.3;
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      color: #2c4b63;
-      max-width: 720px;
-      margin: 0 auto 1.8rem auto;
-    }
-
-    .btn-primary {
-      display: inline-block;
-      background-color: #2c7da0;
-      color: white;
-      font-weight: 600;
-      padding: 0.85rem 2rem;
-      border-radius: 40px;
-      text-decoration: none;
-      font-size: 1rem;
-      transition: background 0.2s, transform 0.1s;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-
-    .btn-primary:hover {
-      background-color: #1f5e7a;
-    }
-
-    /* TWO COLUMNS LAYOUT */
-    .two-columns {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      margin: 2rem 2rem 2rem 2rem;
-    }
-
-    /* MAIN CONTENT */
-    .main-content section {
-      margin-bottom: 3rem;
-    }
-
-    .section-title {
-      font-size: 1.7rem;
-      font-weight: 600;
-      border-left: 5px solid #2c7da0;
-      padding-left: 1rem;
-      margin-bottom: 1.5rem;
-      color: #0f2b3d;
-    }
-
-    /* ARTICLES GRID */
-    .articles-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.8rem;
-    }
-
-    .post-card {
-      background: #ffffff;
-      border-radius: 20px;
-      padding: 1.25rem 1.5rem;
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.03);
-      border: 1px solid #eef2f8;
-      transition: all 0.2s;
-    }
-
-    .post-card:hover {
-      border-color: #d4e0ea;
-      box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.08);
-    }
-
-    .post-category {
-      display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      background: #eef2fa;
-      padding: 0.2rem 0.7rem;
-      border-radius: 30px;
-      color: #2c7da0;
-      letter-spacing: 0.3px;
-      margin-bottom: 0.75rem;
-    }
-
-    .post-title {
-      font-size: 1.35rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      line-height: 1.3;
-      color: #0f2b3d;
-    }
-
-    .post-summary {
-      color: #3a5a72;
-      font-size: 0.95rem;
-      margin: 0.5rem 0 0.75rem 0;
-      line-height: 1.45;
-    }
-
-    .post-meta {
-      display: flex;
-      gap: 1rem;
-      font-size: 0.8rem;
-      color: #6b8a9e;
-      margin-top: 0.5rem;
-      border-top: 1px solid #edf2f7;
-      padding-top: 0.75rem;
-    }
-
-    /* CATEGORIES BOXES */
-    .categories-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 0.5rem;
-    }
-
-    .cat-item {
-      background: #f8fafd;
-      border: 1px solid #e2e9f0;
-      border-radius: 60px;
-      padding: 0.6rem 1.4rem;
-      font-weight: 500;
-      color: #2c7da0;
-      text-decoration: none;
-      transition: all 0.2s;
-      font-size: 0.95rem;
-    }
-
-    .cat-item:hover {
-      background: #e9f0f5;
-      border-color: #cbdde9;
-    }
-
-    /* ABOUT & TRUST */
-    .about-card, .trust-card {
-      background: #fbfdfe;
-      padding: 1.5rem 1.8rem;
-      border-radius: 24px;
-      border: 1px solid #eef2f8;
-      margin-bottom: 1.8rem;
-    }
-
-    .about-card h3, .trust-card h3 {
-      font-size: 1.4rem;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-      color: #1e3b4c;
-    }
-
-    .about-card p, .trust-card p {
-      color: #2b4b62;
-      line-height: 1.55;
-    }
-
-    /* SIDEBAR */
-    .sidebar {
-      background: #fafcff;
-      border-radius: 28px;
-      border: 1px solid #eef2f8;
-      padding: 1.6rem 1.6rem;
-      height: fit-content;
-    }
-
-    .sidebar-widget {
-      margin-bottom: 2rem;
-    }
-
-    .sidebar-widget h4 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      border-bottom: 2px solid #e2eaf1;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-      color: #1e3b4c;
-    }
-
-    .popular-list, .guides-list {
-      list-style: none;
-    }
-
-    .popular-list li, .guides-list li {
-      margin-bottom: 1rem;
-      border-bottom: 1px dashed #eef2f6;
-      padding-bottom: 0.75rem;
-    }
-
-    .popular-list a, .guides-list a {
-      text-decoration: none;
-      font-weight: 500;
-      color: #2c7da0;
-      transition: color 0.2s;
-    }
-
-    .popular-list a:hover, .guides-list a:hover {
-      color: #0f5c7a;
-      text-decoration: underline;
-    }
-
-    .guides-list li:last-child, .popular-list li:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    /* CONTACT SECTION (simples) */
-    .contact-section {
-      margin: 2rem 2rem 1rem 2rem;
-      background: #f8fafd;
-      border-radius: 28px;
-      padding: 1.8rem 2rem;
-      text-align: center;
-      border: 1px solid #eef2f8;
-    }
-
-    .contact-section h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-      color: #1e3b4c;
-    }
-
-    .contact-section p {
-      color: #2b4b62;
-      max-width: 600px;
-      margin: 0 auto 1rem;
-    }
-
-    .contact-email {
-      font-size: 1.2rem;
-      font-weight: 500;
-      background: white;
-      display: inline-block;
-      padding: 0.5rem 1.5rem;
-      border-radius: 60px;
-      border: 1px solid #dce5ed;
-      color: #2c7da0;
-      text-decoration: none;
-    }
-
-    .contact-email:hover {
-      background: #eef3fc;
-    }
-
-    /* FOOTER */
-    .site-footer {
-      background: #f0f4fa;
-      margin-top: 2rem;
-      padding: 2.5rem 2rem 2rem;
-      border-top: 1px solid #e2e9f0;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .footer-col h4 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: #1e3b4c;
-    }
-
-    .footer-col p, .footer-col address, .footer-col a {
-      font-size: 0.9rem;
-      color: #3a5a72;
-      line-height: 1.5;
-      text-decoration: none;
-    }
-
-    .footer-col a:hover {
-      color: #2c7da0;
-      text-decoration: underline;
-    }
-
-    .footer-links {
-      list-style: none;
-    }
-
-    .footer-links li {
-      margin-bottom: 0.5rem;
-    }
-
-    .copyright {
-      text-align: center;
-      font-size: 0.8rem;
-      color: #5c7f96;
-      border-top: 1px solid #dfe7ef;
-      padding-top: 2rem;
-      margin-top: 1.5rem;
-    }
-
-    /* RESPONSIVE */
-    @media (min-width: 768px) {
-      .articles-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .two-columns {
-        grid-template-columns: 2fr 1fr;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .articles-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .footer-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-      .hero h2 {
-        font-size: 2.4rem;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .site-header, .hero, .two-columns, .contact-section {
-        margin-left: 1rem;
-        margin-right: 1rem;
-      }
-      .hero {
-        padding: 2rem 1rem;
-      }
-      .post-card {
-        padding: 1rem;
-      }
-      .main-nav ul {
-        gap: 1rem;
-      }
-      .brand h1 {
-        font-size: 1.6rem;
-      }
-    }
-  </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8967995144964134" crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-8967995144964134">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
 </head>
 <body>
 <div class="container">
   <!-- HEADER -->
-  <header class="site-header">
-    <div class="brand">
-      <h1>HardwareBaseTech</h1>
-      <div class="subhead">Análises e guias de hardware com base em dados reais</div>
-    </div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="/">Início</a></li>
-        <li><a href="/hardware/">Hardware</a></li>
-        <li><a href="/guias/">Guias</a></li>
-        <li><a href="/comparativos/">Comparativos</a></li>
-        <li><a href="/sobre/">Sobre</a></li>
-        <li><a href="/contato/">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+      <header class="site-header">
+        <div class="wrapper header-content">
+            <a href="index.html" class="site-logo">
+                <img src="img/logo.png" alt="HardwareBaseTech Logo" class="logo-img">
+                <div>
+                    <div class="site-title">HardwareBaseTech</div>
+                    <div class="site-tagline">Análises Técnicas de Hardware · Benchmarks Reais</div>
+                </div>
+            </a>
+            <div class="social-header-links">
+                <a href="https://www.instagram.com/nicolastrx1/" target="_blank" rel="noopener noreferrer" title="Instagram">📷</a>
+                <a href="https://www.tiktok.com/@ncmine" target="_blank" rel="noopener noreferrer" title="TikTok">🎵</a>
+                <a href="https://www.youtube.com/@Ncmine" target="_blank" rel="noopener noreferrer" title="YouTube">▶️</a>
+            </div>
+        </div>
+    </header>
 
   <!-- HERO SECTION -->
   <section class="hero">
@@ -597,34 +183,59 @@
   </div>
 
   <!-- FOOTER COMPLETO -->
-  <footer class="site-footer">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>Sobre resumido</h4>
-        <p>HardwareBaseTech fornece análises técnicas, comparativos e guias para profissionais e entusiastas. Baseamos nosso trabalho em dados públicos e benchmarks confiáveis.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Contato</h4>
-        <p>📧 <a href="mailto:contato@hardwarebasetech.online">contato@hardwarebasetech.online</a></p>
-        <p>📍 Brasil</p>
-      </div>
-      <div class="footer-col">
-        <h4>Links legais</h4>
-        <ul class="footer-links">
-          <li><a href="/politica-de-privacidade/">Política de Privacidade</a></li>
-          <li><a href="/termos-de-uso/">Termos de Uso</a></li>
-          <li><a href="/politica-de-cookies/">Política de Cookies</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Localização</h4>
-        <address>Brasil — Conteúdo editorial independente</address>
-      </div>
+          <footer class="site-footer">
+        <div class="wrapper">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="site-title">HardwareBaseTech</span>
+                    <p>Análises técnicas independentes de hardware: CPUs, GPUs, memória RAM, SSDs e muito mais. Benchmarks reais para ajudar você a tomar a melhor decisão de compra.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/nicolastrx1/" target="_blank" rel="noopener noreferrer" title="Instagram">📷</a>
+                        <a href="https://www.tiktok.com/@ncmine" target="_blank" rel="noopener noreferrer" title="TikTok">🎵</a>
+                        <a href="https://www.youtube.com/@Ncmine" target="_blank" rel="noopener noreferrer" title="YouTube">▶️</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Hardware</h4>
+                    <a href="index.html#cpus">Processadores</a>
+                    <a href="index.html#placas-de-video">Placas de Vídeo</a>
+                    <a href="index.html#memoria-ram">Memória RAM</a>
+                    <a href="index.html#armazenamento">Armazenamento</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Site</h4>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="metodologia.html">Metodologia</a>
+                    <a href="contato.html">Contato</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="privacidade.html">Política de Privacidade</a>
+                    <a href="termos.html">Termos de Uso</a>
+                    <a href="cookies.html">Política de Cookies</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Terra Roxa — Paraná · Brasil · © 2026 HardwareBaseTech · Todos os direitos reservados</p>
+                <div class="footer-bottom-links">
+                    <a href="privacidade.html">Privacidade</a>
+                    <a href="termos.html">Termos</a>
+                    <a href="sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Aviso de cookies">
+        <p>Utilizamos cookies para melhorar sua experiência. <a href="cookies.html">Saiba mais</a>.</p>
+        <button class="cookie-btn" id="cookieAccept">Aceitar</button>
     </div>
-    <div class="copyright">
-      © 2026 HardwareBaseTech — Todos os dados baseados em fontes públicas e benchmarks da indústria. Transparência em hardware.
+    <script>(function(){var b=document.getElementById('cookieBanner'),btn=document.getElementById('cookieAccept');if(localStorage.getItem('cookiesAccepted'))b.style.display='none';if(btn)btn.addEventListener('click',function(){localStorage.setItem('cookiesAccepted','1');b.style.display='none';});})();</script>
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Aviso de cookies">
+        <p>Utilizamos cookies para melhorar sua experiência. <a href="cookies.html">Saiba mais</a>.</p>
+        <button class="cookie-btn" id="cookieAccept">Aceitar</button>
     </div>
-  </footer>
+    <script>(function(){var b=document.getElementById('cookieBanner'),btn=document.getElementById('cookieAccept');if(localStorage.getItem('cookiesAccepted'))b.style.display='none';if(btn)btn.addEventListener('click',function(){localStorage.setItem('cookiesAccepted','1');b.style.display='none';});})();</script>
 </div>
 </body>
 </html>

@@ -2,19 +2,21 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYBSXRH3TF"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-RYBSXRH3TF");</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Metodologia de Testes - MINEADDONSNEWS</title>
+    <title>Metodologia de Testes - HardwareBaseTech</title>
     <meta name="description" content="Saiba como realizamos os testes de hardware para servidores Minecraft: ambiente controlado, 500 jogadores simulados, 350+ mods e monitoramento TPS com Spark.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://mineaddonsnews.online/metodologia.html">
+    <link rel="canonical" href="https://hardwarebasetech.online/metodologia.html">
 
     <!-- OPEN GRAPH -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mineaddonsnews.online/metodologia.html">
-    <meta property="og:title" content="Metodologia de Testes - MINEADDONSNEWS">
+    <meta property="og:url" content="https://hardwarebasetech.online/metodologia.html">
+    <meta property="og:title" content="Metodologia de Testes - HardwareBaseTech">
     <meta property="og:description" content="Conheça o rigor técnico por trás de cada análise: simulação realista, ferramentas profissionais e transparência total.">
-    <meta property="og:image" content="https://mineaddonsnews.online/img/og-metodologia.jpg">
+    <meta property="og:image" content="https://hardwarebasetech.online/img/og-metodologia.jpg">
 
     <!-- ADSENSE -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8967995144964134" crossorigin="anonymous"></script>
@@ -29,126 +31,26 @@
 
     <!-- CSS EXTERNAL -->
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* Estilos específicos para metodologia */
-        .methodology-detail {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 40px;
-            margin: 40px 0;
-        }
-        .methodology-detail h2 {
-            color: var(--accent-green);
-            font-size: 1.8rem;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .methodology-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin: 40px 0;
-        }
-        .methodology-card {
-            background: var(--bg-elevated);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 30px 20px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        .methodology-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-green);
-        }
-        .methodology-card .emoji {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-        .methodology-card h3 {
-            color: var(--accent-green);
-            margin-bottom: 10px;
-        }
-        .methodology-card p {
-            color: var(--text-secondary);
-        }
-        .stats-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin: 50px 0;
-        }
-        .stat-item {
-            text-align: center;
-            flex: 1 1 200px;
-        }
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--accent-green);
-            line-height: 1.2;
-        }
-        .stat-label {
-            color: var(--text-secondary);
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .tool-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin: 30px 0;
-        }
-        .tool-item {
-            background: var(--bg-elevated);
-            border: 1px solid var(--border-color);
-            border-radius: 50px;
-            padding: 10px 25px;
-            font-weight: 600;
-            color: var(--accent-green);
-        }
-        .tool-item span {
-            color: var(--text-primary);
-            margin-right: 8px;
-        }
-        @media (max-width: 768px) {
-            .methodology-grid {
-                grid-template-columns: 1fr;
-            }
-            .stats-container {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
 </head>
 <body>
-    <header class="site-header">
+        <header class="site-header">
         <div class="wrapper header-content">
-            <div class="creeper-logo" aria-label="Logo Minecraft Creeper">
-                <div class="creeper-eye eye-left"></div>
-                <div class="creeper-eye eye-right"></div>
-                <div class="creeper-mouth"></div>
-            </div>
-            <div>
-                <h1 class="site-title">MINEADDONSNEWS</h1>
-                <p class="site-tagline">Hardware para Servidores Minecraft · por Nick</p>
-            </div>
+            <a href="index.html" class="site-logo">
+                <img src="img/logo.png" alt="HardwareBaseTech Logo" class="logo-img">
+                <div>
+                    <div class="site-title">HardwareBaseTech</div>
+                    <div class="site-tagline">Análises Técnicas de Hardware · Benchmarks Reais</div>
+                </div>
+            </a>
             <div class="social-header-links">
-                <a href="https://www.instagram.com/nicolastrx1/" target="_blank" rel="noopener" title="Instagram">📷</a>
-                <a href="https://www.tiktok.com/@ncmine" target="_blank" rel="noopener" title="TikTok">🎵</a>
-                <a href="https://www.youtube.com/@Ncmine" target="_blank" rel="noopener" title="YouTube">▶️</a>
-                <a href="https://github.com/ncmine286715" target="_blank" rel="noopener" title="GitHub">⌨️</a>
+                <a href="https://www.instagram.com/nicolastrx1/" target="_blank" rel="noopener noreferrer" title="Instagram">📷</a>
+                <a href="https://www.tiktok.com/@ncmine" target="_blank" rel="noopener noreferrer" title="TikTok">🎵</a>
+                <a href="https://www.youtube.com/@Ncmine" target="_blank" rel="noopener noreferrer" title="YouTube">▶️</a>
             </div>
         </div>
     </header>
 
-    <nav class="site-nav">
+        <nav class="site-nav" aria-label="Navegação principal">
         <div class="wrapper nav-links">
             <a href="index.html">Início</a>
             <a href="index.html#cpus">CPUs</a>
@@ -157,6 +59,7 @@
             <a href="index.html#armazenamento">Armazenamento</a>
             <a href="index.html#guias">Guias</a>
             <a href="sobre.html">Sobre</a>
+            <a href="contato.html">Contato</a>
         </div>
     </nav>
 
@@ -273,7 +176,7 @@
         <div class="wrapper">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <h3 class="footer-logo">MINEADDONSNEWS</h3>
+                    <h3 class="footer-logo">HardwareBaseTech</h3>
                     <p>Análises de hardware para servidores Minecraft, por um analista que realmente testa.</p>
                     <div class="footer-social">
                         <a href="https://www.instagram.com/nicolastrx1/" target="_blank" rel="noopener" title="Instagram">📷</a>

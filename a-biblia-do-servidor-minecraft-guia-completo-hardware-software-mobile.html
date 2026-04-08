@@ -1,530 +1,22 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYBSXRH3TF"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-RYBSXRH3TF');</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nick Analista: A BÍBLIA do Servidor Minecraft – Do Zero ao Profissional (30.000+ Palavras)</title>
+    <title>Nicolas: A BÍBLIA do Servidor Minecraft – Do Zero ao Profissional (30.000+ Palavras)</title>
     <meta name="description" content="Nick, analista de hardware, apresenta o guia definitivo para montar, configurar e gerenciar um servidor Minecraft. Mais de 30.000 palavras cobrindo hardware, software, rede, manutenção, mobile e muito mais. Inclui exemplos reais da vida do autor.">
     <meta name="keywords" content="servidor minecraft, guia definitivo, nick analista, hardware servidor, software servidor, otimização minecraft, servidor mobile">
     <meta name="author" content="Nick">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8967995144964134" crossorigin="anonymous"></script>
-    <style>
-        :root {
-            --bg-primary: #0d1117;
-            --bg-secondary: #161b22;
-            --bg-elevated: #21262d;
-            --border-color: #30363d;
-            --text-primary: #f0f6fc;
-            --text-secondary: #8b949e;
-            --accent-green: #3fb950;
-            --accent-blue: #58a6ff;
-            --accent-yellow: #d29922;
-            --accent-red: #f85149;
-            --accent-purple: #bc8cff;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Fira Code', monospace;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.7;
-            font-size: 16px;
-        }
-        .wrapper {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        .site-header {
-            background: #010409;
-            border-bottom: 1px solid var(--border-color);
-            padding: 24px 0;
-        }
-        .header-content {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-        .creeper-logo {
-            width: 60px;
-            height: 60px;
-            background: var(--accent-green);
-            position: relative;
-            border: 3px solid #000;
-            flex-shrink: 0;
-        }
-        .creeper-eye {
-            width: 12px;
-            height: 12px;
-            background: #000;
-            position: absolute;
-            top: 12px;
-        }
-        .eye-left { left: 8px; }
-        .eye-right { right: 8px; }
-        .creeper-mouth {
-            width: 24px;
-            height: 24px;
-            background: #000;
-            position: absolute;
-            bottom: 6px;
-            left: 18px;
-            clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 75% 50%, 75% 100%, 25% 100%, 25% 50%, 0% 50%);
-        }
-        .site-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--accent-green);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .site-tagline {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-top: 4px;
-        }
-        .site-nav {
-            background: var(--bg-secondary);
-            border-bottom: 1px solid var(--border-color);
-            padding: 12px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-        }
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            flex-wrap: wrap;
-        }
-        .nav-links a {
-            color: var(--text-secondary);
-            font-weight: 500;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            text-decoration: none;
-        }
-        .nav-links a:hover {
-            color: var(--accent-green);
-        }
-        .breadcrumb {
-            margin: 24px 0;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-        .breadcrumb a {
-            color: var(--text-secondary);
-            text-decoration: none;
-        }
-        .breadcrumb a:hover {
-            color: var(--accent-green);
-        }
-        .article-container {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 48px;
-            margin: 40px 0;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-        }
-        h1 {
-            color: var(--accent-green);
-            font-size: 3rem;
-            font-weight: 700;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 16px;
-            margin-bottom: 24px;
-            line-height: 1.3;
-        }
-        h2 {
-            color: var(--accent-green);
-            font-size: 2.4rem;
-            font-weight: 600;
-            margin: 70px 0 25px;
-            border-left: 6px solid var(--accent-green);
-            padding-left: 20px;
-        }
-        h3 {
-            color: var(--text-primary);
-            font-size: 2rem;
-            font-weight: 600;
-            margin: 50px 0 20px;
-        }
-        h4 {
-            color: var(--accent-blue);
-            font-size: 1.6rem;
-            margin: 35px 0 15px;
-        }
-        p {
-            color: var(--text-secondary);
-            margin-bottom: 25px;
-            font-size: 1.15rem;
-        }
-        ul, ol {
-            color: var(--text-secondary);
-            margin-left: 30px;
-            margin-bottom: 25px;
-            font-size: 1.15rem;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        pre {
-            background: #0d1117;
-            border-left: 4px solid var(--accent-green);
-            border-radius: 8px;
-            padding: 25px;
-            margin: 35px 0;
-            overflow-x: auto;
-            font-family: var(--font-mono);
-            font-size: 1rem;
-            line-height: 1.6;
-            border: 1px solid var(--border-color);
-        }
-        code {
-            font-family: var(--font-mono);
-            color: #f0f6fc;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 35px 0;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid var(--border-color);
-            font-size: 1.1rem;
-        }
-        th {
-            background: linear-gradient(135deg, #1e3a5f, #0f2b45);
-            color: #f0f9ff;
-            font-weight: 600;
-            padding: 18px 15px;
-            text-align: left;
-        }
-        td {
-            padding: 16px 15px;
-            border-bottom: 1px solid var(--border-color);
-            background-color: var(--bg-elevated);
-            color: var(--text-secondary);
-        }
-        blockquote {
-            background: var(--bg-elevated);
-            border-left: 6px solid var(--accent-green);
-            padding: 25px 35px;
-            margin: 35px 0;
-            border-radius: 8px;
-            font-style: italic;
-            color: var(--text-primary);
-            font-size: 1.2rem;
-        }
-        .last-updated {
-            display: inline-block;
-            background: var(--bg-elevated);
-            color: var(--text-secondary);
-            padding: 10px 25px;
-            border-radius: 30px;
-            font-size: 1rem;
-            margin: 20px 0;
-            border: 1px solid var(--border-color);
-        }
-        .author-info {
-            background: var(--bg-elevated);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 30px;
-            margin: 35px 0;
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-        .author-photo {
-            width: 120px;
-            height: 120px;
-            background-image: url('https://www.imgur.la/images/2026/03/03/IMG_20260131_201046_285.th.webp');
-            background-size: cover;
-            background-position: center;
-            border-radius: 50%;
-            border: 3px solid var(--accent-green);
-            background-color: #2d2d2d;
-            flex-shrink: 0;
-        }
-        .author-details {
-            flex: 1;
-        }
-        .author-name {
-            color: var(--accent-green);
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-        .author-title {
-            color: var(--text-secondary);
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-        .author-bio {
-            color: var(--text-primary);
-            font-size: 1.15rem;
-            line-height: 1.6;
-        }
-        .badge {
-            background: var(--accent-green);
-            color: #000;
-            padding: 6px 15px;
-            border-radius: 30px;
-            font-size: 1rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-right: 10px;
-            margin-bottom: 10px;
-        }
-        .badge-mobile {
-            background: var(--accent-purple);
-            color: white;
-        }
-        .info-box {
-            background: rgba(63, 185, 80, 0.1);
-            border-left: 6px solid var(--accent-green);
-            padding: 25px;
-            border-radius: 8px;
-            margin: 35px 0;
-        }
-        .warning-box {
-            background: rgba(210, 153, 34, 0.1);
-            border-left: 6px solid var(--accent-yellow);
-            padding: 25px;
-            border-radius: 8px;
-            margin: 35px 0;
-        }
-        .danger-box {
-            background: rgba(248, 81, 73, 0.1);
-            border-left: 6px solid var(--accent-red);
-            padding: 25px;
-            border-radius: 8px;
-            margin: 35px 0;
-        }
-        .mobile-tip-box {
-            background: rgba(188, 140, 255, 0.1);
-            border-left: 6px solid var(--accent-purple);
-            padding: 25px;
-            border-radius: 8px;
-            margin: 35px 0;
-        }
-        .mobile-tip-box h4 {
-            color: var(--accent-purple);
-            margin-top: 0;
-        }
-        .floating-image {
-            float: right;
-            width: 450px;
-            margin: 0 0 25px 35px;
-            border-radius: 16px;
-            border: 2px solid var(--border-color);
-        }
-        .image-caption {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            text-align: center;
-            margin-top: 8px;
-        }
-        .full-width-image {
-            width: 100%;
-            max-height: 600px;
-            object-fit: cover;
-            border-radius: 20px;
-            margin: 50px 0;
-            border: 2px solid var(--border-color);
-        }
-        .toc {
-            background: var(--bg-elevated);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 35px;
-            margin: 35px 0;
-        }
-        .toc h3 {
-            margin-top: 0;
-            color: var(--accent-green);
-            font-size: 2rem;
-        }
-        .toc-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 20px;
-            margin-top: 25px;
-        }
-        .toc-item {
-            color: var(--text-secondary);
-            font-size: 1.15rem;
-        }
-        .toc-item a {
-            color: var(--text-secondary);
-            text-decoration: none;
-        }
-        .toc-item a:hover {
-            color: var(--accent-green);
-        }
-        .progress-container {
-            width: 100%;
-            height: 8px;
-            background: var(--bg-elevated);
-            position: sticky;
-            top: 60px;
-            z-index: 1000;
-        }
-        .progress-bar {
-            height: 8px;
-            background: var(--accent-green);
-            width: 0%;
-        }
-        .word-count {
-            font-size: 1.2rem;
-            color: var(--accent-green);
-            font-weight: 600;
-        }
-        .checklist {
-            background: var(--bg-elevated);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 30px;
-            margin: 40px 0;
-        }
-        .checklist-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 12px 0;
-            border-bottom: 1px dashed var(--border-color);
-            font-size: 1.15rem;
-        }
-        .checklist-item input[type="checkbox"] {
-            width: 22px;
-            height: 22px;
-            cursor: pointer;
-            accent-color: var(--accent-green);
-        }
-        .mobile-friendly {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            background: var(--bg-elevated);
-            padding: 15px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border: 1px solid var(--accent-purple);
-        }
-        .mobile-friendly span {
-            font-size: 1.5rem;
-        }
-        /* ESTILOS DO ENCURTADOR (FUNIL) */
-        .shortener-alert {
-            background: #ff4500;
-            color: white;
-            text-align: center;
-            padding: 18px;
-            font-weight: bold;
-            border-radius: 12px;
-            margin: 20px 0 30px;
-            font-size: 1.3rem;
-            border: 2px solid var(--accent-green);
-        }
-        .shortener-box {
-            background: var(--bg-elevated);
-            border: 2px solid var(--border-color);
-            border-radius: 24px;
-            padding: 30px;
-            margin: 40px 0 20px;
-            text-align: center;
-        }
-        .shortener-step {
-            color: var(--accent-yellow);
-            font-size: 1.8rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        .shortener-desc {
-            color: var(--text-secondary);
-            margin-bottom: 25px;
-        }
-        .ad-area {
-            background: var(--bg-primary);
-            border: 2px dashed var(--accent-green);
-            border-radius: 16px;
-            padding: 20px;
-            margin: 20px 0;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .ad-area:hover {
-            border-color: var(--accent-yellow);
-            background: #1a1a1a;
-        }
-        .btn-shortener {
-            background: linear-gradient(90deg, #25d366, #128c7e);
-            color: white;
-            border: none;
-            border-radius: 60px;
-            padding: 18px 40px;
-            font-size: 1.3rem;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 20px;
-            display: none;
-            width: 100%;
-            max-width: 300px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .btn-shortener:hover {
-            transform: scale(0.98);
-            filter: brightness(1.05);
-        }
-        .wait-message {
-            color: var(--accent-yellow);
-            background: rgba(210,153,34,0.2);
-            padding: 10px;
-            border-radius: 40px;
-            font-weight: bold;
-            margin: 15px auto;
-            display: inline-block;
-        }
-        .guia-funil {
-            background: #1e2a1e;
-            border: 2px solid var(--accent-green);
-            border-radius: 16px;
-            padding: 20px;
-            margin: 20px 0 30px;
-        }
-        .guia-funil h4 {
-            color: var(--accent-green);
-            margin-top: 0;
-        }
-        .banner-meio {
-            margin: 40px 0;
-            text-align: center;
-        }
-        @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.8rem; }
-            h3 { font-size: 1.5rem; }
-            .author-info { flex-direction: column; text-align: center; }
-            .toc-grid { grid-template-columns: 1fr; }
-            .shortener-step { font-size: 1.4rem; }
-        }
-    </style>
     <!-- SCHEMA.ORG -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "TechArticle",
-      "headline": "Nick Analista: A BÍBLIA do Servidor Minecraft – Do Zero ao Profissional (30.000+ Palavras)",
+      "headline": "Nicolas: A BÍBLIA do Servidor Minecraft – Do Zero ao Profissional (30.000+ Palavras)",
       "description": "Nick, analista de hardware, apresenta o guia definitivo para montar, configurar e gerenciar um servidor Minecraft. Mais de 30.000 palavras cobrindo hardware, software, rede, manutenção, mobile e muito mais.",
       "author": {
         "@type": "Person",
@@ -569,38 +61,48 @@
       ]
     }
     </script>
-<meta property="og:title" content="Nick Analista: MINEADDONSNEWS"><meta property="og:description" content="Análise completa de MINEADDONSNEWS com testes reais."><meta property="og:image" content="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200"><link rel="canonical" href="https://mineaddonsnews.online/a-biblia-do-servidor-minecraft-guia-completo-hardware-software-mobile.html">
+<meta property="og:title" content="Nicolas: HardwareBaseTech"><meta property="og:description" content="Análise completa de HardwareBaseTech com testes reais."><meta property="og:image" content="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200"><link rel="canonical" href="https://hardwarebasetech.online/a-biblia-do-servidor-minecraft-guia-completo-hardware-software-mobile.html">
     <!-- Scripts de anúncio fornecidos (serão carregados, mas ativados no clique) -->
     <script src="https://5gvci.com/act/files/tag.min.js?z=10839985" data-cfasync="false" async></script>
     <script src="https://quge5.com/88/tag.min.js" data-zone="227031" async data-cfasync="false"></script>
     <script>(function(s){s.dataset.zone='10840006',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+    <meta name="google-adsense-account" content="ca-pub-8967995144964134">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
 </head>
 <body>
     <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
     </div>
-    <header class="site-header">
+        <header class="site-header">
         <div class="wrapper header-content">
-            <div class="creeper-logo">
-                <div class="creeper-eye eye-left"></div>
-                <div class="creeper-eye eye-right"></div>
-                <div class="creeper-mouth"></div>
-            </div>
-            <div>
-                <h1 class="site-title">MINEADDONSNEWS</h1>
-                <p class="site-tagline">Engenharia de Sistemas · Hardware · Infraestrutura</p>
+            <a href="index.html" class="site-logo">
+                <img src="img/logo.png" alt="HardwareBaseTech Logo" class="logo-img">
+                <div>
+                    <div class="site-title">HardwareBaseTech</div>
+                    <div class="site-tagline">Análises Técnicas de Hardware · Benchmarks Reais</div>
+                </div>
+            </a>
+            <div class="social-header-links">
+                <a href="https://www.instagram.com/nicolastrx1/" target="_blank" rel="noopener noreferrer" title="Instagram">📷</a>
+                <a href="https://www.tiktok.com/@ncmine" target="_blank" rel="noopener noreferrer" title="TikTok">🎵</a>
+                <a href="https://www.youtube.com/@Ncmine" target="_blank" rel="noopener noreferrer" title="YouTube">▶️</a>
             </div>
         </div>
     </header>
-    <nav class="site-nav">
+            <nav class="site-nav" aria-label="Navegação principal">
         <div class="wrapper nav-links">
             <a href="index.html">Início</a>
-            <a href="index.html#engenharia">Engenharia</a>
-            <a href="index.html#hardware">Hardware</a>
-            <a href="index.html#infra">Infraestrutura</a>
-            <a href="index.html#mobile">Mobile</a>
-            <a href="faq.html">FAQ</a>
+            <a href="index.html#cpus">CPUs</a>
+            <a href="index.html#placas-de-video">Placas de Vídeo</a>
+            <a href="index.html#memoria-ram">Memória RAM</a>
+            <a href="index.html#armazenamento">Armazenamento</a>
+            <a href="index.html#guias">Guias</a>
             <a href="sobre.html">Sobre</a>
+            <a href="contato.html">Contato</a>
         </div>
     </nav>
     <main class="wrapper">
@@ -623,7 +125,7 @@
                 <div class="author-photo"></div>
                 <div class="author-details">
                     <div class="author-name">Nick</div>
-                    <div class="author-title">Analista de Hardware · MineAddonsNews</div>
+                    <div class="author-title">Analista de Hardware · HardwareBaseTech</div>
                     <div class="author-bio">Analiso hardware há 8 anos, com foco em desempenho para jogos e servidores. Meu setup pessoal é um Ryzen 7 5800X com RTX 5060 Ti, 64GB RAM, NVMe Gen4, tudo num Corsair 4000D Airflow. Já montei dezenas de servidores para clientes, perdi dados por não fazer backup, explodi uma fonte genérica e aprendi da pior forma. Hoje, compartilho todo esse conhecimento para que você não cometa os mesmos erros. Este guia é a compilação de tudo o que aprendi na prática.</div>
                 </div>
             </div>
@@ -1103,10 +605,10 @@
             <p><strong>Nick, analista de hardware, assina.</strong></p>
 
             <div class="share-buttons" style="display: flex; gap: 15px; margin: 40px 0; flex-wrap: wrap;">
-                <a href="https://twitter.com/intent/tweet?url=https://mineaddonsnews.online/nick-biblia-servidor&amp;text=Nick publicou a BÍBLIA do servidor Minecraft (30.000+ palavras) com guia mobile!" class="share-button share-twitter" style="padding: 12px 24px; border-radius: 6px; color: white; background: #1DA1F2; text-decoration: none; font-size: 1.1rem;">Twitter</a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://mineaddonsnews.online/nick-biblia-servidor" class="share-button share-facebook" style="padding: 12px 24px; border-radius: 6px; color: white; background: #4267B2; text-decoration: none; font-size: 1.1rem;">Facebook</a>
-                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://mineaddonsnews.online/nick-biblia-servidor" class="share-button share-linkedin" style="padding: 12px 24px; border-radius: 6px; color: white; background: #0077B5; text-decoration: none; font-size: 1.1rem;">LinkedIn</a>
-                <a href="https://api.whatsapp.com/send?text=Nick publicou a BÍBLIA do servidor Minecraft (30.000+ palavras) com guia mobile! https://mineaddonsnews.online/nick-biblia-servidor" class="share-button share-whatsapp" style="padding: 12px 24px; border-radius: 6px; color: white; background: #25D366; text-decoration: none; font-size: 1.1rem;">WhatsApp</a>
+                <a href="https://twitter.com/intent/tweet?url=https://hardwarebasetech.online/nick-biblia-servidor&amp;text=Nick publicou a BÍBLIA do servidor Minecraft (30.000+ palavras) com guia mobile!" class="share-button share-twitter" style="padding: 12px 24px; border-radius: 6px; color: white; background: #1DA1F2; text-decoration: none; font-size: 1.1rem;">Twitter</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://hardwarebasetech.online/nick-biblia-servidor" class="share-button share-facebook" style="padding: 12px 24px; border-radius: 6px; color: white; background: #4267B2; text-decoration: none; font-size: 1.1rem;">Facebook</a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://hardwarebasetech.online/nick-biblia-servidor" class="share-button share-linkedin" style="padding: 12px 24px; border-radius: 6px; color: white; background: #0077B5; text-decoration: none; font-size: 1.1rem;">LinkedIn</a>
+                <a href="https://api.whatsapp.com/send?text=Nick publicou a BÍBLIA do servidor Minecraft (30.000+ palavras) com guia mobile! https://hardwarebasetech.online/nick-biblia-servidor" class="share-button share-whatsapp" style="padding: 12px 24px; border-radius: 6px; color: white; background: #25D366; text-decoration: none; font-size: 1.1rem;">WhatsApp</a>
             </div>
 
             <div class="article-cta" style="background: var(--bg-elevated); border: 1px solid var(--border-color); border-radius: 16px; padding: 40px; margin: 50px 0 0; display: flex; gap: 30px; flex-wrap: wrap;">
@@ -1141,47 +643,59 @@
 
         </div> <!-- fim .article-container -->
     </main>
-    <footer class="site-footer" style="background: #010409; border-top: 1px solid var(--border-color); padding: 60px 0 40px; margin-top: 60px;">
+            <footer class="site-footer">
         <div class="wrapper">
-            <div class="footer-grid" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px;">
-                <div class="footer-about">
-                    <h3 style="color: var(--accent-green); font-size: 1.5rem;">MINEADDONSNEWS</h3>
-                    <p style="color: var(--text-secondary); font-size: 1.1rem;">Análises de hardware para Minecraft, por um analista que realmente testa. CNPJ 12.345.678/0001-90</p>
-                </div>
-                <div>
-                    <h4 style="color: var(--text-primary); font-size: 1.3rem;">Contato</h4>
-                    <div class="footer-contact" style="color: var(--text-secondary); font-size: 1.1rem;">
-                        <p>Rua das Nações, 1010<br>Terra Roxa - PR, 85990-000</p>
-                        <p>nick@mineaddonsnews.online</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="site-title">HardwareBaseTech</span>
+                    <p>Análises técnicas independentes de hardware: CPUs, GPUs, memória RAM, SSDs e muito mais. Benchmarks reais para ajudar você a tomar a melhor decisão de compra.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/nicolastrx1/" target="_blank" rel="noopener noreferrer" title="Instagram">📷</a>
+                        <a href="https://www.tiktok.com/@ncmine" target="_blank" rel="noopener noreferrer" title="TikTok">🎵</a>
+                        <a href="https://www.youtube.com/@Ncmine" target="_blank" rel="noopener noreferrer" title="YouTube">▶️</a>
                     </div>
                 </div>
-                <div>
-                    <h4 style="color: var(--text-primary); font-size: 1.3rem;">Institucional</h4>
-                    <div class="footer-links" style="display: flex; flex-direction: column; gap: 12px;">
-                        <a href="sobre.html" style="color: var(--text-secondary); text-decoration: none; font-size: 1.1rem;">Sobre o Nick</a>
-                        <a href="contato.html" style="color: var(--text-secondary); text-decoration: none; font-size: 1.1rem;">Contato</a>
-                        <a href="trabalhe-conosco.html" style="color: var(--text-secondary); text-decoration: none; font-size: 1.1rem;">Seja analista parceiro</a>
-                    </div>
+                <div class="footer-col">
+                    <h4>Hardware</h4>
+                    <a href="index.html#cpus">Processadores</a>
+                    <a href="index.html#placas-de-video">Placas de Vídeo</a>
+                    <a href="index.html#memoria-ram">Memória RAM</a>
+                    <a href="index.html#armazenamento">Armazenamento</a>
                 </div>
-                <div>
-                    <h4 style="color: var(--text-primary); font-size: 1.3rem;">Legal</h4>
-                    <div class="footer-links" style="display: flex; flex-direction: column; gap: 12px;">
-                        <a href="privacidade.html" style="color: var(--text-secondary); text-decoration: none; font-size: 1.1rem;">Privacidade</a>
-                        <a href="termos.html" style="color: var(--text-secondary); text-decoration: none; font-size: 1.1rem;">Termos de uso</a>
-                        <a href="cookies.html" style="color: var(--text-secondary); text-decoration: none; font-size: 1.1rem;">Política de cookies</a>
-                    </div>
+                <div class="footer-col">
+                    <h4>Site</h4>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="metodologia.html">Metodologia</a>
+                    <a href="contato.html">Contato</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="privacidade.html">Política de Privacidade</a>
+                    <a href="termos.html">Termos de Uso</a>
+                    <a href="cookies.html">Política de Cookies</a>
                 </div>
             </div>
-            <div class="footer-bottom" style="border-top: 1px solid var(--border-color); padding-top: 30px; display: flex; justify-content: space-between; color: var(--text-secondary); font-size: 1rem; flex-wrap: wrap;">
-                <p>Terra Roxa - PR · Brasil · 2026</p>
-                <div>
-                    <a href="privacidade.html" style="color: var(--text-secondary); margin-right: 20px;">Privacidade</a>
-                    <a href="termos.html" style="color: var(--text-secondary); margin-right: 20px;">Termos</a>
-                    <a href="cookies.html" style="color: var(--text-secondary);">Cookies</a>
+            <div class="footer-bottom">
+                <p>Terra Roxa — Paraná · Brasil · © 2026 HardwareBaseTech · Todos os direitos reservados</p>
+                <div class="footer-bottom-links">
+                    <a href="privacidade.html">Privacidade</a>
+                    <a href="termos.html">Termos</a>
+                    <a href="sitemap.xml">Sitemap</a>
                 </div>
             </div>
         </div>
     </footer>
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Aviso de cookies">
+        <p>Utilizamos cookies para melhorar sua experiência. <a href="cookies.html">Saiba mais</a>.</p>
+        <button class="cookie-btn" id="cookieAccept">Aceitar</button>
+    </div>
+    <script>(function(){var b=document.getElementById('cookieBanner'),btn=document.getElementById('cookieAccept');if(localStorage.getItem('cookiesAccepted'))b.style.display='none';if(btn)btn.addEventListener('click',function(){localStorage.setItem('cookiesAccepted','1');b.style.display='none';});})();</script>
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Aviso de cookies">
+        <p>Utilizamos cookies para melhorar sua experiência. <a href="cookies.html">Saiba mais</a>.</p>
+        <button class="cookie-btn" id="cookieAccept">Aceitar</button>
+    </div>
+    <script>(function(){var b=document.getElementById('cookieBanner'),btn=document.getElementById('cookieAccept');if(localStorage.getItem('cookiesAccepted'))b.style.display='none';if(btn)btn.addEventListener('click',function(){localStorage.setItem('cookiesAccepted','1');b.style.display='none';});})();</script>
 
     <script>
         // Barra de progresso

@@ -1,632 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYBSXRH3TF"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-RYBSXRH3TF');</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nick Analista: Processadores para Servidores Minecraft – Guia Técnico com Testes Reais (6.500 palavras)</title>
+    <title>Nicolas: Processadores para Servidores Minecraft – Guia Técnico com Testes Reais (6.500 palavras)</title>
     <meta name="description" content="Nick analisa processadores para servidores Minecraft com dados reais: Ryzen 7 5800X, 7800X3D, 9950X3D, Intel i9-14900K, Ultra 9 285K. Impacto do cache, TPS, consumo e custo-benefício. Inclui prints de testes e logs.">
     <meta name="keywords" content="processador, CPU, servidor Minecraft, Ryzen 7 5800X, Ryzen 7 7800X3D, Ryzen 9 9950X3D, Intel Ultra 9, Nick analista">    <!-- Scripts de monetização -->
     <script src="https://flaskledgeheadquarters.com/8b/d8/bf/8bd8bfbfcaf69762b12ca1d54ccd8f40.js"></script>
-    <style>
-        :root {
-            --bg-primary: #0d1117;
-            --bg-secondary: #161b22;
-            --bg-elevated: #21262d;
-            --border-color: #30363d;
-            --text-primary: #f0f6fc;
-            --text-secondary: #8b949e;
-            --accent-green: #3fb950;
-            --accent-blue: #58a6ff;
-            --accent-yellow: #d29922;
-            --accent-red: #f85149;
-            --accent-purple: #bc8cff;
-            --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Fira Code', monospace;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.7;
-            font-size: 16px;
-        }
-        .wrapper {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        .site-header {
-            background: #010409;
-            border-bottom: 1px solid var(--border-color);
-            padding: 24px 0;
-        }
-        .header-content {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-        .creeper-logo {
-            width: 60px;
-            height: 60px;
-            background: var(--accent-green);
-            position: relative;
-            border: 3px solid #000;
-            flex-shrink: 0;
-        }
-        .creeper-eye {
-            width: 12px;
-            height: 12px;
-            background: #000;
-            position: absolute;
-            top: 12px;
-        }
-        .eye-left { left: 8px; }
-        .eye-right { right: 8px; }
-        .creeper-mouth {
-            width: 24px;
-            height: 24px;
-            background: #000;
-            position: absolute;
-            bottom: 6px;
-            left: 18px;
-            clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 75% 50%, 75% 100%, 25% 100%, 25% 50%, 0% 50%);
-        }
-        .site-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--accent-green);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .site-tagline {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-top: 4px;
-        }
-        .site-nav {
-            background: var(--bg-secondary);
-            border-bottom: 1px solid var(--border-color);
-            padding: 12px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-        }
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            flex-wrap: wrap;
-        }
-        .nav-links a {
-            color: var(--text-secondary);
-            font-weight: 500;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            text-decoration: none;
-        }
-        .nav-links a:hover {
-            color: var(--accent-green);
-        }
-        .breadcrumb {
-            margin: 24px 0;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-        .breadcrumb a {
-            color: var(--text-secondary);
-            text-decoration: none;
-        }
-        .breadcrumb a:hover {
-            color: var(--accent-green);
-        }
-        .article-container {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 48px;
-            margin: 40px 0;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-        }
-        h1 {
-            color: var(--accent-green);
-            font-size: 2.4rem;
-            font-weight: 700;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 16px;
-            margin-bottom: 24px;
-        }
-        h2 {
-            color: var(--accent-green);
-            font-size: 2rem;
-            font-weight: 600;
-            margin: 50px 0 20px;
-            border-left: 4px solid var(--accent-green);
-            padding-left: 16px;
-        }
-        h3 {
-            color: var(--text-primary);
-            font-size: 1.6rem;
-            font-weight: 600;
-            margin: 30px 0 15px;
-        }
-        p {
-            color: var(--text-secondary);
-            margin-bottom: 20px;
-            font-size: 1.05rem;
-        }
-        ul, ol {
-            color: var(--text-secondary);
-            margin-left: 24px;
-            margin-bottom: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 30px 0;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid var(--border-color);
-        }
-        th {
-            background: linear-gradient(135deg, #1e3a5f, #0f2b45);
-            color: #f0f9ff;
-            font-weight: 600;
-            padding: 16px 12px;
-            text-align: left;
-        }
-        td {
-            padding: 14px 12px;
-            border-bottom: 1px solid var(--border-color);
-            background-color: var(--bg-elevated);
-            color: var(--text-secondary);
-        }
-        blockquote {
-            background: var(--bg-elevated);
-            border-left: 4px solid var(--accent-green);
-            padding: 20px 30px;
-            margin: 30px 0;
-            border-radius: 8px;
-            font-style: italic;
-            color: var(--text-primary);
-        }
-        .last-updated {
-            display: inline-block;
-            background: var(--bg-elevated);
-            color: var(--text-secondary);
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-size: 0.9rem;
-            margin: 20px 0;
-            border: 1px solid var(--border-color);
-        }
-        .author-info {
-            background: var(--bg-elevated);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 20px;
-            margin: 30px 0;
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-        .author-photo {
-            width: 80px;
-            height: 80px;
-            background-image: url('https://www.imgur.la/images/2026/03/03/IMG_20260131_201046_285.th.webp');
-            background-size: cover;
-            background-position: center;
-            border-radius: 50%;
-            border: 2px solid var(--accent-green);
-            background-color: #2d2d2d;
-        }
-        .author-details {
-            flex: 1;
-        }
-        .author-name {
-            color: var(--accent-green);
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-        .author-title {
-            color: var(--text-secondary);
-            font-size: 1rem;
-            margin-bottom: 8px;
-        }
-        .author-bio {
-            color: var(--text-primary);
-            font-size: 1rem;
-        }
-        .badge {
-            background: var(--accent-green);
-            color: #000;
-            padding: 4px 12px;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-right: 8px;
-        }
-        .info-box {
-            background: rgba(63, 185, 80, 0.1);
-            border-left: 4px solid var(--accent-green);
-            padding: 20px;
-            border-radius: 8px;
-            margin: 30px 0;
-        }
-        .warning-box {
-            background: rgba(210, 153, 34, 0.1);
-            border-left: 4px solid var(--accent-yellow);
-            padding: 20px;
-            border-radius: 8px;
-            margin: 30px 0;
-        }
-        .danger-box {
-            background: rgba(248, 81, 73, 0.1);
-            border-left: 4px solid var(--accent-red);
-            padding: 20px;
-            border-radius: 8px;
-            margin: 30px 0;
-        }
-        .testimonial-box {
-            background: var(--bg-elevated);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 25px;
-            margin: 30px 0;
-            font-style: italic;
-        }
-        .testimonial-author {
-            color: var(--accent-green);
-            margin-top: 10px;
-            font-style: normal;
-            font-weight: 600;
-        }
-        .floating-image {
-            float: right;
-            width: 380px;
-            margin: 0 0 20px 30px;
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
-        }
-        .image-caption {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            text-align: center;
-            margin-top: 5px;
-        }
-        .full-width-image {
-            width: 100%;
-            max-height: 450px;
-            object-fit: cover;
-            border-radius: 16px;
-            margin: 40px 0;
-            border: 2px solid var(--border-color);
-        }
-        .benchmark-image {
-            background: var(--bg-elevated);
-            padding: 15px;
-            border-radius: 12px;
-            text-align: center;
-            border: 1px solid var(--border-color);
-            margin: 30px 0;
-        }
-        .benchmark-placeholder {
-            background: #0d1117;
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            color: var(--text-secondary);
-            font-family: var(--font-mono);
-            border: 1px dashed var(--border-color);
-        }
-        .toc {
-            background: var(--bg-elevated);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 25px;
-            margin: 30px 0;
-        }
-        .toc h3 {
-            margin-top: 0;
-            color: var(--accent-green);
-        }
-        .toc-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 10px;
-            margin-top: 15px;
-        }
-        .toc-item {
-            color: var(--text-secondary);
-        }
-        .toc-item a {
-            color: var(--text-secondary);
-            text-decoration: none;
-        }
-        .toc-item a:hover {
-            color: var(--accent-green);
-        }
-        .progress-container {
-            width: 100%;
-            height: 4px;
-            background: var(--bg-elevated);
-            position: sticky;
-            top: 60px;
-            z-index: 1000;
-        }
-        .progress-bar {
-            height: 4px;
-            background: var(--accent-green);
-            width: 0%;
-        }
-        .word-count {
-            font-size: 1rem;
-            color: var(--accent-green);
-            font-weight: 600;
-        }
-        .guia-funil {
-            background: #1e2a1e;
-            border: 2px solid var(--accent-green);
-            border-radius: 16px;
-            padding: 20px;
-            margin: 20px 0 30px;
-        }
-        .guia-funil h4 {
-            color: var(--accent-green);
-            margin-top: 0;
-        }
-        .banner-meio {
-            margin: 40px 0;
-            text-align: center;
-        }
-        @media (max-width: 768px) {
-            .article-container { padding: 24px; }
-            h1 { font-size: 1.8rem; }
-            h2 { font-size: 1.5rem; }
-            .floating-image {
-                float: none;
-                width: 100%;
-                margin: 20px 0;
-            }
-        }
-    
-/* =========== ENCURTADOR PREMIUM =========== */
-.enc-wrapper {
-    background: linear-gradient(135deg, #0d1a0d 0%, #0d1117 100%);
-    border: 2px solid var(--accent-green);
-    border-radius: 20px;
-    padding: 0;
-    margin: 56px 0 0;
-    overflow: hidden;
-    box-shadow: 0 0 40px rgba(63,185,80,0.15);
-}
-.enc-header {
-    background: linear-gradient(90deg, #1a3a1a, #0d2a0d);
-    border-bottom: 1px solid #2a5a2a;
-    padding: 20px 32px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
-.enc-header-icon { font-size: 2rem; }
-.enc-header-text h3 {
-    color: var(--accent-green);
-    font-size: 1.15rem;
-    font-weight: 700;
-    margin: 0 0 4px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-.enc-header-text p {
-    color: #8b949e;
-    font-size: 0.85rem;
-    margin: 0;
-}
-.enc-progress-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 32px;
-    background: #0d1117;
-    border-bottom: 1px solid #1e3a1e;
-    gap: 8px;
-}
-.enc-step-dot {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex: 1;
-}
-.enc-step-dot:not(:last-child)::after {
-    content: '';
-    flex: 1;
-    height: 2px;
-    background: #21262d;
-    margin: 0 8px;
-}
-.enc-dot {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: #21262d;
-    border: 2px solid #30363d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: #8b949e;
-    flex-shrink: 0;
-    transition: all 0.4s;
-}
-.enc-dot.active {
-    background: linear-gradient(135deg, var(--accent-green), #2ea043);
-    border-color: var(--accent-green);
-    color: #000;
-    box-shadow: 0 0 12px rgba(63,185,80,0.4);
-}
-.enc-dot.done {
-    background: #1e3a1e;
-    border-color: #2a5a2a;
-    color: var(--accent-green);
-}
-.enc-dot-label {
-    font-size: 0.75rem;
-    color: #8b949e;
-    font-weight: 500;
-    white-space: nowrap;
-}
-.enc-dot.active + .enc-dot-label { color: var(--accent-green); }
-.enc-body { padding: 32px; }
-.enc-step { display: none; }
-.enc-step.active { display: block; }
-.enc-step-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 10px;
-}
-.enc-step-desc {
-    color: #8b949e;
-    font-size: 0.98rem;
-    line-height: 1.7;
-    margin-bottom: 24px;
-}
-.enc-why-box {
-    background: #161b22;
-    border: 1px solid #21262d;
-    border-left: 4px solid var(--accent-green);
-    border-radius: 8px;
-    padding: 14px 18px;
-    margin-bottom: 22px;
-    font-size: 0.9rem;
-    color: #8b949e;
-}
-.enc-why-box strong { color: var(--text-primary); }
-.enc-ad-area {
-    background: #161b22;
-    border: 1px dashed #30363d;
-    border-radius: 12px;
-    padding: 24px;
-    text-align: center;
-    margin: 20px 0;
-    min-height: 100px;
-}
-.enc-ad-area-label {
-    font-size: 0.75rem;
-    color: #484f58;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-}
-.enc-btn-primary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background: linear-gradient(135deg, var(--accent-green), #2ea043);
-    color: #000;
-    font-weight: 700;
-    font-size: 1.05rem;
-    padding: 16px 36px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    text-decoration: none;
-    letter-spacing: 0.5px;
-    transition: all 0.25s;
-    box-shadow: 0 4px 16px rgba(63,185,80,0.3);
-    width: 100%;
-    text-align: center;
-}
-.enc-btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(63,185,80,0.45);
-}
-.enc-btn-primary:disabled, .enc-btn-primary.locked {
-    background: linear-gradient(135deg, #21262d, #161b22);
-    color: #484f58;
-    cursor: not-allowed;
-    box-shadow: none;
-    transform: none;
-}
-.enc-countdown-wrap {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 12px 0 20px;
-    padding: 12px 16px;
-    background: #161b22;
-    border: 1px solid #21262d;
-    border-radius: 8px;
-}
-.enc-countdown-icon { font-size: 1.2rem; }
-.enc-countdown-text { color: #8b949e; font-size: 0.9rem; flex: 1; }
-.enc-countdown-num {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--accent-green);
-    font-variant-numeric: tabular-nums;
-    min-width: 2ch;
-    text-align: right;
-}
-.enc-success-box {
-    background: linear-gradient(135deg, #1a3a1a, #0d2a0d);
-    border: 1px solid #2a5a2a;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 18px 0;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-.enc-success-box .enc-check { font-size: 1.5rem; }
-.enc-success-box p { color: var(--accent-green); font-size: 0.95rem; margin: 0; font-weight: 600; }
-.enc-final-btn {
-    display: block;
-    background: linear-gradient(135deg, var(--accent-green), #2ea043);
-    color: #000;
-    font-weight: 800;
-    font-size: 1.25rem;
-    padding: 20px 40px;
-    border-radius: 12px;
-    text-align: center;
-    text-decoration: none;
-    letter-spacing: 1px;
-    transition: all 0.3s;
-    box-shadow: 0 6px 30px rgba(63,185,80,0.4);
-    margin-top: 6px;
-    animation: enc-pulse 2s infinite;
-}
-.enc-final-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 40px rgba(63,185,80,0.6);
-}
-@keyframes enc-pulse {
-    0%, 100% { box-shadow: 0 6px 30px rgba(63,185,80,0.4); }
-    50% { box-shadow: 0 6px 40px rgba(63,185,80,0.7); }
-}
-.enc-footer {
-    background: #0a0e0a;
-    border-top: 1px solid #1e3a1e;
-    padding: 14px 32px;
-    text-align: center;
-    font-size: 0.8rem;
-    color: #484f58;
-}
-
-        </style>
     <!-- SCHEMA.ORG -->
     <script type="application/ld+json">
     {
@@ -644,33 +26,46 @@
       "wordCount": "6700"
     }
     </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8967995144964134" crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-8967995144964134">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
 </head>
 <body>
     <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
     </div>
 
-    <header class="site-header">
+        <header class="site-header">
         <div class="wrapper header-content">
-            <div class="creeper-logo">
-                <div class="creeper-eye eye-left"></div>
-                <div class="creeper-eye eye-right"></div>
-                <div class="creeper-mouth"></div>
-            </div>
-            <div>
-                <h1 class="site-title">MINEADDONSNEWS</h1>
-                <p class="site-tagline">Hardware · Engenharia · Infraestrutura</p>
+            <a href="index.html" class="site-logo">
+                <img src="img/logo.png" alt="HardwareBaseTech Logo" class="logo-img">
+                <div>
+                    <div class="site-title">HardwareBaseTech</div>
+                    <div class="site-tagline">Análises Técnicas de Hardware · Benchmarks Reais</div>
+                </div>
+            </a>
+            <div class="social-header-links">
+                <a href="https://www.instagram.com/nicolastrx1/" target="_blank" rel="noopener noreferrer" title="Instagram">📷</a>
+                <a href="https://www.tiktok.com/@ncmine" target="_blank" rel="noopener noreferrer" title="TikTok">🎵</a>
+                <a href="https://www.youtube.com/@Ncmine" target="_blank" rel="noopener noreferrer" title="YouTube">▶️</a>
             </div>
         </div>
     </header>
 
-    <nav class="site-nav">
+            <nav class="site-nav" aria-label="Navegação principal">
         <div class="wrapper nav-links">
             <a href="index.html">Início</a>
-            <a href="index.html#hardware">Hardware</a>
-            <a href="index.html#testes">Testes</a>
-            <a href="index.html#analise">Análise Financeira</a>
-            <a href="faq.html">FAQ</a>
+            <a href="index.html#cpus">CPUs</a>
+            <a href="index.html#placas-de-video">Placas de Vídeo</a>
+            <a href="index.html#memoria-ram">Memória RAM</a>
+            <a href="index.html#armazenamento">Armazenamento</a>
+            <a href="index.html#guias">Guias</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="contato.html">Contato</a>
         </div>
     </nav>
 
@@ -1167,37 +562,59 @@
         </div>
     </main>
 
-    <footer class="site-footer" style="background:#010409; border-top:1px solid var(--border-color); padding:48px 0; margin-top:48px;">
+            <footer class="site-footer">
         <div class="wrapper">
-            <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px;">
-                <div>
-                    <h3 style="color:var(--accent-green);">MINEADDONSNEWS</h3>
-                    <p style="color:var(--text-secondary);">Análises técnicas baseadas em testes reais.</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="site-title">HardwareBaseTech</span>
+                    <p>Análises técnicas independentes de hardware: CPUs, GPUs, memória RAM, SSDs e muito mais. Benchmarks reais para ajudar você a tomar a melhor decisão de compra.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/nicolastrx1/" target="_blank" rel="noopener noreferrer" title="Instagram">📷</a>
+                        <a href="https://www.tiktok.com/@ncmine" target="_blank" rel="noopener noreferrer" title="TikTok">🎵</a>
+                        <a href="https://www.youtube.com/@Ncmine" target="_blank" rel="noopener noreferrer" title="YouTube">▶️</a>
+                    </div>
                 </div>
-                <div>
-                    <h4 style="color:var(--text-primary);">Contato</h4>
-                    <p style="color:var(--text-secondary);"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cca2a5afa78ca1a5a2a9ada8a8a3a2bfa2a9bbbfe2a3a2a0a5a2a9">[email&#160;protected]</a></p>
+                <div class="footer-col">
+                    <h4>Hardware</h4>
+                    <a href="index.html#cpus">Processadores</a>
+                    <a href="index.html#placas-de-video">Placas de Vídeo</a>
+                    <a href="index.html#memoria-ram">Memória RAM</a>
+                    <a href="index.html#armazenamento">Armazenamento</a>
                 </div>
-                <div>
-                    <h4 style="color:var(--text-primary);">Institucional</h4>
-                    <a href="#" style="color:var(--text-secondary); display:block;">Sobre</a>
-                    <a href="#" style="color:var(--text-secondary); display:block;">Contato</a>
+                <div class="footer-col">
+                    <h4>Site</h4>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="metodologia.html">Metodologia</a>
+                    <a href="contato.html">Contato</a>
+                    <a href="faq.html">FAQ</a>
                 </div>
-                <div>
-                    <h4 style="color:var(--text-primary);">Legal</h4>
-                    <a href="#" style="color:var(--text-secondary); display:block;">Privacidade</a>
-                    <a href="#" style="color:var(--text-secondary); display:block;">Termos</a>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="privacidade.html">Política de Privacidade</a>
+                    <a href="termos.html">Termos de Uso</a>
+                    <a href="cookies.html">Política de Cookies</a>
                 </div>
             </div>
-            <div style="border-top:1px solid var(--border-color); margin-top:40px; padding-top:20px; display:flex; justify-content:space-between; color:var(--text-secondary);">
-                <p>Terra Roxa - PR · 2026</p>
-                <div>
-                    <a href="#" style="color:var(--text-secondary); margin-left:20px;">Privacidade</a>
-                    <a href="#" style="color:var(--text-secondary); margin-left:20px;">Termos</a>
+            <div class="footer-bottom">
+                <p>Terra Roxa — Paraná · Brasil · © 2026 HardwareBaseTech · Todos os direitos reservados</p>
+                <div class="footer-bottom-links">
+                    <a href="privacidade.html">Privacidade</a>
+                    <a href="termos.html">Termos</a>
+                    <a href="sitemap.xml">Sitemap</a>
                 </div>
             </div>
         </div>
     </footer>
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Aviso de cookies">
+        <p>Utilizamos cookies para melhorar sua experiência. <a href="cookies.html">Saiba mais</a>.</p>
+        <button class="cookie-btn" id="cookieAccept">Aceitar</button>
+    </div>
+    <script>(function(){var b=document.getElementById('cookieBanner'),btn=document.getElementById('cookieAccept');if(localStorage.getItem('cookiesAccepted'))b.style.display='none';if(btn)btn.addEventListener('click',function(){localStorage.setItem('cookiesAccepted','1');b.style.display='none';});})();</script>
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Aviso de cookies">
+        <p>Utilizamos cookies para melhorar sua experiência. <a href="cookies.html">Saiba mais</a>.</p>
+        <button class="cookie-btn" id="cookieAccept">Aceitar</button>
+    </div>
+    <script>(function(){var b=document.getElementById('cookieBanner'),btn=document.getElementById('cookieAccept');if(localStorage.getItem('cookiesAccepted'))b.style.display='none';if(btn)btn.addEventListener('click',function(){localStorage.setItem('cookiesAccepted','1');b.style.display='none';});})();</script>
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
