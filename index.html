@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,7 +13,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --bg: #0d0d14; --bg2: #13131f; --bg3: #1a1a2a; --bg4: #20202e;
       --accent: #00e5a0; --accent2: #6366f1;
@@ -23,21 +22,11 @@
       --card-shadow: 0 4px 24px rgba(0,0,0,0.5);
       --radius: 12px; --radius-sm: 8px; --radius-xs: 6px;
     }
-    [data-theme="light"] {
-      --bg: #f4f4f8; --bg2: #fff; --bg3: #f0f0f5; --bg4: #e8e8ef;
-      --accent: #009970; --accent2: #4f46e5;
-      --accent-dim: rgba(0,153,112,0.1);
-      --text: #0d0d14; --text2: #555d72; --text3: #8890a4;
-      --border: rgba(0,0,0,0.08); --border2: rgba(0,0,0,0.15);
-      --card-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    }
-
     html { scroll-behavior: smooth; }
     body {
       font-family: 'DM Sans', sans-serif;
       background: var(--bg); color: var(--text);
       min-height: 100vh;
-      /* NÃO usar transition em background — evita flash no toggle de tema */
     }
     a { color: inherit; text-decoration: none; }
     button { font-family: inherit; cursor: pointer; }
@@ -47,15 +36,32 @@
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: var(--bg4); border-radius: 3px; }
 
+    /* ── TUTORIAL BANNER ── */
+    #tutorialBanner {
+      background: linear-gradient(135deg, #0d1a14 0%, #0d0d14 100%);
+      border-bottom: 1px solid var(--border);
+      padding: .85rem 1.5rem;
+      display: flex; align-items: center; justify-content: center; gap: 1rem;
+      flex-wrap: wrap; text-align: center;
+      position: sticky; top: 0; z-index: 101;
+    }
+    #tutorialBanner span { font-size: .85rem; color: var(--text2); }
+    #tutorialBanner strong { color: var(--accent); }
+    #tutorialBanner button {
+      background: var(--accent); color: #0d0d14;
+      border: none; border-radius: 50px; padding: .45rem 1.2rem;
+      font-weight: 700; font-size: .82rem; transition: all .2s;
+    }
+    #tutorialBanner button:hover { box-shadow: 0 4px 16px rgba(0,229,160,.35); transform: translateY(-1px); }
+
     /* ── HEADER ── */
     #header {
-      position: sticky; top: 0; z-index: 100;
+      position: sticky; top: 52px; z-index: 100;
       background: rgba(13,13,20,0.92);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
       padding: 0 1.5rem;
     }
-    [data-theme="light"] #header { background: rgba(244,244,248,0.93); }
     .header-inner {
       max-width: 1400px; margin: 0 auto;
       display: flex; align-items: center; gap: 1rem; height: 64px;
@@ -80,29 +86,6 @@
     .header-search input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-dim); }
     .header-search input::placeholder { color: var(--text3); }
     .search-icon { position: absolute; left: .8rem; top: 50%; transform: translateY(-50%); color: var(--text3); pointer-events: none; font-size: 15px; }
-    .header-actions { display: flex; align-items: center; gap: .5rem; flex-shrink: 0; }
-    .btn-icon {
-      height: 38px; border-radius: var(--radius-sm);
-      background: var(--bg3); border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-      color: var(--text2); font-size: .8rem; font-weight: 600;
-      transition: all .2s; padding: 0 .75rem; gap: .4rem; white-space: nowrap;
-    }
-    .btn-icon:hover { background: var(--bg4); color: var(--text); border-color: var(--border2); }
-    .btn-icon.active { background: var(--accent-dim); color: var(--accent); border-color: var(--accent); }
-
-    /* ── MODE PILL ── */
-    .mode-pill {
-      display: flex; align-items: center;
-      background: var(--bg3); border: 1px solid var(--border);
-      border-radius: 50px; padding: 3px; gap: 2px;
-    }
-    .mode-pill button {
-      padding: .28rem .7rem; border-radius: 50px; border: none;
-      font-size: .72rem; font-weight: 600; color: var(--text3);
-      background: transparent; transition: all .2s;
-    }
-    .mode-pill button.active { background: var(--accent); color: #0d0d14; }
 
     /* ── APP ── */
     #app { max-width: 1400px; margin: 0 auto; padding: 1.5rem; }
@@ -153,7 +136,6 @@
     .see-all { font-size: .8rem; color: var(--accent); font-weight: 500; transition: opacity .2s; }
     .see-all:hover { opacity: .7; }
 
-    /* ── CATEGORIES ── */
     .cats { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
     .cat-btn {
       padding: .4rem 1rem; border-radius: 50px; font-size: .82rem; font-weight: 500;
@@ -162,20 +144,16 @@
     .cat-btn:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
     .cat-btn.active { background: var(--accent); color: #0d0d14; border-color: var(--accent); font-weight: 700; }
 
-    /* ── FILTERS ── */
     .filters-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem; flex-wrap: wrap; }
     .sort-select {
       background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius-sm);
       padding: .4rem .8rem; font-family: 'DM Sans', sans-serif; font-size: .82rem; color: var(--text); outline: none; cursor: pointer;
     }
-    .sort-select:focus { border-color: var(--accent); }
     .results-count { font-size: .82rem; color: var(--text3); }
 
-    /* ── GRID ── */
     .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 1rem; }
     .grid-wide { grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); }
 
-    /* ── CARD ── */
     .card {
       background: var(--bg2); border: 1px solid var(--border);
       border-radius: var(--radius); overflow: hidden;
@@ -202,11 +180,6 @@
     .meta-info { display: flex; flex-direction: column; gap: .15rem; }
     .meta-line { font-size: .7rem; color: var(--text3); }
 
-    /* ── ADVANCED INFO (hidden in basic mode) ── */
-    .adv-only { display: none; }
-    [data-mode="advanced"] .adv-only { display: flex; }
-    [data-mode="advanced"] .meta-info { display: flex; }
-
     .btn-download {
       flex-shrink: 0; background: var(--accent-dim); color: var(--accent);
       border: 1px solid rgba(0,229,160,.25); border-radius: var(--radius-xs);
@@ -214,18 +187,6 @@
       padding: .35rem .75rem; transition: all .2s;
     }
     .btn-download:hover { background: var(--accent); color: #0d0d14; }
-    .btn-download-basic {
-      width: 100%; background: var(--accent); color: #0d0d14;
-      border: none; border-radius: var(--radius-xs);
-      font-size: .8rem; font-weight: 800; font-family: 'Outfit', sans-serif;
-      padding: .5rem; transition: all .2s; margin-top: .4rem;
-    }
-    .btn-download-basic:hover { box-shadow: 0 4px 16px rgba(0,229,160,.35); }
-
-    /* In basic mode show big download btn, in advanced show VER ▸ */
-    [data-mode="basic"] .btn-download { display: none; }
-    [data-mode="basic"] .btn-download-basic { display: block; }
-    [data-mode="advanced"] .btn-download-basic { display: none; }
 
     /* ── SKELETON ── */
     @keyframes shimmer { 0%{background-position:-400px 0} 100%{background-position:400px 0} }
@@ -236,7 +197,6 @@
     .sk-line-sm { height: 12px; margin: 0 .85rem .5rem; border-radius: 4px; width: 60%; }
     .sk-line-xs { height: 10px; margin: 0 .85rem .85rem; border-radius: 4px; width: 40%; }
 
-    /* ── LOAD MORE ── */
     .load-more-wrap { display: flex; justify-content: center; margin: 1.5rem 0; }
     .btn-load-more {
       background: var(--bg2); border: 1px solid var(--border2); color: var(--text);
@@ -245,7 +205,6 @@
     }
     .btn-load-more:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
 
-    /* ── DETAIL ── */
     .breadcrumb { display: flex; align-items: center; gap: .4rem; font-size: .8rem; color: var(--text3); margin-bottom: 1.2rem; flex-wrap: wrap; }
     .breadcrumb a { color: var(--text2); transition: color .2s; }
     .breadcrumb a:hover { color: var(--accent); }
@@ -266,8 +225,7 @@
     .spec-label { color: var(--text2); }
     .spec-val { font-weight: 500; color: var(--text); }
 
-    /* ── DOWNLOAD BOX ── */
-    .dl-box { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; position: sticky; top: 80px; }
+    .dl-box { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; position: sticky; top: 130px; }
     .dl-box-title { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 1rem; }
     .dl-steps { margin-bottom: 1.2rem; }
     .dl-step { display: flex; align-items: flex-start; gap: .75rem; margin-bottom: .7rem; font-size: .82rem; color: var(--text2); line-height: 1.5; }
@@ -291,16 +249,9 @@
       padding: .7rem .85rem; font-size: .78rem; color: #d97706; margin-top: .8rem; line-height: 1.5;
     }
 
-    /* Basic mode detail: hide specs */
-    [data-mode="basic"] .detail-specs .spec-row.adv-spec { display: none; }
-    [data-mode="basic"] .detail-steps-note { display: block; }
-    .detail-steps-note { display: none; }
-
-    /* ── RELATED ── */
     .related { margin-top: 2.5rem; }
     .related h2 { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: .5rem; }
 
-    /* ── EMPTY / ERROR ── */
     .empty-state { text-align: center; padding: 4rem 2rem; color: var(--text3); }
     .empty-state .big { font-size: 3rem; margin-bottom: 1rem; opacity: .3; }
     .empty-state h3 { font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--text2); margin-bottom: .4rem; }
@@ -310,7 +261,6 @@
       color: #f87171; margin-bottom: 1rem; display: flex; align-items: center; gap: .5rem;
     }
 
-    /* ── BACK TO TOP ── */
     #backtop {
       position: fixed; bottom: 1.5rem; right: 1.5rem;
       width: 44px; height: 44px; border-radius: 50%;
@@ -387,21 +337,25 @@
     }
     .inapp-btn-secondary:hover { color: rgba(255,255,255,.75); }
 
-    /* ── FOOTER ── */
     footer { text-align: center; padding: 2.5rem 1.5rem; color: var(--text3); font-size: .82rem; border-top: 1px solid var(--border); margin-top: 1rem; }
 
-    /* ── RESPONSIVE ── */
     @media(max-width:640px){
       .header-inner { height: 56px; gap: .5rem; }
       .header-search { max-width: none; }
-      .logo-text { display: none; }
-      .logo-by { display: none; }
+      .logo-text, .logo-by { display: none; }
       #app { padding: 1rem; }
       .hero-content { padding: 1.2rem 1.5rem; }
+      #tutorialBanner { flex-direction: column; padding: .65rem 1rem; gap: .4rem; }
     }
   </style>
 </head>
 <body>
+
+<!-- TUTORIAL BANNER (fixo no topo) -->
+<div id="tutorialBanner">
+  <span>📥 <strong>Como baixar?</strong> Clique no addon → TeraBox abre → botão azul → ignora anúncios → baixa! Simples assim.</span>
+  <button onclick="openVideoModal()">▶ Ver vídeo tutorial</button>
+</div>
 
 <!-- IN-APP BROWSER OVERLAY -->
 <div id="inapp-overlay">
@@ -415,25 +369,13 @@
   <div class="inapp-tap-label">Toque aqui ↗</div>
   <div class="inapp-card">
     <div class="inapp-handle"></div>
-    <div class="inapp-app-badge">
-      <span class="dot"></span>
-      <span id="inapp-app-name">Navegador in-app detectado</span>
-    </div>
+    <div class="inapp-app-badge"><span class="dot"></span><span id="inapp-app-name">Navegador in-app detectado</span></div>
     <h2 id="inapp-title">O download <span>não vai funcionar</span> aqui</h2>
     <p class="inapp-sub" id="inapp-sub">Você está no navegador interno do app. O TeraBox precisa abrir no Chrome ou Safari para baixar corretamente.</p>
     <div class="inapp-steps" id="inapp-steps">
-      <div class="inapp-step">
-        <div class="inapp-step-num">1</div>
-        <span>Toque nos <strong style="color:#fff">⋯ três pontinhos</strong> no canto superior direito</span>
-      </div>
-      <div class="inapp-step">
-        <div class="inapp-step-num">2</div>
-        <span id="inapp-step2">Escolha <strong style="color:#fff">"Abrir no navegador"</strong></span>
-      </div>
-      <div class="inapp-step">
-        <div class="inapp-step-num">3</div>
-        <span>Clique em <strong style="color:#00e5a0">BAIXAR AGORA</strong> normalmente ✅</span>
-      </div>
+      <div class="inapp-step"><div class="inapp-step-num">1</div><span>Toque nos <strong style="color:#fff">⋯ três pontinhos</strong> no canto superior direito</span></div>
+      <div class="inapp-step"><div class="inapp-step-num">2</div><span id="inapp-step2">Escolha <strong style="color:#fff">"Abrir no navegador"</strong></span></div>
+      <div class="inapp-step"><div class="inapp-step-num">3</div><span>Clique em <strong style="color:#00e5a0">BAIXAR AGORA</strong> normalmente ✅</span></div>
     </div>
     <button class="inapp-btn-primary" onclick="openInBrowser()">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
@@ -467,15 +409,6 @@
       <span class="search-icon">🔍</span>
       <input type="text" id="searchInput" placeholder="Buscar addons, packs, texturas…" oninput="onSearch(this.value)" />
     </div>
-    <nav class="header-actions">
-      <!-- Modo Básico / Avançado -->
-      <div class="mode-pill" id="modePill">
-        <button id="modeBasicBtn" onclick="setMode('basic')">🙂 Simples</button>
-        <button id="modeAdvBtn" onclick="setMode('advanced')">⚙️ Avançado</button>
-      </div>
-      <!-- Tema -->
-      <button class="btn-icon" id="themeBtn" onclick="toggleTheme()" title="Alternar tema">🌙</button>
-    </nav>
   </div>
 </header>
 
@@ -491,46 +424,23 @@
 (function () {
   'use strict';
 
-  /* ═══════════════════════════════════════
-     CONFIG — troque a URL quando necessário
-  ═══════════════════════════════════════ */
   const DATA_URL         = "https://raw.githubusercontent.com/ncmine/mine-addons-data/main/addons.json";
   const YOUTUBE_VIDEO_ID = "fN4BennXjTY";
-
-  /* ═══════════════════════════════════════
-     FALLBACK (usado se fetch falhar)
-  ═══════════════════════════════════════ */
-  const FALLBACK_ADDONS = [
-    { id:"fps-boost-ultra", slug:"fps-boost-ultra", title:"FPS Boost Ultra", featured:true, category:"FPS / Performance", tags:["fps","leve","performance","otimização"], desc:"Aumenta drasticamente o FPS removendo partículas desnecessárias e otimizando texturas. Perfeito para PCs fracos.", size:"4.2 MB", compat:"1.19 – 1.21", downloads:18420, badges:["hot","updated"], img:"https://placehold.co/800x500/0d1a14/00e5a0?text=FPS+Boost+Ultra", terabox:"https://terabox.com", dateAdded:"2024-12-28", valid:true },
-    { id:"pvp-motion-pack", slug:"pvp-motion-pack", title:"PvP Motion Pack", featured:false, category:"PvP", tags:["pvp","animação","sword","movimento"], desc:"Pack com animações de PvP suaves e responsivas. Melhora a feel de combate com novos swings e partículas.", size:"8.7 MB", compat:"1.20 – 1.21", downloads:14230, badges:["hot"], img:"https://placehold.co/800x500/140d1a/6366f1?text=PvP+Motion+Pack", terabox:"https://terabox.com", dateAdded:"2024-12-20", valid:true },
-    { id:"ultra-shader-lite", slug:"ultra-shader-lite", title:"Ultra Shader Lite", featured:false, category:"Visual / Texturas", tags:["shader","visual","luz","bonito"], desc:"Shader leve e bonito. Sombras dinâmicas, reflexo na água e iluminação suave sem travar o jogo.", size:"22 MB", compat:"1.18 – 1.21", downloads:29100, badges:["hot","updated"], img:"https://placehold.co/800x500/0d1214/00d4ff?text=Ultra+Shader+Lite", terabox:"https://terabox.com", dateAdded:"2024-12-15", valid:true },
-    { id:"addon-explosivos", slug:"addon-explosivos", title:"Addon Explosivos+", featured:false, category:"Addons", tags:["explosivo","tnt","addon","destruição"], desc:"Adiciona novos tipos de explosivos ao jogo: TNT nuclear, granada e minas.", size:"6.1 MB", compat:"1.20 – 1.21", downloads:9850, badges:["new"], img:"https://placehold.co/800x500/1a0d0d/ef4444?text=Explosivos+", terabox:"https://terabox.com", dateAdded:"2024-12-30", valid:true },
-    { id:"texture-pvp-clean", slug:"texture-pvp-clean", title:"Texture PvP Clean", featured:false, category:"PvP", tags:["pvp","textura","limpo","16x"], desc:"Textura minimalista para PvP. Ícones claros, hitbox preciso e visual limpo para competição.", size:"3.5 MB", compat:"1.19 – 1.21", downloads:11200, badges:["updated"], img:"https://placehold.co/800x500/0d1214/f59e0b?text=Texture+PvP+Clean", terabox:"https://terabox.com", dateAdded:"2024-12-18", valid:true },
-    { id:"sky-ultra-realistic", slug:"sky-ultra-realistic", title:"Sky Ultra Realistic", featured:false, category:"Visual / Texturas", tags:["céu","visual","hd","realístico"], desc:"Transforma o céu do Minecraft com nuvens 3D, pôr do sol realista e estrelas à noite.", size:"15 MB", compat:"1.20 – 1.21", downloads:7340, badges:["new"], img:"https://placehold.co/800x500/0d0d1a/818cf8?text=Sky+Ultra+Realistic", terabox:"https://terabox.com", dateAdded:"2025-01-01", valid:true },
-    { id:"anti-lag-addon", slug:"anti-lag-addon", title:"Anti-Lag Addon", featured:false, category:"FPS / Performance", tags:["fps","anti-lag","performance","mobile"], desc:"Remove lag no mobile e PC fraco. Reduz renderização de entidades e otimiza chunks.", size:"2.1 MB", compat:"1.18 – 1.21", downloads:22600, badges:["hot"], img:"https://placehold.co/800x500/0f1a0d/4ade80?text=Anti-Lag+Addon", terabox:"https://terabox.com", dateAdded:"2024-11-30", valid:true },
-    { id:"mobs-plus", slug:"mobs-plus", title:"Mobs Plus", featured:false, category:"Addons", tags:["mobs","addon","novos","animais"], desc:"Adiciona mais de 20 novos mobs ao jogo, com comportamentos únicos e drops especiais.", size:"18 MB", compat:"1.20 – 1.21", downloads:5600, badges:["new"], img:"https://placehold.co/800x500/141a0d/a3e635?text=Mobs+Plus", terabox:"https://terabox.com", dateAdded:"2025-01-02", valid:true }
-  ];
-
   const CATS = ["Todos", "FPS / Performance", "PvP", "Visual / Texturas", "Addons"];
 
-  /* ═══════════════════════════════════════
-     ESTADO GLOBAL
-  ═══════════════════════════════════════ */
   let ADDONS = [];
-  let _renderTimer = null; // ← FIX: controla o timer de render para evitar race condition
+  let _renderTimer = null;
 
   const state = {
-    page:      "home",
+    page: "home",
     addonSlug: null,
-    category:  "Todos",
-    sort:      "downloads",
-    search:    "",
-    shown:     8
+    category: "Todos",
+    sort: "downloads",
+    search: "",
+    shown: 8
   };
 
-  /* ═══════════════════════════════════════
-     FETCH ADDONS
-  ═══════════════════════════════════════ */
+  // ── FETCH (sem fallback) ──
   async function fetchAddons() {
     try {
       const resp = await fetch(DATA_URL);
@@ -538,74 +448,25 @@
       const data = await resp.json();
       if (Array.isArray(data) && data.length > 0) {
         ADDONS = data.filter(a => a.valid !== false);
-        console.log("✅ Addons carregados do GitHub:", ADDONS.length);
+        console.log("✅ Addons carregados:", ADDONS.length);
         return;
       }
     } catch (e) {
-      console.warn("⚠️ Fallback ativado:", e.message);
+      console.error("❌ Erro ao carregar addons:", e.message);
+      ADDONS = [];
     }
-    ADDONS = [...FALLBACK_ADDONS];
   }
 
-  /* ═══════════════════════════════════════
-     TEMA — NÃO chama render(), apenas troca CSS
-  ═══════════════════════════════════════ */
-  function initTheme() {
-    let saved = null;
-    try { saved = localStorage.getItem("man-theme"); } catch {}
-    const pref = saved || (window.matchMedia("(prefers-color-scheme:light)").matches ? "light" : "dark");
-    applyTheme(pref);
-  }
-
-  function applyTheme(theme) {
-    document.documentElement.setAttribute("data-theme", theme);
-    const btn = document.getElementById("themeBtn");
-    if (btn) btn.textContent = theme === "dark" ? "🌙" : "☀️";
-  }
-
-  function toggleTheme() {
-    const cur = document.documentElement.getAttribute("data-theme");
-    const next = cur === "dark" ? "light" : "dark";
-    applyTheme(next); // ← apenas troca tema, NUNCA chama render()
-    try { localStorage.setItem("man-theme", next); } catch {}
-    // NÃO chama render() aqui — era a raiz do bug
-  }
-
-  /* ═══════════════════════════════════════
-     MODO BÁSICO / AVANÇADO
-  ═══════════════════════════════════════ */
-  function initMode() {
-    let saved = "basic";
-    try { saved = localStorage.getItem("man-mode") || "basic"; } catch {}
-    applyMode(saved);
-  }
-
-  function applyMode(mode) {
-    document.documentElement.setAttribute("data-mode", mode);
-    const bBtn = document.getElementById("modeBasicBtn");
-    const aBtn = document.getElementById("modeAdvBtn");
-    if (bBtn) bBtn.classList.toggle("active", mode === "basic");
-    if (aBtn) aBtn.classList.toggle("active", mode === "advanced");
-    // NÃO chama render() aqui também
-  }
-
-  function setMode(mode) {
-    applyMode(mode);
-    try { localStorage.setItem("man-mode", mode); } catch {}
-  }
-
-  /* ═══════════════════════════════════════
-     IN-APP BROWSER DETECTION
-  ═══════════════════════════════════════ */
-  const INAPP_LS_KEY   = "man-inapp-dismissed";
-  const INAPP_COOLDOWN = 2 * 60 * 60 * 1000; // 2h
+  // ── IN-APP ──
+  const INAPP_LS_KEY = "man-inapp-dismissed";
+  const INAPP_COOLDOWN = 2 * 60 * 60 * 1000;
 
   function detectInAppBrowser() {
     const ua = navigator.userAgent || "";
-    if (/TikTok|musical_ly/i.test(ua))            return "TikTok";
-    if (/Instagram/i.test(ua))                     return "Instagram";
-    if (/FBAN|FBAV|FB_IAB|FB4A|FBIOS/i.test(ua))  return "Facebook";
-    if (/\bFB\b/.test(ua) && /Mobile/i.test(ua))  return "Facebook";
+    if (/TikTok|musical_ly/i.test(ua)) return "TikTok";
+    if (/Instagram/i.test(ua)) return "Instagram";
+    if (/FBAN|FBAV|FB_IAB|FB4A|FBIOS/i.test(ua)) return "Facebook";
+    if (/\bFB\b/.test(ua) && /Mobile/i.test(ua)) return "Facebook";
     return null;
   }
 
@@ -621,65 +482,55 @@
       TikTok: {
         badge: "🎵 Navegador do TikTok",
         title: 'O download <span>não funciona</span> no TikTok',
-        sub:   "O TikTok bloqueia downloads externos. Abra no Chrome ou Safari para conseguir baixar.",
+        sub: "O TikTok bloqueia downloads externos. Abra no Chrome ou Safari para conseguir baixar.",
         step2: 'Escolha <strong style="color:#fff">"Abrir no navegador"</strong> ou <strong style="color:#fff">"Abrir com o Chrome"</strong>'
       },
       Instagram: {
         badge: "📸 Navegador do Instagram",
         title: 'O download <span>não funciona</span> no Instagram',
-        sub:   "O Instagram tem um mini-navegador que impede o TeraBox de funcionar. Abra no Chrome ou Safari.",
+        sub: "O Instagram tem um mini-navegador que impede o TeraBox de funcionar. Abra no Chrome ou Safari.",
         step2: 'Escolha <strong style="color:#fff">"Abrir no navegador externo"</strong>'
       },
       Facebook: {
         badge: "📘 Navegador do Facebook",
         title: 'O download <span>não funciona</span> no Facebook',
-        sub:   "O navegador do Facebook não abre o TeraBox corretamente. Use Chrome ou Safari.",
+        sub: "O navegador do Facebook não abre o TeraBox corretamente. Use Chrome ou Safari.",
         step2: 'Escolha <strong style="color:#fff">"Abrir com o Chrome"</strong> ou <strong style="color:#fff">"Abrir no navegador"</strong>'
       }
     };
     const c = cfg[appName] || {
       badge: "⚠️ Navegador in-app",
       title: 'O download <span>pode falhar</span> aqui',
-      sub:   "Você está em um navegador interno. Para baixar corretamente, abra no Chrome ou Safari.",
+      sub: "Você está em um navegador interno. Para baixar corretamente, abra no Chrome ou Safari.",
       step2: 'Escolha <strong style="color:#fff">"Abrir no navegador"</strong>'
     };
     const set = (id, html) => { const el = document.getElementById(id); if (el) el.innerHTML = html; };
     set("inapp-app-name", c.badge);
-    set("inapp-title",    c.title);
-    set("inapp-sub",      c.sub);
-    set("inapp-step2",    c.step2);
+    set("inapp-title", c.title);
+    set("inapp-sub", c.sub);
+    set("inapp-step2", c.step2);
   }
 
   function showInAppOverlay(appName) {
     if (inAppWasDismissed()) return;
-    const ov = document.getElementById("inapp-overlay");
-    if (!ov) return;
     configureOverlay(appName);
-    ov.classList.add("show");
+    document.getElementById("inapp-overlay").classList.add("show");
     document.body.style.overflow = "hidden";
   }
 
   function showInAppDownloadWarning(appName) {
-    const ov = document.getElementById("inapp-overlay");
-    if (!ov) return;
     configureOverlay(appName);
     const t = document.getElementById("inapp-title");
     const s = document.getElementById("inapp-sub");
     if (t) t.innerHTML = "⚠️ Download <span>bloqueado!</span>";
     if (s) s.innerHTML = "O " + (appName || "app") + " impede o TeraBox de abrir. Vá para o Chrome ou Safari para baixar.";
-    ov.classList.add("show");
+    document.getElementById("inapp-overlay").classList.add("show");
     document.body.style.overflow = "hidden";
   }
 
-  function closeInAppOverlay() {
-    const ov = document.getElementById("inapp-overlay");
-    if (ov) ov.classList.remove("show");
-    document.body.style.overflow = "";
-  }
-
-  // Exporta para onclick inline
   window.dismissInAppOverlay = function () {
-    closeInAppOverlay();
+    document.getElementById("inapp-overlay").classList.remove("show");
+    document.body.style.overflow = "";
     try { localStorage.setItem(INAPP_LS_KEY, String(Date.now())); } catch {}
   };
 
@@ -693,109 +544,70 @@
     window.open(url, "_blank");
   };
 
-  /* ═══════════════════════════════════════
-     VIDEO MODAL
-  ═══════════════════════════════════════ */
+  // ── VIDEO ──
   window.openVideoModal = function () {
-    const iframe = document.getElementById("videoIframe");
-    const modal  = document.getElementById("videoModal");
-    iframe.src = "https://www.youtube-nocookie.com/embed/" + YOUTUBE_VIDEO_ID + "?autoplay=1&rel=0";
-    modal.classList.add("open");
+    document.getElementById("videoIframe").src = "https://www.youtube-nocookie.com/embed/" + YOUTUBE_VIDEO_ID + "?autoplay=1&rel=0";
+    document.getElementById("videoModal").classList.add("open");
     document.body.style.overflow = "hidden";
   };
-
   window.closeVideoModal = function () {
-    const iframe = document.getElementById("videoIframe");
-    const modal  = document.getElementById("videoModal");
-    iframe.src = "";
-    modal.classList.remove("open");
+    document.getElementById("videoIframe").src = "";
+    document.getElementById("videoModal").classList.remove("open");
     document.body.style.overflow = "";
   };
 
-  /* ═══════════════════════════════════════
-     HASH ROUTING
-  ═══════════════════════════════════════ */
+  // ── HASH ──
   function parseHash() {
     const hash = window.location.hash.replace("#", "");
-    if (!hash || hash === "/") {
-      state.page = "home"; state.addonSlug = null;
-    } else if (hash.startsWith("/addon/")) {
-      state.page      = "detail";
-      state.addonSlug = hash.replace("/addon/", "").split("?")[0];
-    } else {
-      state.page = "home"; state.addonSlug = null;
-    }
+    if (!hash || hash === "/") { state.page = "home"; state.addonSlug = null; }
+    else if (hash.startsWith("/addon/")) { state.page = "detail"; state.addonSlug = hash.replace("/addon/", "").split("?")[0]; }
+    else { state.page = "home"; state.addonSlug = null; }
   }
 
   function updateHash(page, slug) {
-    // Usa replaceState para NÃO disparar hashchange event
     const newHash = page === "detail" && slug ? "#/addon/" + slug : "#/";
-    if (window.location.hash !== newHash) {
-      history.pushState(null, "", newHash);
-    }
+    if (window.location.hash !== newHash) history.pushState(null, "", newHash);
   }
 
   window.navigate = function (page, slug) {
-    state.page      = page;
-    state.addonSlug = slug || null;
-    if (page === "home") {
-      state.shown  = 8;
-      state.search = "";
-      const si = document.getElementById("searchInput");
-      if (si) si.value = "";
-    }
+    state.page = page; state.addonSlug = slug || null;
+    if (page === "home") { state.shown = 8; state.search = ""; const si = document.getElementById("searchInput"); if (si) si.value = ""; }
     updateHash(page, slug);
     render();
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  window.navigateHome = function () {
-    window.navigate("home");
-  };
+  window.navigateHome = function () { window.navigate("home"); };
 
-  // Botão voltar / avançar do navegador
   window.addEventListener("popstate", function () {
     parseHash();
-    if (state.page === "home") {
-      state.shown  = 8;
-      state.search = "";
-      const si = document.getElementById("searchInput");
-      if (si) si.value = "";
-    }
+    if (state.page === "home") { state.shown = 8; state.search = ""; const si = document.getElementById("searchInput"); if (si) si.value = ""; }
     render();
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  /* ═══════════════════════════════════════
-     SEO
-  ═══════════════════════════════════════ */
+  // ── SEO ──
   function updateSEO(addon) {
     const set = (sel, attr, val) => { const el = document.querySelector(sel); if (el) el.setAttribute(attr, val); };
     if (addon) {
       document.title = addon.title + " – Mine Addons News";
-      set("meta[name='description']",    "content", addon.desc.slice(0,160));
-      set("meta[property='og:title']",   "content", addon.title);
+      set("meta[name='description']", "content", addon.desc.slice(0,160));
+      set("meta[property='og:title']", "content", addon.title);
       set("meta[property='og:description']", "content", addon.desc.slice(0,160));
       if (addon.img) set("meta[property='og:image']", "content", addon.img);
     } else {
       document.title = "Mine Addons News – Addons & Packs para Minecraft";
-      set("meta[name='description']",    "content", "Os melhores addons, texturas e packs para Minecraft. Downloads rápidos e organizados por ncmine.");
-      set("meta[property='og:title']",   "content", "Mine Addons News");
+      set("meta[name='description']", "content", "Os melhores addons, texturas e packs para Minecraft. Downloads rápidos e organizados por ncmine.");
+      set("meta[property='og:title']", "content", "Mine Addons News");
       set("meta[property='og:description']", "content", "Addons, texturas e packs para Minecraft — by ncmine");
-      set("meta[property='og:image']",   "content", "https://placehold.co/1200x630/0d0d14/00e5a0?text=Mine+Addons+News");
+      set("meta[property='og:image']", "content", "https://placehold.co/1200x630/0d0d14/00e5a0?text=Mine+Addons+News");
     }
   }
 
-  /* ═══════════════════════════════════════
-     TRACKING
-  ═══════════════════════════════════════ */
   function trackDownload(addon) {
-    console.log("📥 [TRACK] Download:", addon.title, "| ID:", addon.id, "|", new Date().toISOString());
+    console.log("📥 Download:", addon.title, "|", new Date().toISOString());
   }
 
-  /* ═══════════════════════════════════════
-     DOWNLOAD
-  ═══════════════════════════════════════ */
   window.startDownload = function (slug) {
     const addon = ADDONS.find(a => (a.slug || a.id) === slug);
     if (!addon) return;
@@ -805,110 +617,80 @@
     window.open(addon.terabox, "_blank");
   };
 
-  /* ═══════════════════════════════════════
-     FILTERS
-  ═══════════════════════════════════════ */
+  // ── FILTERS ──
   function filtered() {
     let list = [...ADDONS];
     if (state.search) {
       const q = state.search.toLowerCase();
-      list = list.filter(a =>
-        a.title.toLowerCase().includes(q) ||
-        (a.tags || []).some(t => t.toLowerCase().includes(q)) ||
-        a.category.toLowerCase().includes(q)
-      );
+      list = list.filter(a => a.title.toLowerCase().includes(q) || (a.tags||[]).some(t => t.toLowerCase().includes(q)) || a.category.toLowerCase().includes(q));
     }
     if (state.category !== "Todos") list = list.filter(a => a.category === state.category);
     if (state.sort === "downloads") list.sort((a,b) => b.downloads - a.downloads);
-    if (state.sort === "recent")    list.sort((a,b) => new Date(b.dateAdded) - new Date(a.dateAdded));
-    if (state.sort === "name")      list.sort((a,b) => a.title.localeCompare(b.title));
+    if (state.sort === "recent") list.sort((a,b) => new Date(b.dateAdded) - new Date(a.dateAdded));
+    if (state.sort === "name") list.sort((a,b) => a.title.localeCompare(b.title));
     return list;
   }
 
   window.onSearch = function (val) {
-    state.search   = val.toLowerCase();
-    state.page     = "home";
-    state.category = "Todos";
-    state.shown    = 8;
-    updateHash("home");
-    render();
+    state.search = val.toLowerCase(); state.page = "home"; state.category = "Todos"; state.shown = 8;
+    updateHash("home"); render();
   };
 
   window.setCategory = function (cat) {
-    state.category = cat;
-    state.shown    = 8;
-    state.search   = "";
-    const si = document.getElementById("searchInput");
-    if (si) si.value = "";
+    state.category = cat; state.shown = 8; state.search = "";
+    const si = document.getElementById("searchInput"); if (si) si.value = "";
     window.navigate("home");
   };
 
-  window.loadMore = function () {
-    state.shown += 8;
-    render();
-  };
+  window.loadMore = function () { state.shown += 8; render(); };
 
-  /* ═══════════════════════════════════════
-     HELPERS
-  ═══════════════════════════════════════ */
+  // ── HELPERS ──
   function fmtDl(n) { return n >= 1000 ? (n/1000).toFixed(1) + "k" : n; }
-
-  function sanitize(str) {
-    return String(str || "").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
-  }
-
+  function sanitize(str) { return String(str||"").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
   function badgeHtml(b) {
     const map = { new:"badge-new", updated:"badge-updated", hot:"badge-hot", ok:"badge-ok" };
     const lbl = { new:"Novo", updated:"Atualizado", hot:"🔥 Hot", ok:"✅ Testado" };
     return `<span class="badge ${map[b]||''}">${lbl[b]||sanitize(b)}</span>`;
   }
-
-  function tagHtml(tags) {
-    return (tags||[]).slice(0,3).map(t => `<span class="tag">${sanitize(t)}</span>`).join("");
-  }
+  function tagHtml(tags) { return (tags||[]).slice(0,3).map(t => `<span class="tag">${sanitize(t)}</span>`).join(""); }
 
   function cardHtml(a) {
     const slug = sanitize(a.slug || a.id);
     const bgs  = (a.badges||[]).map(badgeHtml).join("");
-    return `
-      <article class="card" onclick="navigate('detail','${slug}')">
-        <div class="card-thumb">
-          <img src="${sanitize(a.img)}" alt="${sanitize(a.title)}" loading="lazy"/>
-          <div class="card-badges">${bgs}<span class="badge badge-ok">✅ Testado</span></div>
-          <div class="card-dl-count">⬇ ${fmtDl(a.downloads)}</div>
-        </div>
-        <div class="card-body">
-          <div class="card-title">${sanitize(a.title)}</div>
-          <div class="card-desc">${sanitize(a.desc)}</div>
-          <div class="card-tags">${tagHtml(a.tags)}</div>
-          <div class="card-meta">
-            <div class="meta-info adv-only">
-              <span class="meta-line">📦 ${sanitize(a.size)}</span>
-              <span class="meta-line">🎮 ${sanitize(a.compat)}</span>
-            </div>
-            <button class="btn-download" onclick="event.stopPropagation();navigate('detail','${slug}')">VER ▸</button>
-            <button class="btn-download-basic" onclick="event.stopPropagation();navigate('detail','${slug}')">⬇ BAIXAR</button>
+    return `<article class="card" onclick="navigate('detail','${slug}')">
+      <div class="card-thumb">
+        <img src="${sanitize(a.img)}" alt="${sanitize(a.title)}" loading="lazy"/>
+        <div class="card-badges">${bgs}<span class="badge badge-ok">✅ Testado</span></div>
+        <div class="card-dl-count">⬇ ${fmtDl(a.downloads)}</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">${sanitize(a.title)}</div>
+        <div class="card-desc">${sanitize(a.desc)}</div>
+        <div class="card-tags">${tagHtml(a.tags)}</div>
+        <div class="card-meta">
+          <div class="meta-info">
+            <span class="meta-line">📦 ${sanitize(a.size)}</span>
+            <span class="meta-line">🎮 ${sanitize(a.compat)}</span>
           </div>
+          <button class="btn-download" onclick="event.stopPropagation();navigate('detail','${slug}')">VER ▸</button>
         </div>
-      </article>`;
+      </div>
+    </article>`;
   }
 
   function skeletonGrid(n) {
-    return Array(n).fill(0).map(() => `
-      <div class="card-skeleton">
-        <div class="sk-thumb skeleton"></div>
-        <div class="sk-line skeleton"></div>
-        <div class="sk-line-sm skeleton"></div>
-        <div class="sk-line-xs skeleton"></div>
-      </div>`).join("");
+    return Array(n).fill(0).map(() => `<div class="card-skeleton"><div class="sk-thumb skeleton"></div><div class="sk-line skeleton"></div><div class="sk-line-sm skeleton"></div><div class="sk-line-xs skeleton"></div></div>`).join("");
   }
 
-  /* ═══════════════════════════════════════
-     PAGES
-  ═══════════════════════════════════════ */
+  // ── PAGES ──
   function renderHome() {
     if (!ADDONS.length) {
-      return `<div class="empty-state"><div class="big">📭</div><h3>Nenhum addon disponível</h3><p>Verifique a URL do JSON ou tente novamente.</p></div>`;
+      return `<div class="empty-state">
+        <div class="big">📭</div>
+        <h3>Nenhum addon disponível no momento</h3>
+        <p>Estamos carregando os addons do GitHub. Se o problema persistir, verifique sua conexão.</p>
+        <button class="btn-primary" style="margin-top:1rem" onclick="location.reload()">🔄 Tentar novamente</button>
+      </div>`;
     }
     const featured = ADDONS.find(a => a.featured) || ADDONS[0];
     const hot      = [...ADDONS].sort((a,b) => b.downloads - a.downloads).slice(0,4);
@@ -917,7 +699,6 @@
     const shown    = list.slice(0, state.shown);
     const hasMore  = list.length > state.shown;
     updateSEO(null);
-
     const fSlug = sanitize(featured.slug || featured.id);
 
     return `
@@ -932,53 +713,32 @@
           <div class="hero-meta">
             <button class="btn-primary" onclick="event.stopPropagation();navigate('detail','${fSlug}')">⬇ BAIXAR AGORA</button>
             <button class="btn-ghost" onclick="event.stopPropagation();openVideoModal()">❓ Como baixar</button>
-            <span style="font-size:.78rem;color:rgba(255,255,255,.5)" class="adv-only">📦 ${sanitize(featured.size)} · 🎮 ${sanitize(featured.compat)}</span>
+            <span style="font-size:.78rem;color:rgba(255,255,255,.5)">📦 ${sanitize(featured.size)} · 🎮 ${sanitize(featured.compat)}</span>
           </div>
         </div>
       </div>
-
       <section class="section">
-        <div class="section-header">
-          <h2 class="section-title"><span class="dot"></span> Mais Baixados</h2>
-          <a class="see-all" href="#/" onclick="event.preventDefault();state.sort='downloads';state.category='Todos';navigate('home')">Ver tudo →</a>
-        </div>
+        <div class="section-header"><h2 class="section-title"><span class="dot"></span> Mais Baixados</h2><a class="see-all" href="#/" onclick="event.preventDefault();state.sort='downloads';state.category='Todos';navigate('home')">Ver tudo →</a></div>
         <div class="grid grid-wide">${hot.map(cardHtml).join("")}</div>
       </section>
-
       <section class="section">
-        <div class="section-header">
-          <h2 class="section-title"><span class="dot"></span> Novos & Atualizados</h2>
-        </div>
+        <div class="section-header"><h2 class="section-title"><span class="dot"></span> Novos & Atualizados</h2></div>
         <div class="grid grid-wide">${recentes.map(cardHtml).join("")}</div>
       </section>
-
       <section class="section">
-        <div class="section-header">
-          <h2 class="section-title"><span class="dot"></span> Todos os Addons</h2>
-          <span class="results-count">${list.length} resultado${list.length!==1?"s":""}</span>
-        </div>
-        <div class="cats">
-          ${CATS.map(c=>`<button class="cat-btn${state.category===c?" active":""}" onclick="setCategory('${sanitize(c)}')">${sanitize(c)}</button>`).join("")}
-        </div>
+        <div class="section-header"><h2 class="section-title"><span class="dot"></span> Todos os Addons</h2><span class="results-count">${list.length} resultado${list.length!==1?"s":""}</span></div>
+        <div class="cats">${CATS.map(c=>`<button class="cat-btn${state.category===c?" active":""}" onclick="setCategory('${sanitize(c)}')">${sanitize(c)}</button>`).join("")}</div>
         <div class="filters-row">
           <label style="font-size:.82rem;color:var(--text2)">Ordenar:</label>
           <select class="sort-select" onchange="state.sort=this.value;state.shown=8;render()">
             <option value="downloads" ${state.sort==="downloads"?"selected":""}>Mais baixados</option>
-            <option value="recent"    ${state.sort==="recent"?"selected":""}>Mais recentes</option>
-            <option value="name"      ${state.sort==="name"?"selected":""}>Alfabético</option>
+            <option value="recent" ${state.sort==="recent"?"selected":""}>Mais recentes</option>
+            <option value="name" ${state.sort==="name"?"selected":""}>Alfabético</option>
           </select>
         </div>
-        ${list.length===0?`
-          <div class="empty-state">
-            <div class="big">🔍</div>
-            <h3>Nenhum resultado para "${sanitize(state.search)}"</h3>
-            <p>Tente outra palavra ou categoria.</p>
-          </div>`:
-          `<div class="grid" id="mainGrid">${shown.map(cardHtml).join("")}</div>
-          ${hasMore?`
-            <div class="load-more-wrap">
-              <button class="btn-load-more" onclick="loadMore()">Carregar mais (${list.length-state.shown} restantes)</button>
-            </div>`:""}`}
+        ${list.length===0?`<div class="empty-state"><div class="big">🔍</div><h3>Nenhum resultado para "${sanitize(state.search)}"</h3><p>Tente outra palavra ou categoria.</p></div>`:
+          `<div class="grid">${shown.map(cardHtml).join("")}</div>
+          ${hasMore?`<div class="load-more-wrap"><button class="btn-load-more" onclick="loadMore()">Carregar mais (${list.length-state.shown} restantes)</button></div>`:""}`}
       </section>`;
   }
 
@@ -989,38 +749,29 @@
       return `<div class="empty-state"><div class="big">😕</div><h3>Addon não encontrado</h3><p><a href="#/" onclick="event.preventDefault();navigate('home')" style="color:var(--accent)">← Voltar ao início</a></p></div>`;
     }
     updateSEO(addon);
-    const related = ADDONS.filter(a =>
-      (a.slug||a.id) !== (addon.slug||addon.id) &&
-      (a.category === addon.category || (a.tags||[]).some(t => (addon.tags||[]).includes(t)))
-    ).slice(0,4);
-
+    const related = ADDONS.filter(a => (a.slug||a.id) !== (addon.slug||addon.id) && (a.category === addon.category || (a.tags||[]).some(t => (addon.tags||[]).includes(t)))).slice(0,4);
     const slug = sanitize(addon.slug || addon.id);
 
     return `
       <div class="breadcrumb">
-        <a href="#/" onclick="event.preventDefault();navigate('home')">Início</a>
-        <span class="sep">›</span>
-        <a href="#/" onclick="event.preventDefault();setCategory('${sanitize(addon.category)}')">${sanitize(addon.category)}</a>
-        <span class="sep">›</span>
+        <a href="#/" onclick="event.preventDefault();navigate('home')">Início</a><span class="sep">›</span>
+        <a href="#/" onclick="event.preventDefault();setCategory('${sanitize(addon.category)}')">${sanitize(addon.category)}</a><span class="sep">›</span>
         <span style="color:var(--text)">${sanitize(addon.title)}</span>
       </div>
-
       <div class="detail-grid">
         <div>
-          <div class="detail-hero">
-            <img src="${sanitize(addon.img)}" alt="${sanitize(addon.title)}" loading="eager"/>
-          </div>
+          <div class="detail-hero"><img src="${sanitize(addon.img)}" alt="${sanitize(addon.title)}" loading="eager"/></div>
           <h1 class="detail-title">${sanitize(addon.title)}</h1>
           <p class="detail-author">Publicado por <span>ncmine</span> · ${sanitize(addon.category)}</p>
           <div class="detail-tags">${tagHtml(addon.tags)}</div>
           <p class="detail-desc">${sanitize(addon.desc)}</p>
           <div class="detail-specs">
             <h3>Especificações</h3>
-            <div class="spec-row adv-spec"><span class="spec-label">Tamanho</span><span class="spec-val">📦 ${sanitize(addon.size)}</span></div>
-            <div class="spec-row adv-spec"><span class="spec-label">Compatibilidade</span><span class="spec-val">🎮 ${sanitize(addon.compat)}</span></div>
-            <div class="spec-row adv-spec"><span class="spec-label">Downloads</span><span class="spec-val">⬇ ${Number(addon.downloads).toLocaleString("pt-BR")}</span></div>
+            <div class="spec-row"><span class="spec-label">Tamanho</span><span class="spec-val">📦 ${sanitize(addon.size)}</span></div>
+            <div class="spec-row"><span class="spec-label">Compatibilidade</span><span class="spec-val">🎮 ${sanitize(addon.compat)}</span></div>
+            <div class="spec-row"><span class="spec-label">Downloads</span><span class="spec-val">⬇ ${Number(addon.downloads).toLocaleString("pt-BR")}</span></div>
             <div class="spec-row"><span class="spec-label">Status</span><span class="spec-val" style="color:var(--accent)">✅ Testado</span></div>
-            <div class="spec-row adv-spec"><span class="spec-label">Categoria</span><span class="spec-val">${sanitize(addon.category)}</span></div>
+            <div class="spec-row"><span class="spec-label">Categoria</span><span class="spec-val">${sanitize(addon.category)}</span></div>
           </div>
         </div>
         <div>
@@ -1038,70 +789,35 @@
           </div>
         </div>
       </div>
-
-      ${related.length>0?`
-        <div class="related">
-          <h2><span class="dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent)"></span> Você também pode gostar</h2>
-          <div class="grid grid-wide">${related.map(cardHtml).join("")}</div>
-        </div>`:""}`;
+      ${related.length>0?`<div class="related"><h2><span class="dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent)"></span> Você também pode gostar</h2><div class="grid grid-wide">${related.map(cardHtml).join("")}</div></div>`:""}`;
   }
 
-  /* ═══════════════════════════════════════
-     RENDER  ← BUG CORRIGIDO AQUI
-     clearTimeout garante que apenas UM
-     timer está pendente por vez, eliminando
-     a race condition que causava o bug de tema
-  ═══════════════════════════════════════ */
   function render() {
-    clearTimeout(_renderTimer); // ← cancela qualquer render pendente anterior
-
+    clearTimeout(_renderTimer);
     const app = document.getElementById("app");
     if (!app) return;
-
     app.innerHTML = `<div style="display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));min-height:200px">${skeletonGrid(8)}</div>`;
-
     _renderTimer = setTimeout(function () {
-      let html = "";
-      if (state.page === "home")       html = renderHome();
-      else if (state.page === "detail") html = renderDetail();
-      app.innerHTML = html;
-    }, 150); // 150ms é suficiente para o skeleton aparecer sem delay irritante
+      app.innerHTML = state.page === "home" ? renderHome() : renderDetail();
+    }, 150);
   }
 
-  // Expõe render para uso inline (ex: sort-select onchange)
   window.render = render;
 
-  /* ═══════════════════════════════════════
-     BACK TO TOP
-  ═══════════════════════════════════════ */
   window.addEventListener("scroll", function () {
     const bt = document.getElementById("backtop");
     if (bt) bt.classList.toggle("visible", window.scrollY > 400);
   });
 
-  /* ═══════════════════════════════════════
-     INIT  ← sem double-render
-  ═══════════════════════════════════════ */
+  // ── INIT ──
   async function init() {
-    initTheme(); // apenas CSS, sem render
-    initMode();  // apenas CSS, sem render
-
-    // Configura hash ANTES do fetch para evitar hashchange durante init
     if (!window.location.hash || window.location.hash === "" || window.location.hash === "#") {
       history.replaceState(null, "", "#/");
     }
-
-    // Lê hash para definir state inicial
     parseHash();
-
-    // Carrega addons
     await fetchAddons();
-
-    // Detecta in-app e mostra overlay se necessário
     const inApp = detectInAppBrowser();
     if (inApp) setTimeout(() => showInAppOverlay(inApp), 600);
-
-    // Renderiza UMA única vez
     render();
   }
 
